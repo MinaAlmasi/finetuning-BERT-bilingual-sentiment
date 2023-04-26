@@ -1,5 +1,6 @@
 matplotlib
 pandas
-tensorflow-cpu
+torch
 transformers
 datasets
+evaluate
