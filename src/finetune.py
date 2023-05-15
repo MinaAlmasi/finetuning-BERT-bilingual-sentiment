@@ -8,13 +8,14 @@ Fine-tuning BERT for bilingual emotion classification in English and Spanish
 import pathlib 
 
 # dataset
-from datasets import load_dataset
+import datasets
 
 # to define parameters for model 
 from transformers import TrainingArguments
 
 # custom moduels
-from finetune_fns import (combine_datasets, finetune)
+from finetune_fns import (finetune)
+from data_preprocess import (load_TASS, convert_TASS_dataset, add_eng_lang_col, add_es_lang_col, combine_datasets)
 
 def main(): 
     # define model outpath
@@ -22,12 +23,22 @@ def main():
     modeloutpath = path.parents[1] / "models"
     modeloutpath.mkdir(exist_ok=True)
 
-    # load data 
-    eng_data = load_dataset("cardiffnlp/tweet_sentiment_multilingual", "english")
-    es_data = load_dataset("cardiffnlp/tweet_sentiment_multilingual", "spanish")
+    ## TASS DATASET
+    train_path = path.parents[1] / "data" / "train"
+    dev_path = path.parents[1] / "data" / "dev"
 
-    # combine data 
-    all_data = combine_datasets(eng_data, es_data)
+    # convert TASS 
+    dfs = load_TASS(train_path, dev_path)
+    tass_es = convert_TASS_dataset(dfs)
+
+    # load datasets 
+    cardiff_es = datasets.load_dataset("cardiffnlp/tweet_sentiment_multilingual", "spanish")
+    cardiff_eng = datasets.load_dataset("cardiffnlp/tweet_sentiment_multilingual", "english")
+
+    cardiff_eng = cardiff_eng.map(add_eng_lang_col)
+    cardiff_es = cardiff_es.map(add_es_lang_col)
+
+    all_data = combine_datasets([cardiff_es, cardiff_eng, tass_es])
 
     # map labels to ids
     id2label = {0: "negative", 1:"neutral", 2:"positive"}
