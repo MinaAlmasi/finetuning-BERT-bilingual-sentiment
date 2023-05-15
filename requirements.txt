@@ -5,3 +5,4 @@ transformers
 datasets
 evaluate
 scikit-learn
+accelerate

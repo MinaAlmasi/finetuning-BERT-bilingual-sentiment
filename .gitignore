@@ -135,3 +135,7 @@ dmypy.json
 # ignore models 
 models/*
 !models/README.md
+
+# ignore models 
+data/*
+!data/README.md
