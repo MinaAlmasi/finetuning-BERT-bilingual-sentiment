@@ -85,36 +85,120 @@ def convert_TASS_dataset(dfs):
 
     return data
 
-# add lang cols to other dataset
-def add_eng_lang_col(example): # inspired by https://stackoverflow.com/questions/72749730/add-new-column-to-a-huggingface-dataset-inside-a-dictionary
+# add lang cols to other dataset, 
+def add_eng_lang_col(example): 
     example["lang"] = "ENG"
 
     return example
 
-def add_es_lang_col(example): # inspired by https://stackoverflow.com/questions/72749730/add-new-column-to-a-huggingface-dataset-inside-a-dictionary
+def add_es_lang_col(example):
     example["lang"] = "ES"
 
     return example
 
-def main():
-    path = pathlib.Path(__file__)
-    train_path = path.parents[1] / "data" / "train"
-    dev_path = path.parents[1] / "data" / "dev"
-
-    # convert TASS 
-    dfs = load_TASS(train_path, dev_path)
-    tass_es = convert_TASS_dataset(dfs)
-
+def load_cardiff(): # https://huggingface.co/datasets/cardiffnlp/tweet_sentiment_multilingual/viewer/arabic/train
     # load datasets 
     cardiff_es = datasets.load_dataset("cardiffnlp/tweet_sentiment_multilingual", "spanish")
     cardiff_eng = datasets.load_dataset("cardiffnlp/tweet_sentiment_multilingual", "english")
 
+    # add columns
     cardiff_eng = cardiff_eng.map(add_eng_lang_col)
     cardiff_es = cardiff_es.map(add_es_lang_col)
 
-    all_data = combine_datasets([cardiff_es, cardiff_eng, tass_es])
+    return cardiff_eng, cardiff_es
 
-    print(all_data)
+
+def load_mteb(): # https://huggingface.co/datasets/mteb/tweet_sentiment_extraction/viewer/mteb--tweet_sentiment_extraction/train?p=0 
+    data = datasets.load_dataset("mteb/tweet_sentiment_extraction", "english")
+
+    # subset train
+    data["train"] = data["train"].shuffle(seed=155).select(range(4802)) # https://huggingface.co/learn/nlp-course/chapter5/3
+
+    # subset test
+    data["test"] = data["test"].shuffle(seed=155).select(range(2443)) 
+
+    # split test into val and test 
+    test_validation = data['test'].train_test_split(test_size=0.5) # solution by https://discuss.huggingface.co/t/how-to-split-main-dataset-into-train-dev-test-as-datasetdict/1090
+
+    data = datasets.DatasetDict({
+        "train": data["train"],
+        "validation": test_validation["train"],
+        "test":  test_validation["train"]
+        })
+
+    # remove columns 
+    data = data.remove_columns(["id", "label"])
+
+    # add lang col
+    data = data.map(add_eng_lang_col)
+
+    # encode label_text as label col, rename to 'label' to follow other datasets
+    data = data.class_encode_column("label_text")
+    data = data.rename_column("label_text", "label")
+
+    return data
+
+def get_overview(datadict):
+    '''
+    Get overview of lengths of rows in each split train, validation, test per combined dataset. 
+    '''
+
+    all_lengths = []
+
+    for name, data in datadict.items():
+        lengths = pd.DataFrame() 
+        lengths["data"] = [name]
+
+        for split in ["train", "validation", "test"]:
+            length = len(data[split])
+            lengths[split] = [length]
+
+        all_lengths.append(lengths)
+    
+    final = pd.concat(all_lengths, ignore_index=True)
+
+    return final
+
+def load_datasets(TASS_path=None):
+    if TASS_path: 
+        train_path = TASS_path / "train"
+        dev_path = TASS_path / "dev"
+
+        tass_es = load_TASS(train_path, dev_path)
+        tass_es = convert_TASS_dataset(tass_es)
+    else: 
+        tass_es = None
+
+    # load other datasets 
+    cardiff_eng, cardiff_es = load_cardiff()
+    mteb_eng = load_mteb()
+
+    all_ds = {
+        "tass_es": tass_es,
+        "mteb_eng": mteb_eng,
+        "cardiff_es": cardiff_es,
+        "cardiff_eng": cardiff_eng,
+    }
+
+    if not TASS_path: 
+        del all_ds["tass_es"]
+    
+    # combine datasets 
+    combined_ds = combine_datasets(all_ds.values())    
+    
+    # get overview of lengths 
+    ds_lengths = get_overview(all_ds)
+
+    return combined_ds, ds_lengths 
+
+
+def main():
+    path = pathlib.Path(__file__)
+    tass_path = path.parents[1] / "data"
+
+    ds, ds_overview = load_datasets(tass_path)
+    print(ds)
+    print(ds_overview)
 
 if __name__ == "__main__":
     main()

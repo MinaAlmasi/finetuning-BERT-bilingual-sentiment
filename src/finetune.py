@@ -6,39 +6,40 @@ Fine-tuning BERT for bilingual emotion classification in English and Spanish
 
 # utils 
 import pathlib 
-
-# dataset
-import datasets
+import argparse
 
 # to define parameters for model 
 from transformers import TrainingArguments
 
 # custom moduels
-from finetune_fns import (finetune)
-from data_preprocess import (load_TASS, convert_TASS_dataset, add_eng_lang_col, add_es_lang_col, combine_datasets)
+from finetune_fns import finetune
+from data_fns import load_datasets
+from plot_fns import get_loss
+
+def input_parse():
+    parser = argparse.ArgumentParser()
+
+    # add arguments 
+    parser.add_argument("-hub", "--push_to_hub", help = "Whether to push to huggingface hub or not", type = bool, default = False) #default img defined
+    
+    # save arguments to be parsed from the CLI
+    args = parser.parse_args()
+
+    return args
 
 def main(): 
+    # intialise args 
+    args = input_parse()
+
     # define model outpath
     path = pathlib.Path(__file__)
     modeloutpath = path.parents[1] / "models"
     modeloutpath.mkdir(exist_ok=True)
 
-    ## TASS DATASET
-    train_path = path.parents[1] / "data" / "train"
-    dev_path = path.parents[1] / "data" / "dev"
+    path = pathlib.Path(__file__)
+    tass_path = path.parents[1] / "data"
 
-    # convert TASS 
-    dfs = load_TASS(train_path, dev_path)
-    tass_es = convert_TASS_dataset(dfs)
-
-    # load datasets 
-    cardiff_es = datasets.load_dataset("cardiffnlp/tweet_sentiment_multilingual", "spanish")
-    cardiff_eng = datasets.load_dataset("cardiffnlp/tweet_sentiment_multilingual", "english")
-
-    cardiff_eng = cardiff_eng.map(add_eng_lang_col)
-    cardiff_es = cardiff_es.map(add_es_lang_col)
-
-    all_data = combine_datasets([cardiff_es, cardiff_eng, tass_es])
+    ds, ds_overview = load_datasets(tass_path)
 
     # map labels to ids
     id2label = {0: "negative", 1:"neutral", 2:"positive"}
@@ -47,24 +48,38 @@ def main():
     # define training arguments 
     training_args = TrainingArguments(
         output_dir = modeloutpath, 
+        push_to_hub = args.push_to_hub,
         learning_rate=2e-5,
         per_device_train_batch_size = 16, 
         per_device_eval_batch_size = 16, 
-        num_train_epochs=2, 
+        num_train_epochs=1, 
         weight_decay=0.01,
         evaluation_strategy="epoch", 
         save_strategy = "epoch", 
         load_best_model_at_end = True
     )
 
-    finetuned_model = finetune(
-        dataset = all_data, 
+    trainer = finetune(
+        dataset = ds, 
         model_name = "bert-base-multilingual-cased", 
         n_labels = 3,
         id2label = id2label,
         label2id = label2id,
         training_args = training_args
         )
+
+    loss = get_loss(trainer.state.log_history)
+    print(loss)
+
+
+    if args.push_to_hub == True: 
+        from huggingface_hub import login
+
+        # get token from txt
+        with open(path.parents[1] / "token.txt") as f:
+            hf_token = f.read()
+
+        login(hf_token)
 
 
 if __name__ == "__main__":

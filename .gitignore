@@ -139,3 +139,6 @@ models/*
 # ignore models 
 data/*
 !data/README.md
+
+# ignore token.txt 
+token.txt
