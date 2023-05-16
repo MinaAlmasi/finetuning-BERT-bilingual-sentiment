@@ -1,3 +1,11 @@
+'''
+This script comprises several functions necessary for the finetune pipeline, including tokenization.
+
+Fine-tune functions adapted / inspired by  https://huggingface.co/docs/transformers/v4.17.0/en/tasks/sequence_classification#finetune-with-trainer
+
+@MinaAlmasi
+'''
+
 # utils
 import numpy as np 
 from functools import partial 
@@ -10,7 +18,7 @@ from transformers import (AutoTokenizer, AutoModelForSequenceClassification,
 # evaluation
 import evaluate 
 
-# tokenisation functions
+
 def tokenize(example, tokenizer, text_col:str="text"):
     return tokenizer(example[text_col], truncation=True)
     
@@ -23,7 +31,7 @@ def tokenize_dataset(dataset, tokenizer, text_col:str="text"):
 
     return tokenized_dataset
 
-# eval functions
+
 def compute_metrics(eval_pred):
     # load accuracy metric 
     accuracy = evaluate.load("accuracy")

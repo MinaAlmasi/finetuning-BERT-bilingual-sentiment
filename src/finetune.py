@@ -1,7 +1,8 @@
 '''
 Fine-tuning BERT for bilingual emotion classification in English and Spanish
 
-# https://huggingface.co/docs/transformers/v4.17.0/en/tasks/sequence_classification#finetune-with-trainer
+Run in terminal 
+
 '''
 
 # utils 
@@ -14,9 +15,7 @@ from transformers import TrainingArguments
 # custom moduels
 from finetune_fns import finetune
 from data_fns import load_datasets
-from plot_fns import get_loss
-
-import pandas as pd 
+from plot_fns import get_loss, plot_loss
 
 def input_parse():
     parser = argparse.ArgumentParser()
@@ -33,14 +32,19 @@ def main():
     # intialise args 
     args = input_parse()
 
-    # define model outpath
+    # define paths (for saving model and loss curve)
     path = pathlib.Path(__file__)
     modeloutpath = path.parents[1] / "models"
-    modeloutpath.mkdir(exist_ok=True)
+    savepath = path.parents[1] / "results"
+    
+    # ensure that paths exist
+    savepath.mkdir(exist_ok=True, parents=True)
+    modeloutpath.mkdir(exist_ok=True, parents=True)
 
-    path = pathlib.Path(__file__)
+    # load tass_path 
     tass_path = path.parents[1] / "data"
 
+    # load datasets 
     ds, ds_overview = load_datasets(tass_path)
 
     # map labels to ids
@@ -52,16 +56,17 @@ def main():
         output_dir = modeloutpath, 
         push_to_hub = args.push_to_hub,
         learning_rate=2e-5,
-        per_device_train_batch_size = 16, 
-        per_device_eval_batch_size = 16, 
+        per_device_train_batch_size = 32, 
+        per_device_eval_batch_size = 32, 
         num_train_epochs=2, 
         weight_decay=0.01,
         evaluation_strategy="epoch",
         logging_strategy="epoch",
         save_strategy = "epoch", 
-        load_best_model_at_end = True
+        load_best_model_at_end = True, 
     )
 
+    # fine tune 
     trainer = finetune(
         dataset = ds, 
         model_name = "bert-base-multilingual-cased", 
@@ -71,10 +76,11 @@ def main():
         training_args = training_args
         )
 
-    train_loss, val_loss  = get_loss(trainer.state.log_history)
-    print("Eval Losses per Epoch:", val_loss)
-    print("Train Losses per Epoch:", train_loss)  
+    # compute loss, plot loss
+    train_loss, val_loss = get_loss(trainer.state.log_history)
+    plot_loss(train_loss, val_loss, 2, savepath, "loss_curve.png")
 
+    # push to hub ! 
     if args.push_to_hub == True: 
         from huggingface_hub import login
 
