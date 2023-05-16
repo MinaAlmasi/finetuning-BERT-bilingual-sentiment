@@ -1,5 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import torch 
+import pandas as pd 
+from sklearn import metrics
 
 def get_loss(trainer_history):
     train_loss = {}
@@ -36,3 +39,21 @@ def plot_loss(train_loss, val_loss, epochs, savepath, filename): # adapted from 
     plt.legend()
    
     plt.savefig(savepath / filename, dpi=300)
+
+def get_metrics(trainer, tokenized_ds_split):
+    # make predictions 
+    predictions = trainer.predict(tokenized_ds_split)
+
+    # extract prediction with highest probability (predicted labels)
+    y_pred = np.argmax(predictions.predictions, axis=-1)
+
+    # calculate probability instead of logits
+    probabilities = torch.nn.Softmax(predictions)
+
+    # get true labels 
+    y_true = predictions.label_ids
+
+    # get summary metrics 
+    model_metrics = metrics.classification_report(y_true, y_pred, target_names=["neutral", "negative", "positive"])
+
+    return model_metrics

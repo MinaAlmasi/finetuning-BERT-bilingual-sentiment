@@ -88,9 +88,8 @@ def convert_TASS(dfs):
     Returns: 
         - ds: HF dataset dictionary containing splits "train", "validation" and "test". 
     '''
-
     # split dev into val and test, stratify by language, so that we do not get an overrepresentation of e.g., "Mexican" (MX) Spanish. 
-    dfs["validation"], dfs["test"] = train_test_split(dfs["dev"], test_size=0.5, stratify=dfs["dev"]["lang"], random_state=155)
+    dfs["validation"], dfs["test"] = train_test_split(dfs["dev"], test_size=0.50, stratify=dfs["dev"]["lang"], random_state=155)
     
     # rm dev
     del dfs["dev"]
@@ -211,7 +210,7 @@ def get_ds_overview(datadict):
 
     for name, ds in datadict.items():
         lengths = pd.DataFrame() 
-        lengths["Dataset"] = [name]
+        lengths["dataset"] = [name]
 
         for split in ["train", "validation", "test"]:
             length = len(ds[split])

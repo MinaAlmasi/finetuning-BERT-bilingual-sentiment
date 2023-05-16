@@ -13,11 +13,9 @@ from functools import partial
 
 # transformers tokenizers, models 
 from transformers import (AutoTokenizer, AutoModelForSequenceClassification, 
-                        Trainer, DataCollatorWithPadding)
+                        Trainer, DataCollatorWithPadding, EarlyStoppingCallback)
 
-# evaluation
-import evaluate 
-
+from sklearn.metrics import precision_recall_fscore_support, accuracy_score
 
 def tokenize(example, tokenizer, text_col:str="text"):
     return tokenizer(example[text_col], truncation=True)
@@ -31,23 +29,26 @@ def tokenize_dataset(dataset, tokenizer, text_col:str="text"):
 
     return tokenized_dataset
 
+def compute_metrics(pred):
+    # get labels 
+    labels = pred.label_ids
 
-def compute_metrics(eval_pred):
-    # load accuracy metric 
-    accuracy = evaluate.load("accuracy")
+    # get predictions
+    preds = pred.predictions.argmax(-1)
 
-    # compute predictions 
-    predictions, labels = eval_pred
+    # calculate metrics 
+    precision, recall, f1, _ = precision_recall_fscore_support(labels, preds, average='weighted')
+    acc = accuracy_score(labels, preds)
 
-    # choose prediction with highest probability
-    predictions = np.argmax(predictions, axis=1)
+    # return dict 
+    return {
+        'accuracy': acc,
+        'f1': f1,
+        'precision': precision,
+        'recall': recall
+    }
 
-    # compute accuracy 
-    accuracy = accuracy.compute(predictions=predictions, references=labels)
-
-    return accuracy 
-
-def finetune(dataset, model_name:str, n_labels:int, id2label:dict, label2id:dict, training_args): 
+def finetune(dataset, model_name:str, n_labels:int, id2label:dict, label2id:dict, training_args, early_stop_patience:int=3): 
     # import tokenizer 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
@@ -56,6 +57,9 @@ def finetune(dataset, model_name:str, n_labels:int, id2label:dict, label2id:dict
 
     # define datacollator 
     data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
+
+    # define earlystop
+    early_stop = EarlyStoppingCallback(early_stopping_patience = early_stop_patience)
 
     # initialize model
     model = AutoModelForSequenceClassification.from_pretrained(
@@ -70,11 +74,12 @@ def finetune(dataset, model_name:str, n_labels:int, id2label:dict, label2id:dict
         eval_dataset=tokenized_data["validation"], 
         tokenizer=tokenizer, 
         data_collator=data_collator, 
-        compute_metrics = compute_metrics
+        compute_metrics = compute_metrics, 
+        callbacks = [early_stop]
     )
 
     # train model
     trainer.train()
 
-    return trainer 
+    return trainer, tokenized_data
 
