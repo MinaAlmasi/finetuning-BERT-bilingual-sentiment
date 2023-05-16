@@ -16,6 +16,8 @@ from finetune_fns import finetune
 from data_fns import load_datasets
 from plot_fns import get_loss
 
+import pandas as pd 
+
 def input_parse():
     parser = argparse.ArgumentParser()
 
@@ -52,9 +54,10 @@ def main():
         learning_rate=2e-5,
         per_device_train_batch_size = 16, 
         per_device_eval_batch_size = 16, 
-        num_train_epochs=1, 
+        num_train_epochs=2, 
         weight_decay=0.01,
-        evaluation_strategy="epoch", 
+        evaluation_strategy="epoch",
+        logging_strategy="epoch",
         save_strategy = "epoch", 
         load_best_model_at_end = True
     )
@@ -68,9 +71,9 @@ def main():
         training_args = training_args
         )
 
-    loss = get_loss(trainer.state.log_history)
-    print(loss)
-
+    train_loss, val_loss  = get_loss(trainer.state.log_history)
+    print("Eval Losses per Epoch:", val_loss)
+    print("Train Losses per Epoch:", train_loss)  
 
     if args.push_to_hub == True: 
         from huggingface_hub import login
