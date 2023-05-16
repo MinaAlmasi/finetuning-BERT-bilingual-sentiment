@@ -76,7 +76,7 @@ def main():
         learning_rate=2e-5,
         per_device_train_batch_size = 32, 
         per_device_eval_batch_size = 32, 
-        num_train_epochs=2, 
+        num_train_epochs=30, 
         weight_decay=0.01,
         evaluation_strategy="epoch",
         logging_strategy="epoch",
@@ -92,7 +92,8 @@ def main():
         n_labels = 3,
         id2label = id2label,
         label2id = label2id,
-        training_args = training_args
+        training_args = training_args, 
+        early_stop_patience=5
         )
 
     # push model to hub
