@@ -140,10 +140,13 @@ def add_es_lang_col(example):
 
     return example
 
-def load_cardiff(): # https://huggingface.co/datasets/cardiffnlp/tweet_sentiment_multilingual/viewer/arabic/train
+def load_cardiff(download_mode=None): # https://huggingface.co/datasets/cardiffnlp/tweet_sentiment_multilingual/viewer/arabic/train
     '''
     Load English and Spanish twitter sentiment HF datasets by @cardiffnlp: 
     (LINK: https://huggingface.co/datasets/cardiffnlp/tweet_sentiment_multilingual)
+
+    Args:
+        - download_mode: whether a cached dataset should be used (=None) or the dataset should be redownloaded (="force_redownload"). Defaults to None.
 
     Returns: 
         - cardiff_eng: dataset with English text 
@@ -151,8 +154,8 @@ def load_cardiff(): # https://huggingface.co/datasets/cardiffnlp/tweet_sentiment
     '''
 
     # load datasets 
-    cardiff_es = datasets.load_dataset("cardiffnlp/tweet_sentiment_multilingual", "spanish")
-    cardiff_eng = datasets.load_dataset("cardiffnlp/tweet_sentiment_multilingual", "english")
+    cardiff_es = datasets.load_dataset("cardiffnlp/tweet_sentiment_multilingual", "spanish", download_mode=download_mode)
+    cardiff_eng = datasets.load_dataset("cardiffnlp/tweet_sentiment_multilingual", "english", download_mode=download_mode)
 
     # add columns
     cardiff_eng = cardiff_eng.map(add_eng_lang_col)
@@ -161,13 +164,19 @@ def load_cardiff(): # https://huggingface.co/datasets/cardiffnlp/tweet_sentiment
     return cardiff_eng, cardiff_es
 
 
-def load_mteb(): # https://huggingface.co/datasets/mteb/tweet_sentiment_extraction/viewer/mteb--tweet_sentiment_extraction/train?p=0 
+def load_mteb(download_mode): # https://huggingface.co/datasets/mteb/tweet_sentiment_extraction/viewer/mteb--tweet_sentiment_extraction/train?p=0 
     '''
     Load a subset of English Twiter HF dataset from MTEB.
     (LINK: https://huggingface.co/datasets/mteb/tweet_sentiment_extraction)
+
+    Args:
+        - download_mode: whether a cached dataset should be used (=None) or the dataset should be redownloaded (="force_redownload"). Defaults to None.
+
+    Returns: 
+        - data: subset of MTEB as HF dataset. 
     '''
 
-    data = datasets.load_dataset("mteb/tweet_sentiment_extraction", "english")
+    data = datasets.load_dataset("mteb/tweet_sentiment_extraction", "english", download_mode=download_mode)
 
     # subset train to match the amount of ES data in TASS 
     data["train"] = data["train"].shuffle(seed=155).select(range(4802)) # https://huggingface.co/learn/nlp-course/chapter5/3
@@ -222,12 +231,13 @@ def get_ds_overview(datadict):
 
     return lengths_overview
 
-def load_datasets(TASS_path=None):
+def load_datasets(TASS_path:pathlib.Path=None, download_mode:str=None):
     '''
     Load all HF datasets as a combined dataset for finetuning. 
 
     Args: 
-        TASS_path: path to TASS data. If no path is specified, the TASS data will not be loaded. 
+        - TASS_path: path to TASS data. If no path is specified, the TASS data will not be loaded. 
+        - download_mode: cached HF datasets should be used (=None) or the HF datasets should be redownloaded (="force_redownload"). Defaults to None.
 
     Returns: 
         - combined_ds: HF dataset containing the TASS 2020 (Spanish), Cardiff (Spanish and English) and MTEB (English) dataset. 
@@ -239,8 +249,8 @@ def load_datasets(TASS_path=None):
         tass_es = None
 
     # load other datasets 
-    cardiff_eng, cardiff_es = load_cardiff()
-    mteb_eng = load_mteb()
+    cardiff_eng, cardiff_es = load_cardiff(download_mode)
+    mteb_eng = load_mteb(download_mode)
 
     all_ds = {
         "tass_es": tass_es,
@@ -265,7 +275,7 @@ def main():
     path = pathlib.Path(__file__)
     tass_path = path.parents[1] / "data"
 
-    ds, ds_overview = load_datasets(tass_path)
+    ds, ds_overview = load_datasets(tass_path, download_mode="force_redownload")
     print(ds)
     print(ds_overview)
 

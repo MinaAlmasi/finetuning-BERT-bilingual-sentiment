@@ -16,9 +16,8 @@ import argparse
 from transformers import TrainingArguments 
 
 # custom modules
-from finetune_fns import finetune
+from finetune_fns import finetune, get_loss, plot_loss, get_metrics, get_metrics_per_language
 from data_fns import load_datasets
-from evaluate_fns import get_loss, plot_loss, get_metrics
 
 # disable msg datasets 
 import datasets 
@@ -28,13 +27,24 @@ def input_parse():
     parser = argparse.ArgumentParser()
 
     # add arguments 
-    parser.add_argument("-hub", "--push_to_hub", help = "Whether to push to huggingface hub or not", type = bool, default = False) #default img defined
-    parser.add_argument("-epochs", "--n_epochs", help = "number of epochs the model should run for", type = int, default = 20) #default img defined
-    
+    parser.add_argument("-hub", "--push_to_hub", help = "Whether to push to huggingface hub or not", type = bool, default = False) 
+    parser.add_argument("-epochs", "--n_epochs", help = "number of epochs the model should run for", type = int, default = 20)
+    parser.add_argument("-download", "--download_mode", help = "'force_redownload' to force HF datasets to be redownloaded. None for using cached datasets.", type = str, default = None)
+    parser.add_argument("-mdl", "--model", help = "Choose between 'mBERT' or 'mDistilBERT'", type = str, default = "mBERT")
+
     # save arguments to be parsed from the CLI
     args = parser.parse_args()
 
     return args
+
+def model_picker(chosen_model): 
+    if chosen_model == "mBERT":
+        model_dict = {"ES-ENG-mBERT-sentiment": "bert-base-multilingual-cased"}
+
+    if chosen_model == "mDistilBERT":
+        model_dict = {"ES-ENG-mDistilBERT-sentiment": "distilbert-base-multilingual-cased"}        
+
+    return model_dict
 
 def main(): 
     # intialise args 
@@ -44,10 +54,16 @@ def main():
     path = pathlib.Path(__file__)
     modeloutpath = path.parents[1] / "models"
     resultspath = path.parents[1] / "results"
-    
-    # ensure that paths exist
-    resultspath.mkdir(exist_ok=True, parents=True)
+
+    # ensure that modelpath exists
     modeloutpath.mkdir(exist_ok=True, parents=True)
+
+    # pick model
+    model_dict = model_picker(args.model)
+
+    # get outputfolder, modelname
+    output_folder = list(model_dict.keys())[0]
+    model_name = list(model_dict.values())[0]
 
     # push to hub ! 
     if args.push_to_hub == True: 
@@ -63,7 +79,7 @@ def main():
     tass_path = path.parents[1] / "data"
 
     # load datasets 
-    ds, ds_overview = load_datasets(tass_path)
+    ds, ds_overview = load_datasets(tass_path, args.download_mode)
 
     # map labels to ids
     id2label = {0: "negative", 1:"neutral", 2:"positive"}
@@ -71,12 +87,12 @@ def main():
 
     # define training arguments 
     training_args = TrainingArguments(
-        output_dir = modeloutpath / "ES-ENG-mBERT-sentiment", 
+        output_dir = modeloutpath / output_folder, 
         push_to_hub = args.push_to_hub,
         learning_rate=2e-5,
-        per_device_train_batch_size = 16, 
-        per_device_eval_batch_size = 16, 
-        num_train_epochs=args.n_epochs, #input parse, defaults to 20
+        per_device_train_batch_size = 64, 
+        per_device_eval_batch_size = 64, 
+        num_train_epochs=args.n_epochs, 
         weight_decay=0.01,
         evaluation_strategy="epoch",
         logging_strategy="epoch",
@@ -88,7 +104,7 @@ def main():
     # fine tune 
     trainer, tokenized_data = finetune(
         dataset = ds, 
-        model_name = "bert-base-multilingual-cased", 
+        model_name = model_name,
         n_labels = 3,
         id2label = id2label,
         label2id = label2id,
@@ -97,25 +113,20 @@ def main():
         )
 
     # push model to hub
-    trainer.push_to_hub()
+    if args.push_to_hub == True: 
+        trainer.push_to_hub()
 
     # compute train and val loss, plot loss
     train_loss, val_loss = get_loss(trainer.state.log_history)
-    plot_loss(train_loss, val_loss, args.n_epochs, resultspath, "loss_curve.png")
+    plot_loss(train_loss, val_loss, args.n_epochs, resultspath, f"{args.model}_loss_curve.png")
 
     # evaluate, save summary metrics 
-    metrics = get_metrics(trainer, tokenized_data["test"])
+    get_metrics(trainer,  tokenized_data["test"], ds["test"], id2label, resultspath, f"{args.model}_all")
 
-    es_test = tokenized_data["test"].filter(lambda example: example['lang'] != "ENG")
-    eng_test= tokenized_data["test"].filter(lambda example: example['lang'] == "ENG")
-
-    eng_metrics = get_metrics(trainer, eng_test)
-    es_metrics = get_metrics(trainer, es_test)
-
-    for metric_name, metric in {"all":metrics, "eng":eng_metrics, "es":es_metrics}.items():
-        with open(resultspath / f"mBERT_{metric_name}_metrics.txt", "w") as file: 
-            file.write(metric)
+    # evaluate per language metrics subset 
+    get_metrics_per_language(trainer, tokenized_data["test"], ds["test"], id2label, resultspath, f"{args.model}_es", language="ES")
+    get_metrics_per_language(trainer, tokenized_data["test"], ds["test"], id2label, resultspath, f"{args.model}_eng", language="ENG")
 
 
 if __name__ == "__main__":
-    main()
+    main() 
