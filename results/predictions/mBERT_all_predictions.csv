@@ -1,0 +1,871 @@
+,prediction,true_value,text,lang,probabilities,logits,prediction_label,true_label
+0,0,0,Trying to have a conversation with my dad about vegetarianism is the most pointless infuriating thing ever #caveman ,ENG,[0.40817448 0.26146266 0.3303629 ],[ 0.17346628 -0.27193692 -0.03803673],negative,negative
+1,1,1,#latestnews 4 #newmexico #politics + #nativeamerican + #Israel + #Palestine  -  Protesting Rise Of Alt-Right At... ,ENG,[0.30013555 0.38267353 0.3171909 ],[0.08299279 0.32594085 0.13826244],neutral,neutral
+2,1,2,@user You are a stand up guy and a Gentleman Vice President Pence ,ENG,[0.30154634 0.35521698 0.3432367 ],[0.05911619 0.22292131 0.18861279],neutral,positive
+3,0,0,"@user @user @user Looks like Flynn isn't too pleased with me, he blocked me. You blocked by Flynn too @user ",ENG,[0.34789222 0.3278554  0.32425246],[0.146881   0.08756095 0.07651061],negative,negative
+4,2,1,perfect pussy clips #vanessa hudgens zac efron naked ,ENG,[0.32472214 0.30067706 0.3746008 ],[ 0.02679218 -0.05014084  0.16968325],positive,neutral
+5,0,2,"i'm not even catholic, but pope francis is my dude. like i just need him to hug me and tell me everything is okay. ",ENG,[0.4342758  0.20444751 0.36127666],[ 0.25023037 -0.50313824  0.06619459],negative,positive
+6,0,0,@user for al the crying you do about how middle America is left out-they have twice as much voting power ,ENG,[0.42595804 0.27675933 0.2972827 ],[ 0.26819077 -0.16300178 -0.09146658],negative,negative
+7,0,1,Sentinel Editorial: FBI’s Comey ‘had no one of middle class families. ,ENG,[0.3613502  0.35187283 0.28677696],[ 0.11238828  0.08581048 -0.11875457],negative,neutral
+8,1,2,"Samsung to Bring Android 7.0 Nougat to Galaxy S6, S6 edge, Note 5, and Tab S2 - Softpedia News ",ENG,[0.25782153 0.38374045 0.35843801],[-0.10728545  0.29041344  0.22220275],neutral,positive
+9,1,0,Israel deems comatose Gaza man who needs treatment in West Bank  a security threat. #Palestine  via @user ,ENG,[0.34955812 0.36683542 0.28360647],[ 0.15227824  0.20052171 -0.05680399],neutral,negative
+10,1,1,Presenting the Red Line symptoms of Aconite in two slides.I <3 Homeopathy ,ENG,[0.29805732 0.3741543  0.3277884 ],[-0.05878275  0.16859964  0.03629972],neutral,neutral
+11,0,2,"I will go so far to say s1 of westworld isn't just good, it's brilliant. A story within a story within a story about storytelling ",ENG,[0.40056515 0.2896531  0.3097817 ],[ 0.18691266 -0.13727975 -0.07009587],negative,positive
+12,1,0,"Iraqi Forces set to storm 3 areas of #Mosul, #AlQahira, #alMasarif &  #alAmn#MosulOps#mosuloffensive#iraq#ISIS… ",ENG,[0.34581771 0.353055   0.30112723],[ 0.10353604  0.12424803 -0.03484295],neutral,negative
+13,1,1,"Alfred Essa, VP Analytics & R&D @user talks about ""Deep Learning Primer for Business Leaders"" @ #PAChicago N… ",ENG,[0.28757071 0.39635792 0.3160714 ],[-0.01552862  0.3053203   0.07897072],neutral,neutral
+14,0,2,#NationalFastFoodDay Would love to live there. Chick-fil-A 😍 ,ENG,[0.35864538 0.28981644 0.35153818],[ 0.07610754 -0.13697882  0.05609173],negative,positive
+15,0,0,Electoral College must reject Trump #rejecttrump #notmypresident #takingbackdemocracy #blacklivesmatter #nevertrump ,ENG,[0.43391052 0.271727   0.29436257],[ 0.2499825  -0.21805803 -0.13804348],negative,negative
+16,2,1,Git 'em girls #BarackObama #blm #blacklivesmatter #mylifematters #therealskinnysuge #thepeopleschamp #skinnyup #pmd… ,ENG,[0.32768247 0.30323496 0.3690826 ],[-0.02166552 -0.09920263  0.09730987],positive,neutral
+17,1,2,The Reputation Doctor weighs in on Tony Romo #NFL @user joins @user on #TheMorningRush LISTEN: ,ENG,[0.26703653 0.38868877 0.3442747 ],[-0.06837352  0.30702004  0.18568103],neutral,positive
+18,0,0,Stop #fracking #Cuadrilla persecuting land defenders through the legal system #BankruptCuadrilla #ECOCIDE ,ENG,[0.39752436 0.32394844 0.2785273 ],[ 0.16404773 -0.04062412 -0.19169244],negative,negative
+19,1,1,"#Valentines #Gifts Polo Ralph Lauren Bear Plush 15"" Jointed #TeddyBear 1997 Sweater Stuffed Animal… ",ENG,[0.27351576 0.38294673 0.34353754],[-0.11652154  0.22001511  0.11141562],neutral,neutral
+20,2,2,So proud of way @user & #trumpTransitionteam are molding strong leadership group for #America #TeamTrump #MakeAmericaGreatAgain ,ENG,[0.26631957 0.31871083 0.41496965],[-0.01278882  0.1667983   0.4307195 ],positive,positive
+21,0,0,"@user Everyone's thinking far too short-termed. When all fossil fuels run out with no substitutes, then the crisis will come. ",ENG,[0.37388054 0.30474323 0.3213762 ],[ 0.12841363 -0.07605308 -0.02291025],negative,negative
+22,0,1,Go fight 4 REAL women's rights like 4 the ones who suffer in human trafficking or from being raped by rapeugees.Or… ,ENG,[0.38954586 0.31372374 0.29673046],[ 0.1980046  -0.01846415 -0.07415284],negative,neutral
+23,2,2,@user @user - #ScreamQueens so lucky to get to work with TK. ,ENG,[0.2610869  0.3508617  0.38805136],[-0.0632536   0.23228507  0.33303067],positive,positive
+24,0,0,@user @user @user Why is it that today society is casually comfortable about being pubicly distasteful?#deplorables ,ENG,[0.42632714 0.2767947  0.29687813],[ 0.23673077 -0.19520006 -0.12515447],negative,negative
+25,1,1,@user top candidate for NL Cy Young inevitably... ,ENG,[0.29569072 0.3693053  0.3350039 ],[0.02716614 0.24947576 0.15199426],neutral,neutral
+26,2,2,This is a big deal and a smart move by Microsoft: ,ENG,[0.3179534  0.32550266 0.35654396],[0.10071317 0.12417904 0.21526587],positive,positive
+27,1,0,Ben Carson for Housing & Urban Development?? 😐 I just can't 😒 ,ENG,[0.32781777 0.36221433 0.30996788],[ 0.02088613  0.12066431 -0.03510308],neutral,negative
+28,2,1,Ah the time-honoured tradition of wrapping a hard day's work with a #mannequinchallenge ,ENG,[0.3656956  0.26615325 0.36815122],[ 0.04080898 -0.27692008  0.04750144],positive,neutral
+29,2,2,Digesting while watching #ScreamQueens s1 Thanksgiving & Black Friday eps. SO SO GOOD!! ,ENG,[0.2032104  0.33253667 0.464253  ],[-0.310854    0.18165433  0.5153339 ],positive,positive
+30,0,0,Israel's New Racism: Persecution of African Migrants in Holy Land #gaza #palestine #israel #BDS ,ENG,[0.38817775 0.32224318 0.28957912],[ 0.2160601   0.02990317 -0.07697468],negative,negative
+31,0,1,cause like euthanasia get it? lmaooo ,ENG,[0.47934058 0.24180582 0.27885365],[ 0.36301088 -0.32126546 -0.17871332],negative,neutral
+32,2,2,I've been listening to Leonard Cohen nonstop for the past month. Only to find out he passed literally weeks ago. Wow my heart is so overwhel ,ENG,[0.32719767 0.27002823 0.40277404],[ 0.07031218 -0.12172577  0.27812335],positive,positive
+33,0,0,@user She just didn't get them in areas were she needed them. Lots of voter suppression going on. Hacking & tampering💙 ,ENG,[0.34959313 0.3357079  0.31469896],[ 0.05698932  0.01646073 -0.04816417],negative,negative
+34,1,1,Pictures: Players on the bench during the game. #fcblive  ,ENG,[0.31265098 0.37505865 0.31229043],[0.01369139 0.19568627 0.01253746],neutral,neutral
+35,1,2,Listen to #NBAwards Winner @user interview on @user ,ENG,[0.30983385 0.35672173 0.33344445],[0.04541969 0.18633942 0.11885965],neutral,positive
+36,0,0,Pelosi should go no matter ,ENG,[0.39646247 0.31681085 0.28672674],[ 0.18830784 -0.03596859 -0.13574383],negative,negative
+37,1,1,Used Google earth with a VR headset and #jeez ,ENG,[0.2707304  0.40218934 0.32708016],[-0.12380674  0.2719927   0.06527509],neutral,neutral
+38,0,2,"Kelly Anne Conway is here reporting the wall is a glorious 10 meters high, while Ben Carson counters that 'meters' arent even a real thing ",ENG,[0.42722923 0.28422707 0.2885437 ],[ 0.20145586 -0.20609137 -0.1910183 ],negative,positive
+39,0,0,I'm doing a speech on animal testing and it is so fucking horrible oh my god ,ENG,[0.451153   0.18551432 0.36333275],[ 0.34481904 -0.5438554   0.12833154],negative,negative
+40,1,1,@user She will be hearing my voice on her hesitation to back HRC. I am a MA voter. @user @user @user ,ENG,[0.3370599  0.34333688 0.31960323],[0.16344985 0.1819014  0.11026962],neutral,neutral
+41,1,2,Grayson Allen & Lonzo Ball the best players in college basketball. ,ENG,[0.24194515 0.38220578 0.37584913],[-0.12488851  0.3323596   0.31558827],neutral,positive
+42,1,0,@user Coward... well... why doesn't Poroshenko or Avakov or Saakasjvili travel to Crimea? ,ENG,[0.3046932  0.4278328  0.26747394],[-0.00185144  0.33757573 -0.13213462],neutral,negative
+43,1,1,President-elect @user has a conflict of interest in Dakota Access Pipeline. #IStandWithStandingRock ,ENG,[0.32150486 0.38713133 0.29136375],[0.10355354 0.28930482 0.0051133 ],neutral,neutral
+44,2,2,"FINALLY watching Love & Happiness!!!  This country is going to miss your family's class, wisdom, love, and patience. #ThankYouObama ",ENG,[0.26161122 0.2787168  0.4596719 ],[-0.04809213  0.01524467  0.5155614 ],positive,positive
+45,0,0,-- @user your statement for Mitt to apologize is not a qualifier for him as SOS Trump's transition is ASKING its an Insult. ,ENG,[0.42417645 0.28085583 0.29496765],[ 0.23066676 -0.1816413  -0.13261707],negative,negative
+46,2,1,I'm crying over Richard and Leonard Cohen 😭😭😭 #GilmoreGirlsRevival ,ENG,[0.3505359  0.27293652 0.3765275 ],[ 0.03620102 -0.21402287  0.10772894],positive,neutral
+47,0,2,#MPN #OneDirection#MtvStarsNiallHoran JESUS😍😍😍😍😍 ,ENG,[0.36861372 0.315125   0.31626126],[ 0.13753794 -0.01924195 -0.01564263],negative,positive
+48,0,0,"@user last thing @user needs is a self-promoting $ laundering medicare fraud scammer, voter fraud.. rese… ",ENG,[0.3909012  0.30289418 0.30620462],[ 0.18227494 -0.07279637 -0.06192639],negative,negative
+49,2,1,Join us today JBR The Walk at 5:30 for a special performance for the Orange Campaign#SpeakUpae #OrangeTheWorld … ,ENG,[0.24198979 0.37030917 0.38770103],[-0.12941404  0.2960287   0.34192497],positive,neutral
+50,2,2,If you wanna have some seasonal fun & #teachecon #Hatchimals are today's Cabbage Patch Kids & Tickle Me Elmo Christ… ,ENG,[0.34625    0.2876337  0.36611632],[ 0.02993453 -0.15553872  0.08572459],positive,positive
+51,0,0,This reminds me of that time I got attacked by Alt-rightists: ,ENG,[0.36917308 0.30217382 0.32865307],[ 0.15950336 -0.0407598   0.04324045],negative,negative
+52,1,1,"On a place of Poroshenko I would gave Saakashvili a medal ""For the liberation of Odessa..."". ",ENG,[0.32662275 0.36378568 0.30959162],[0.06638592 0.17414495 0.01283406],neutral,neutral
+53,2,2,Look at Kierra doing her good singing and growling today. #ThankYouObama ,ENG,[0.32602787 0.28009155 0.39388058],[ 0.05390267 -0.09796372  0.24296752],positive,positive
+54,1,0,Taylor Shit doing the #mannequinchallenge here in the great state of Rhode Island means that the mannequin challenge is #cancelled. ,ENG,[0.32048482 0.3403142  0.33920097],[0.00326163 0.06329604 0.06001947],neutral,negative
+55,0,1,MY LIFE by Fidel Castrohttps://t.co/2hGT23JyGz#FidelCastro #books #MyLife ,ENG,[0.36529836 0.3222393  0.3124623 ],[0.19159675 0.0661768  0.0353662 ],negative,neutral
+56,2,2,#ThisIsUs = my new fav series 👊🏾 ,ENG,[0.31748882 0.3327652  0.349746  ],[0.07012343 0.11711793 0.16688797],positive,positive
+57,0,0,"""Are we out of touch, sexually deviant, decadent dilettantes who can't own up to our misrule?No it is the deplora… ",ENG,[0.46524164 0.25681928 0.27793914],[ 0.31899574 -0.27518857 -0.19615902],negative,negative
+58,2,1,First Look at Neighbors 2 with Zac Efron Shirtless! (PHOTO)... #zacefron ,ENG,[0.23855649 0.35213354 0.40930995],[-0.13065013  0.25875425  0.40921646],positive,neutral
+59,0,2,"It's incredible how many people are born in November... if u think about it, that means they were conceived in february...(VALENTINES DAY) ",ENG,[0.35798675 0.30899185 0.33302143],[ 0.11407248 -0.03310862  0.04178337],negative,positive
+60,0,0,"Mooreder When Michael Moore picks up your cause, then wrecks you. ""He so called out the DNC! It was mooreder I tells ya!"" #UsefulNewVerbs ",ENG,[0.34029153 0.33925974 0.32044867],[0.09326844 0.09023182 0.03318789],negative,negative
+61,0,1,"FACT: there is NO online gun ""loophole"". READ>> #2A #NRA #PJNET #tgdn #tcot #teaparty ",ENG,[0.34750524 0.32653818 0.3259565 ],[ 0.05119243 -0.01104041 -0.01282337],negative,neutral
+62,1,2,I liked a @user video from @user Persona 5 - E3 Gameplay Analysis ,ENG,[0.20862672 0.39741245 0.39396086],[-0.21306455  0.43136346  0.42264038],neutral,positive
+63,0,0,Donald Trump does not have a clue about global warming. Maybe the Rockefeller's can clue them in about fossil fuels. ,ENG,[0.40255582 0.2962262  0.30121797],[ 0.1757521  -0.13095826 -0.11424758],negative,negative
+64,2,1,The latest Bare Thoughts that matter!! Thanks to @user @user @user #nodapl #nbawards ,ENG,[0.24608399 0.3286223  0.4252937 ],[-0.14994806  0.1392881   0.39715907],positive,neutral
+65,2,2,Our #MannequinChallenge it's only 10 secs tho 😂😂😂 ,ENG,[0.28357953 0.35819522 0.35822532],[-0.05751339  0.1760721   0.17615618],positive,positive
+66,1,0,#TV #Bullshit They are saying #Brexit was not about Closing borders and leaving the single market?? FUNNY THAT ?? STOP BULLSHITING US ,ENG,[0.31911165 0.37838918 0.30249915],[0.06019024 0.23057243 0.00672762],neutral,negative
+67,0,1,Many rightists say a person is reacting emotionally when a person is trying to engage. ,ENG,[0.454357   0.27208835 0.27355468],[ 0.23179993 -0.28095648 -0.27558175],negative,neutral
+68,2,2,Yeah where's season 2 gonna go? Incredible season finale yo #WestWorld ,ENG,[0.24998   0.3739066 0.3761134],[-0.11605828  0.28656685  0.2924515 ],positive,positive
+69,1,0,“Pharmaceutical companies are being affected by these lower numbers in so many states across the country.” ,ENG,[0.35054615 0.36021224 0.28924164],[ 0.12952062  0.15672168 -0.06270927],neutral,negative
+70,0,1,Possible lawsuit amid new Texas rules over fetal remains ,ENG,[0.38341203 0.35136688 0.26522112],[ 0.19365282  0.10637353 -0.17489356],negative,neutral
+71,2,2,Bob Dylan is the greatest. ,ENG,[0.33794993 0.28682765 0.3752224 ],[ 0.10278501 -0.06123124  0.20740616],positive,positive
+72,0,0,"@user By this logic, we shouldn't have lifted embargo on Cuba b/c it was ""long standing policy."" ",ENG,[0.43158358 0.30731663 0.26109976],[ 0.2751964  -0.0643862  -0.22736226],negative,negative
+73,0,1,"Anyone else praying the recount shows an error in voting in PA, WI, MI and they flip for Hillary??? #StillWithHer ",ENG,[0.37454334 0.2867666  0.33869007],[ 0.15626466 -0.11077429  0.05564258],negative,neutral
+74,2,2,"So is @user gonna sing the #BeautyAndTheBeast theme song? Cos I mean it'd be really great if she did. It'd be perfect, actually... ",ENG,[0.26217178 0.32324958 0.41457862],[-0.05797136  0.1514534   0.40029132],positive,positive
+75,0,0,Nope. But it may not matter as Dems tend to be invertebrates & it pains me to say this. Lame duck session should be… ,ENG,[0.37757322 0.3088069  0.31361985],[ 0.08646876 -0.11457955 -0.0991142 ],negative,negative
+76,2,1,One Of Us Cannot Be Wrong | Leonard Cohen ,ENG,[0.3254218  0.32955855 0.34501964],[-0.01380255 -0.0011708   0.04467651],positive,neutral
+77,1,2,I liked a @user video Adrian Younge and Ali Shaheed Muhammad (feat. Method Man) – Bulletproof Love ,ENG,[0.28503326 0.3625547  0.35241202],[-0.0585332   0.18203625  0.15366195],neutral,positive
+78,0,0,@user Donald Trump needs this idiot for his nomination to his cabinet what a joke ,ENG,[0.4204669  0.27287292 0.3066602 ],[ 0.2333427  -0.19901694 -0.08228275],negative,negative
+79,0,1,Syria army takes new Aleppo district: monitorhttps://t.co/AEKBmmX9Y1#Aleppo #Syria #SyrianArmy ,ENG,[0.37731928 0.3277199  0.2949609 ],[ 0.21566817  0.07473572 -0.03058072],negative,neutral
+80,0,2,Powerful words on sport and life. Full transcript of Tony Romo's statement: ,ENG,[0.36575884 0.29855335 0.33568782],[ 0.11947557 -0.08354999  0.03368299],negative,positive
+81,0,0,"@user @user Nazi philosophy defined: Breathtaking douchebag stuff. Also, a form of Socialism ",ENG,[0.3486321  0.34676838 0.30459952],[ 0.06203755  0.0566774  -0.07298181],negative,negative
+82,0,1,@user ....they haven't read about his history with that wall in Scotland or his shabby business deals.#deplorables bought a lemon ,ENG,[0.39124915 0.31067774 0.29807314],[ 0.17596692 -0.05462155 -0.09603877],negative,neutral
+83,2,2,Watching #BETPresents Love & Happiness an Obama Celebration brings tears 2 my eyes @user u led this country w/#dignity&grace #ThankYouObama ,ENG,[0.302116   0.27210355 0.42578042],[ 0.05411193 -0.05051643  0.3972246 ],positive,positive
+84,0,0,Kim fatty the third of north korea is the worst dictator that keeps hereditary communist dynasty in the world ,ENG,[0.45676312 0.2478812  0.29535568],[ 0.32279366 -0.2884217  -0.11319095],negative,negative
+85,1,1,#Syria #Hezbollah Nasrallah's bodyguard identified in #Aleppo ,ENG,[0.28968942 0.42437574 0.28593487],[ 0.00290887  0.38471875 -0.01013651],neutral,neutral
+86,2,2,Finally watching Scream Queens episode 5 after what feels like forever!! #ScreamQueens ,ENG,[0.2083752  0.34124112 0.45038375],[-0.25189486  0.24135421  0.51886487],positive,positive
+87,0,0,Just in: Trump advisor Steve Bannon wants Black Friday banned. Shopping day doesn't fit Alt-Right color scheme. ,ENG,[0.34903178 0.32390028 0.32706797],[ 0.04907729 -0.02564998 -0.01591773],negative,negative
+88,2,1,@user @user It all comes together if electors go with the popular vote. Dun dun DUNNNN! ,ENG,[0.35167024 0.27486336 0.3734664 ],[ 0.15851337 -0.08790637  0.21864751],positive,neutral
+89,2,2,"Exotic Fashion News Journal is out! Managing Editor, Riley Rose McKesson, @user #beautyandthebeast ",ENG,[0.24858263 0.35757425 0.3938431 ],[-0.07932235  0.28424543  0.380855  ],positive,positive
+90,1,0,"Prof, what do you humanly think when prices of stuffs skyrocketed leaving behind the country's minimum wage? Corruption is imminent. @user ",ENG,[0.33557266 0.35571483 0.30871248],[0.13224743 0.19053827 0.04881927],neutral,negative
+91,0,1,UK Govt reject criticism on Libya saying its involvement saved lives-... wishing UK to enjoy post Gadafi Libya fate. #UK #libya ,ENG,[0.36728033 0.343891   0.28882864],[ 0.18378788  0.11798726 -0.05650391],negative,neutral
+92,2,2,Happy Black Friday everybody! @user #thewalkingdead #walkers #zombies #blackfriday… ,ENG,[0.26791596 0.29401508 0.43806902],[-0.13707796 -0.04412039  0.35462505],positive,positive
+93,0,0,The phoenix cried fat tears of pearlWhen the dragon snapped up his best girl 🎶 @user #FantasticBeasts #FBNewthttps://t.co/4g5lyjV9S3 ,ENG,[0.41514683 0.26350358 0.32134953],[ 0.1957902  -0.2587751  -0.06031268],negative,negative
+94,2,1,"Bob Dylan sings his 5th biggest hit, Knockin' On Heaven's Door live on MTV's Unplugged in 1995 - ",ENG,[0.21526399 0.3893291  0.3954069 ],[-0.32767594  0.26488394  0.28037435],positive,neutral
+95,2,2,🤔🤔🤔 younger is better!!! #toyboy #onedirection ,ENG,[0.2498385  0.31157485 0.43858674],[-0.17534906  0.04547586  0.38739383],positive,positive
+96,0,0,@user Not surprised. People hate being duped. Truth is brutal. Putin manipulated. FBI Comey reinforced the myth Putin created. ,ENG,[0.42186853 0.28900844 0.289123  ],[ 0.22244848 -0.15578943 -0.15539306],negative,negative
+97,0,1,"@user Corby - he was all for building a wall on the Mexican border, denying Muslims entry to the US, and against BLM. ",ENG,[0.42850012 0.28966993 0.28182992],[ 0.21760453 -0.17394437 -0.20138267],negative,neutral
+98,2,2,"Google Earth in VR is a ""profound, almost emotional"" experience. Many people are calling it the best thing they've experienced in VR. ",ENG,[0.30437902 0.34146497 0.354156  ],[-0.03263378  0.08233763  0.11882998],positive,positive
+99,0,0,Exactly right and the problem. #Hamas and the #PA both PROMOTE the idea of their people dying to fuel their war. ,ENG,[0.4104073  0.26425698 0.32533568],[ 0.21739972 -0.22282836 -0.01489283],negative,negative
+100,0,1,"Don't worry, there's enough fossil fuels to go around along with your fossil (outdated) views - we won't have to us… ",ENG,[0.43842965 0.25392503 0.3076453 ],[ 0.26887226 -0.27728802 -0.0853797 ],negative,neutral
+101,0,2,ashley graham is so pretty ,ENG,[0.4163529  0.23270346 0.35094362],[ 0.24742307 -0.33434522  0.07651545],negative,positive
+102,0,0,I'm not going to sack Tony romo but I will sack dak ,ENG,[0.45177504 0.24419954 0.30402538],[ 0.2675581  -0.34764066 -0.12851515],negative,negative
+103,0,1,Some NBA team is going to waste a 1st round pick on Grayson Allen. I'm guessing the Suns ,ENG,[0.37533307 0.2777797  0.3468872 ],[ 0.14654316 -0.15444231  0.067729  ],negative,neutral
+104,1,2,"Fuel efficiency of vehicles improving rapidly, reducing pollution, hurting fossil fuel industry.#ThankYouObama ",ENG,[0.32986748 0.34400964 0.32612294],[0.01571882 0.05769745 0.00430218],neutral,positive
+105,0,0,*me not prepared to give a speech on medical marijuana*: hey professor can I just teach y'all how to roll a blunt for the next 7 minutes ,ENG,[0.44590256 0.23669238 0.31740513],[ 0.22034147 -0.41299766 -0.11958002],negative,negative
+106,0,1,"So who's next? Maduro? A little young, perhaps, but it is Venezuela.... ",ENG,[0.3442251  0.32115865 0.33461624],[0.11397012 0.04460952 0.08565862],negative,neutral
+107,2,2,Taking hella left overs for my break today thanksgiving pt.2 mf . ,ENG,[0.26286247 0.34094495 0.39619252],[-0.11680645  0.14328358  0.2934628 ],positive,positive
+108,0,0,@user You need to resign -- your immigration case is a big lie -- you're a hater and a bigot -- voter suppression is voter fraud ,ENG,[0.44501153 0.27950725 0.27548125],[ 0.31340793 -0.15166408 -0.1661726 ],negative,negative
+109,1,1,@user where did you get the fact that there is infighting in the Trump transition team over SofS? @user ,ENG,[0.30854192 0.38151228 0.30994576],[0.06556254 0.2778479  0.07010215],neutral,neutral
+110,0,2,"if you wanna feel a lil better about the state of the world and maybe crack a smile watch Michael Moore's ""Where To Invade Next"" ",ENG,[0.3878437 0.292838  0.3193182],[ 0.11392118 -0.16706166 -0.08049319],negative,positive
+111,0,0,@user @user @user @user Too bad #MH17 truth comes free. I know how that really bugs piss out of you paid #Kremlintrolls ,ENG,[0.3736993  0.29915315 0.32714754],[ 0.11583935 -0.10665651 -0.01720088],negative,negative
+112,1,1,". @user was ""the first U.S. officer ever allowed inside the headquarters of the GRU."" (Russian military intelli… ",ENG,[0.32084367 0.3744197  0.3047366 ],[0.0578475  0.21227084 0.00634131],neutral,neutral
+113,2,2,Saw a Tesla Model S and X today. They were awesome. Definitely getting one when I hit 3M subs like @user lol ,ENG,[0.36504337 0.26689067 0.36806592],[ 0.16038376 -0.15279333  0.16862962],positive,positive
+114,0,0,@user @user sir serious concern must take to avoid fossil fuels solar cars and so on must come to india jai hind. ,ENG,[0.38130283 0.30818117 0.310516  ],[ 0.18141744 -0.03148862 -0.02394108],negative,negative
+115,2,1,"@user Nah, she's cool. Repeal won't kick in before summer, when she's old enough for Medicare. Oh, wait... ",ENG,[0.26027024 0.31719932 0.42253047],[-0.08428917  0.11352077  0.40025198],positive,neutral
+116,2,2,Oh my god that Thanksgiving #ThisIsUs episode had me in tears 😭😭😭 ,ENG,[0.28713888 0.26111746 0.45174366],[-0.03200893 -0.12700464  0.42114002],positive,positive
+117,2,0,Uno wen u finally get over the fact u were in Tipp for 8 wks on placement and then get an email to say u'll be in Kilkenny for another 8 wks ,ENG,[0.34588632 0.30576742 0.34834617],[ 0.05537026 -0.06791513  0.06245681],positive,negative
+118,1,1,"@user ""Ask TIm Duncan about us."" #DropsMic #BBN ",ENG,[0.32355326 0.35371396 0.32273275],[0.05937146 0.14849626 0.05683227],neutral,neutral
+119,2,2,There's this Jaguar ad that keeps coming up on my tl and every time i see it i think of a tesla model s ,ENG,[0.33132014 0.27987972 0.3888001 ],[ 0.04992657 -0.11879846  0.2099069 ],positive,positive
+120,2,0,It could all be true and @user  @user Drone strikes & flying around on Air Force 1 has caused it! ,ENG,[0.32059428 0.2901058  0.3893    ],[ 0.04680265 -0.05312816  0.24097645],positive,negative
+121,1,1,Hazy Days Ahead? What We Don't Know About Florida's New Medical Marijuana Law - Above the Law… ,ENG,[0.3297462  0.36663446 0.30361933],[ 0.06800911  0.17405125 -0.01453931],neutral,neutral
+122,0,2,"Bearakeet, Burtle, Draggle, Penguala for sale! DM me before they are all gone! #Hatchimals #hatchimal #blackfriday… ",ENG,[0.37599283 0.25329712 0.37071002],[ 0.11089162 -0.28411537  0.09674169],negative,positive
+123,0,0,"Don't want to be unsporting, but this man as POTUS? It's terrifying. Wait til he calls Kim Jong-Un a loser. ",ENG,[0.438394   0.24317725 0.31842873],[ 0.24915414 -0.3401734  -0.07056527],negative,negative
+124,0,1,The gov't quietly just approved this enormous oil pipeline #NoDakotaAccess #NoDAPL ,ENG,[0.36932215 0.3408102  0.2898677 ],[ 0.19604908  0.11570551 -0.04619557],negative,neutral
+125,1,2,"Ashley Graham, Tami Roman + More Reveal Which Diva They're Most Excited To See ",ENG,[0.23131558 0.3912371  0.3774473 ],[-0.1947052   0.33082566  0.29494286],neutral,positive
+126,0,0,List of people I'd love to punch in the mouth:1. Grayson Allen2. Josh Norman3. Josh Norman again ,ENG,[0.43295407 0.2614624  0.3055836 ],[ 0.2211295  -0.2832117  -0.12727879],negative,negative
+127,1,1,"Quote of the year:""Hello"" - Melania Trump ",ENG,[0.27490598 0.39292723 0.33216676],[-0.09062198  0.2665733   0.09858599],neutral,neutral
+128,2,2,"I love Antoine Walker, ""Ask Tim Duncan about us!"" ",ENG,[0.29227716 0.29744312 0.41027972],[-0.03933036 -0.02180975  0.29980636],positive,positive
+129,0,0,I hate it when conservatives recreate churches. ,ENG,[0.4125823  0.25548032 0.33193737],[ 0.24656181 -0.23272857  0.02907243],negative,negative
+130,0,1,Pelosi sends 3rd letter to House Ds ahead of 11/30 elections on leadership team including Lujan back at DCCC Chairhttps://t.co/1VDt7sPBDR ,ENG,[0.37537676 0.33293596 0.2916873 ],[ 0.15109628  0.03111628 -0.10115159],negative,neutral
+131,0,2,"Something to fight for: Schumer, Pelosi throw down the gauntlet on @user plan to privatize, voucherize Med… ",ENG,[0.37814724 0.32352158 0.29833117],[ 0.11786862 -0.03814921 -0.11921088],negative,positive
+132,0,0,"@user ""As conservatives, we also care about your sexuality though"". ",ENG,[0.37022322 0.30028614 0.3294907 ],[ 0.17505121 -0.03431909  0.05849317],negative,negative
+133,1,1,Killer Robots and Rebel Wieners: Did Hollywood’s Working-Class Revolt Fantasies Fuel Trump’s Rise? ,ENG,[0.31630477 0.39059243 0.29310286],[-0.02287008  0.18808825 -0.0990527 ],neutral,neutral
+134,0,2,"$15 minimum wage is a win-win. If businesses continue to boom, it's a win. Or, if it puts @user out of b… ",ENG,[0.40690958 0.31115797 0.2819324 ],[ 0.20805457 -0.06023571 -0.15886906],negative,positive
+135,0,0,The radical left positioned Trump as a Nazi when they themselves r deeply anti Semitic and their riots are mini Intifadas. Keith Ellison. ,ENG,[0.37497404 0.32165858 0.30336735],[ 0.15469557  0.00132947 -0.05721677],negative,negative
+136,1,1,Pete BurnsDavid BowieLeonard CohenAlexis ArquetteGene WilderChristina GrimmiePrinceChynaBig AngFlo Henderson etc.RIP 2016 ,ENG,[0.3030983  0.39556167 0.30134013],[-0.02007047  0.24617913 -0.02588797],neutral,neutral
+137,2,2,How I feel after post #Thanksgiving headed to #BlackFriday looking for deals and doing my #cardio on... #Doyoueven?… ,ENG,[0.27024403 0.3467358  0.38302016],[-0.15277757  0.09646022  0.19598472],positive,positive
+138,0,0,@user you shut your mouth Grayson Allen is a saint ,ENG,[0.4289729  0.2598826  0.31114447],[ 0.26814735 -0.23301646 -0.05298916],negative,negative
+139,1,1,Cynthia Mckinney: AIPAC total control of US Gov't  #aipac #lobby #israel #palestine #BDS ,ENG,[0.35663584 0.36612663 0.2772376 ],[ 0.14815293  0.17441696 -0.10368742],neutral,neutral
+140,2,2,#friday #itsfriday #blackfriday #dayafterthanksgiving hope everyone has a wonderful thanksgiving… ,ENG,[0.36798415 0.24732657 0.3846893 ],[ 0.14250672 -0.2548235   0.18690287],positive,positive
+141,0,0,@user Melania Trump isn't a public figure. She's a spouse who is being mocked for a speech she didn't write. Just sayin'. ,ENG,[0.38970593 0.27235457 0.33793947],[ 0.15779528 -0.20049237  0.01526965],negative,negative
+142,0,1,BREAKING Fox NEWS: (WTF) President OBAMA at fault for ANTI TRUMP riots ,ENG,[0.33792353 0.3304175  0.33165905],[0.08829541 0.0658328  0.06958323],negative,neutral
+143,1,2,77%OFF: Really working in LIVE trade! 💰Fully automated Forex trading Systems/Robots/Signa… ,ENG,[0.27851042 0.3787587  0.3427309 ],[-0.08239236  0.2250515   0.12509783],neutral,positive
+144,0,0,Israeli brutality immune to Palestinian calls for justice: #gaza #palestine #israel #jerusalem ,ENG,[0.43927646 0.27987236 0.28085116],[ 0.2759479  -0.17484751 -0.17135619],negative,negative
+145,0,1,Wait nvm David Ross is on it for some reason and I'm not sure if that's Verlander or someone else ,ENG,[0.39683723 0.28894863 0.31421414],[ 0.1661564  -0.15112087 -0.06729508],negative,neutral
+146,2,2,@user @user @user #Israel #Jerusalem SHABBAT SHALOM & BLESSINGS EVERYONE!!! ,ENG,[0.22127901 0.34372655 0.4349944 ],[-0.17641303  0.26400903  0.49949571],positive,positive
+147,1,0,Full Gallery: Mac - Learning to deep throat ,ENG,[0.25740883 0.3852873  0.3573038 ],[-0.17675251  0.22657123  0.15116827],neutral,negative
+148,2,1,Discussing Catholic Faith and Pope Francis Live On Radio... #catholic ,ENG,[0.2791839  0.34674463 0.37407154],[-0.02236007  0.19435778  0.27021626],positive,neutral
+149,2,2,Picture | That time I took a photo of Zac Efron taking a photo of Zac Efron. Efronception. | ,ENG,[0.3110913  0.3362104  0.35269827],[0.00328239 0.08093313 0.12880892],positive,positive
+150,0,0,When you wake up sick asf after getting to turnt on thanksgiving 🦃🔪 ,ENG,[0.39065903 0.23243271 0.37690827],[ 0.1879895  -0.3312449   0.15215623],negative,negative
+151,0,1,"‣ Chomsky and Hillary  | ""Why are some leftists acting that Hillary was some great..."" | | #AngryArab ",ENG,[0.40023822 0.28402424 0.31573755],[ 0.1894443  -0.15355603 -0.04770431],negative,neutral
+152,0,2,Good enough for me. He told her to concede. And I thought. That is rushing it a bit. Same with Gore. Dems have to g… ,ENG,[0.4552815  0.25548503 0.28923345],[ 0.257789   -0.3199631  -0.19589275],negative,positive
+153,1,0,Really?! #MelaniaTrump and #BarronTrump won't be moving to the #WhiteHouse come January: ,ENG,[0.18966807 0.4422774  0.36805454],[-0.30077574  0.545886    0.36217985],neutral,negative
+154,1,1,Saakashvili’s Resignation: Start of Ukrainian Parliamentary... via @user ,ENG,[0.34902155 0.35197616 0.29900232],[0.15860969 0.1670394  0.00392728],neutral,neutral
+155,2,2,@user Darlena; I loved your piece 'deplorables' .  It made me feel great about Trump.☺ ,ENG,[0.33154055 0.31677666 0.35168278],[0.08237141 0.0368183  0.14135087],positive,positive
+156,2,0,Hey Liberals. I'm going to ask for a recount and try get Hillary into the presidency. You can send me your money. Bank details later ,ENG,[0.2935772  0.35309318 0.35332963],[-0.03881806  0.14577323  0.14644271],positive,negative
+157,1,1,These gas stations need to have some #blackfriday prices for #uber drivers #lbvs Use my link for $200 extra:… ,ENG,[0.3298792  0.36922875 0.30089208],[ 0.06094667  0.17363654 -0.0310282 ],neutral,neutral
+158,2,2,happy thanksgiving to all fellow native americans @user ,ENG,[0.32079765 0.2710714  0.4081309 ],[0.20566092 0.0372327  0.4464384 ],positive,positive
+159,2,0,"by putting it on your face, you're condoning animal testing and animal ingredients in make up!! ",ENG,[0.26491266 0.26319018 0.47189716],[-0.05469644 -0.06121982  0.5226644 ],positive,negative
+160,0,1,"Social science in action, case study: Oregon voting. Opt-out, not opt-in, to achieve high rates of participation. ",ENG,[0.36967137 0.33592653 0.2944021 ],[ 0.12879723  0.03307524 -0.09887078],negative,neutral
+161,1,2,#Spurs #GoSpursGo SAN ANTONIO SPURS #Card LOT TIM DUNCAN DAVID ROBINSON MANU GINOBILI AVERY JOHNSON #TimDuncan #NBA ,ENG,[0.26053748 0.40609315 0.33336934],[-0.07638336  0.36745244  0.17012084],neutral,positive
+162,0,0,Well - we shld be grateful for that home b/c most likely the DT admin will cut it from the budget/put them on the s… ,ENG,[0.45604458 0.25074443 0.29321098],[ 0.2767464  -0.3214101  -0.16495177],negative,negative
+163,1,1,129 days until the release of Persona 5 ,ENG,[0.21861273 0.4449708  0.3364165 ],[-0.23060201  0.48010477  0.20044617],neutral,neutral
+164,2,2,Going to see the adorable Eddie Redmayne in #FantasticBeasts tonight. Happy Friday! ,ENG,[0.20337802 0.29305962 0.50356233],[-0.26535016  0.09995948  0.6412909 ],positive,positive
+165,0,0,📷 “Cuba sends physicians all over the world. The U.S. responds with an embargo.” Via USSR 2.0 ,ENG,[0.36374864 0.35941124 0.2768402 ],[ 0.12142479  0.10942894 -0.1515978 ],negative,negative
+166,1,1,"@user @user @user @user @user @user Non-availablity of child vaccines @ Jamui, Bihar hospital** ",ENG,[0.3107265  0.39721084 0.2920627 ],[0.07314193 0.31869614 0.01119747],neutral,neutral
+167,2,2,@user made America Respected around the world again #thankyouObama @user @user @user @user @user ,ENG,[0.28736904 0.3426064  0.37002465],[-0.0311891   0.14462587  0.22161329],positive,positive
+168,0,0,The #Trump cabinet is an utter disaster. Full of cronies and swamp dwellers. You #MAGA people have been taken. Next… ,ENG,[0.3666151  0.29912233 0.33426258],[ 0.11284319 -0.09061668  0.02045754],negative,negative
+169,0,1,If only there had been a sign...or 60. ,ENG,[0.37315866 0.32640472 0.30043656],[ 0.17056045  0.0366949  -0.04620665],negative,neutral
+170,2,2,"The house is quiet, and I am sitting by the fire and watching the latest @user episode. Yes, it's the perfect morning. #ThisIsUs ",ENG,[0.28173503 0.33359453 0.38467038],[-0.08623276  0.08272643  0.22518697],positive,positive
+171,0,0,The shruggers are all white supremacists. ,ENG,[0.44826794 0.27043727 0.2812948 ],[ 0.2961063  -0.20924456 -0.1698817 ],negative,negative
+172,2,1,@user 1. Emily 2. Michel 3.  Kirk 4. TJ. Love the quirky ones and Emily coz she's such a BIATCH! #gilmoregirlstop4 ,ENG,[0.28695175 0.31023642 0.40281188],[-0.01567984  0.06234076  0.32347578],positive,neutral
+173,2,2,The background singers breasts are clapping along to Jesus Can Work It Out. *tears* #ThankYouObama ,ENG,[0.33639514 0.29672316 0.36688164],[ 0.03432489 -0.09116212  0.12107766],positive,positive
+174,0,0,"That's the guy who now calls George Soros a Nazi ss officer from 1940 , Trumps insecurity knows no bounds GET RID O… ",ENG,[0.43292364 0.26276487 0.3043115 ],[ 0.29573444 -0.20356725 -0.05677499],negative,negative
+175,1,1,.@calreid opens our panel of #NBAwards Young People's Literature authors. #MiamiBookFair2016 ,ENG,[0.2696831  0.37991604 0.35040084],[0.0068553  0.34955806 0.26868552],neutral,neutral
+176,0,2,@user @user @user Yeah Grayson Allen. 17 points vs W&M ,ENG,[0.3549532  0.3335042  0.31154266],[ 0.11073244  0.04840196 -0.01971726],negative,positive
+177,0,0,"How can alt-rightists/identitarians be white ""supremacists"" if they don't think whites are supreme--the best, the greatest? ",ENG,[0.44318157 0.2821795  0.27463895],[ 0.27969146 -0.17174469 -0.19883078],negative,negative
+178,2,1,The latest #NoTPP Today (https://t.co/vd7t22SVe7)! Thanks to @user @user @user #stoptpp #tpp ,ENG,[0.315489   0.29541627 0.3890947 ],[ 0.05789752 -0.00784081  0.26759648],positive,neutral
+179,0,2,@user It's most appealing aspect must surely be its vegetarianism ,ENG,[0.3779519 0.3049479 0.3171002],[ 0.19780974 -0.01681615  0.02226067],negative,positive
+180,1,0,"This is a MAJOR FAILURE of the 4th estate. How Russia, Putin and Comey CONSPIRED with @user to steal the… ",ENG,[0.31938756 0.35365126 0.32696122],[0.08797339 0.18987936 0.11140964],neutral,negative
+181,0,1,At least they created electoral college to prevent less popular candidate from getting victory by popular vote with help of bigger states. ,ENG,[0.4692434 0.264802  0.2659546],[ 0.29149863 -0.28064066 -0.27629733],negative,neutral
+182,1,2,Learn more about how medical marijuana eases suffering for #Arthritis : ,ENG,[0.2441877  0.38522008 0.37059227],[-0.1389349   0.3169427   0.27823034],neutral,positive
+183,0,0,"also referring to vegetarianism as a diet is so dumb, it's a lifestyle n if u 'cheat' you're not a vegetarian, don't treat it like a diet! ! ",ENG,[0.39452925 0.23331502 0.3721557 ],[ 0.17730476 -0.34799898  0.11892378],negative,negative
+184,0,1,@user and #TrumpTransitionTeam@JimWebbUSA for Secretary of Defense. He was right in 2002 about Iraq.https://t.co/zy07ZWX96A ,ENG,[0.39133757 0.31044215 0.2982203 ],[ 0.19250907 -0.03906397 -0.07922897],negative,neutral
+185,1,2,#Rich 15 Stunning Photos Of A Young Melania Trump ,ENG,[0.26051614 0.37192044 0.3675634 ],[-0.0714956   0.2845195   0.27273536],neutral,positive
+186,2,0,The #NikkiHaley #UnitedNations appointment is political ju jitso on #Trump’s part. Rewarding his enemies with worthless positions! #tcot ,ENG,[0.3235972  0.2889488  0.38745406],[ 0.03388518 -0.07936475  0.213983  ],positive,negative
+187,2,1,Match my grind 😏 ,ENG,[0.32033265 0.29982057 0.37984675],[ 0.01409916 -0.05207654  0.18450713],positive,neutral
+188,2,2,#ThankYouObama 4everything!This @user special's giving me so much happiness in this moment. Beyond that I'm a mess;anxious &already grieving! ,ENG,[0.26499236 0.23671065 0.49829695],[-0.02228802 -0.13515039  0.6092073 ],positive,positive
+189,2,0,"spent 3 hours watching David Blaine youtube videos, THAT GUY IS FUCKING RIDICULOUS ",ENG,[0.22888668 0.38352594 0.38758743],[-0.13385229  0.38232788  0.3928621 ],positive,negative
+190,1,1,"#Yemen: hospitals being terrorised by US allied, #Saudi funded anti-Houthi forces in Ta'iz ",ENG,[0.35323486 0.36588812 0.28087702],[ 0.06967334  0.10486776 -0.15954289],neutral,neutral
+191,1,2,"Porcello nips Verlander, Scherzer romps in Cy Young win :Auto pickup by wikyou ",ENG,[0.31752622 0.3542632  0.32821056],[0.02032764 0.12980735 0.0534226 ],neutral,positive
+192,0,0,How is it that in 2016 & with the internet existing people still think vaccines are unsafe ,ENG,[0.43882808 0.28340465 0.2777673 ],[ 0.2664572  -0.17077482 -0.19086686],negative,negative
+193,1,1,he was struck by how similar parts of Trump's victory speech were to a speech Putin gave... last month ,ENG,[0.3015311  0.36828908 0.33017978],[-0.00758351  0.19241153  0.08318067],neutral,neutral
+194,2,2,Finally I'm gonna watch all eps that I missed #Lucifer #Supernatural #Arrow #Flash #Class #TheWalkingDead #TheBigBangTheory 😂💝 ,ENG,[0.2830585  0.34076715 0.37617433],[-0.08765229  0.09789348  0.19674681],positive,positive
+195,0,0,The same people who kept harping about privilege are now going on about how Great Granddad Clem was killing proto-alt rightists at Normandy ,ENG,[0.46149117 0.2568622  0.28164664],[ 0.27376652 -0.3121567  -0.22004317],negative,negative
+196,1,1,First Official Image From Neighbors 2 Starring Zac Efron And Seth Rogen #ZacEfron ,ENG,[0.21133906 0.4257525  0.36290842],[-0.19953582  0.50085855  0.3411509 ],neutral,neutral
+197,2,2,@user just in time for the long weekend. Happy Thanksgiving from Ohio. ,ENG,[0.21249162 0.3280521  0.4594563 ],[-0.1961098  0.2381602  0.5750315],positive,positive
+198,2,0,"Not sure I can take anymore. Brexit, Trump and now no more Casey and Jessica has left Eric. God is life worth living ? Tesla model S,o YES. ",ENG,[0.3516944  0.2776034  0.37070227],[ 0.09094485 -0.14562434  0.14358145],positive,negative
+199,1,1,L'Oreal wants to start 3D printing SKIN: ,ENG,[0.28267443 0.39559624 0.3217293 ],[-0.00742627  0.328672    0.12198842],neutral,neutral
+200,2,2,"Thankful for my fam, the slores, house3, tswift, Grayson Allen, wine, cats, and most of all cannolis ♥️♥️#happyturkeyday ",ENG,[0.28832424 0.2531155  0.45856026],[-0.08860317 -0.21884292  0.37540293],positive,positive
+201,0,0,@user @user More massive voter suppression. The right will stop at nothing to disenfranchise black & brown voters ,ENG,[0.38915223 0.3158503  0.29499748],[ 0.20430711 -0.00439515 -0.07269662],negative,negative
+202,0,1,@user @user  I don't know costs associated with security of a Pres. I do know 8 yrs of Obama admin has taken a huge toll on America. ,ENG,[0.4121837  0.27622342 0.31159282],[ 0.20738973 -0.19286938 -0.07238215],negative,neutral
+203,0,2,"""Robots"" (2005) is a sensitive movie (B) #ConamaraViews <oh8qpr> ",ENG,[0.37404728 0.32809252 0.2978602 ],[ 0.10067587 -0.03041074 -0.1270821 ],negative,positive
+204,0,0,@user @user @user no hate in my heart! I don't like fake people hypocrites who point there finger at others to gain $ ,ENG,[0.376333   0.3022856  0.32138136],[ 0.15344417 -0.06565789 -0.00440176],negative,negative
+205,1,1,"Lawmakers file bills on scholarships, medical marijuana, taxes - Arkansas News ",ENG,[0.32649645 0.37688306 0.29662052],[ 0.02882018  0.17233603 -0.06714533],neutral,neutral
+206,2,2,One SINGLE dose! Another marvel of Homeopathy! ,ENG,[0.23450735 0.30124488 0.4642477 ],[-0.11642431  0.13401225  0.566507  ],positive,positive
+207,0,0,@user did of any good was kept Labour/Greens out for 3 years. He should have gone 4 an important rights legacy: #euthanasia ,ENG,[0.40016586 0.29051548 0.30931866],[ 0.19175589 -0.12846638 -0.06575122],negative,negative
+208,2,1,This man David Blaine can finesse you out your shoes ,ENG,[0.34697405 0.27094543 0.38208058],[ 0.06113027 -0.18620235  0.15751186],positive,neutral
+209,2,2,"The latest Art, Music & Culture in Lawrence Kansas! #nbawards #poetry ",ENG,[0.25227547 0.35921454 0.38851005],[-0.11356632  0.2398319   0.3182311 ],positive,positive
+210,0,0,Ask who wants new stuff and stop making it. Self serve check outs? NO! Self driving cars? NO. Mass unemployment? NO. Who benefits? #auspol ,ENG,[0.3451381  0.34005827 0.31480363],[ 0.07906081  0.06423314 -0.01293482],negative,negative
+211,2,1,Also low-key wanting to look into veganism & vegetarianism? I'm feeling like trash & want to do something good for my diet and the earth. ,ENG,[0.35921046 0.26274258 0.37804693],[ 0.13046208 -0.18227156  0.18157193],positive,neutral
+212,0,2,[5A274/AC349] I LOVE YOU—I MUST BE LOVE ON THE HEAD OF THE YEAR BY BOB BURTON—FIDEL CASTRO WAS—AFTER EVERYTHING—ACCEPT WHAT IS THIS PUPPY T… ,ENG,[0.34938115 0.3098938  0.340725  ],[0.16247502 0.04254126 0.1373873 ],negative,positive
+213,2,0,Nov 19????.Busted !! WIKILEAKS anti TRUMP PROTESTS SponsorS BY HILLARY AND GEORGE... ,ENG,[0.23369674 0.38050273 0.3858005 ],[-0.16441552  0.32305363  0.33688065],positive,negative
+214,1,1,To Donald Trump: National Security Memorandum Number One - - #Alternative #Matrix #Vaccines ,ENG,[0.3060395 0.3945386 0.2994219],[ 0.0056663   0.25966915 -0.01619422],neutral,neutral
+215,2,2,it's a bob dylan kinda night 🎧 ,ENG,[0.39328673 0.2053733  0.40133992],[ 0.21085188 -0.43885773  0.23112167],positive,positive
+216,1,0,#Liberalism #Progressives are failing worldwide from #Brexit #Trump now #Italy ,ENG,[0.3376261  0.34712067 0.31525317],[ 0.0272702   0.05500355 -0.0412929 ],neutral,negative
+217,2,1,"@user Lucky you don't have VR, then! ",ENG,[0.30781585 0.30725887 0.38492525],[0.01881194 0.01700092 0.2423594 ],positive,neutral
+218,2,2,Keep pushing! #FightFor15 #IncomeEquality #IBelieveInGini ,ENG,[0.32132536 0.28433332 0.39434135],[ 0.0487395  -0.07356748  0.25350228],positive,positive
+219,1,0,Turkey is #ISIS itself @user @user @user @user @user #BlackFridayTactics ,ENG,[0.34213814 0.3723787  0.2854831 ],[ 0.16764116  0.25233793 -0.01339056],neutral,negative
+220,1,1,@user Exactly how many Super Bowl wins does Tony Romo have ? ,ENG,[0.28983006 0.37636128 0.33380872],[-0.00116949  0.2600853   0.14010394],neutral,neutral
+221,1,2,I liked a @user video from @user Chicago Cubs World Series Champions Highlights ,ENG,[0.22508352 0.39695325 0.37796324],[-0.11182791  0.4555191   0.40649757],neutral,positive
+222,1,0,Get your news about the #TrumpTransitionTeam NOT from backstabbing  Commie liars at @user @user @user  Enemies of USA ,ENG,[0.2984643  0.3655822  0.33595353],[0.0018007  0.20464155 0.1201233 ],neutral,negative
+223,0,1,"'Its funny how we'll sell our waking life for minimum wage, but you know, you can get your dreams for free' ",ENG,[0.46089593 0.21887672 0.3202274 ],[ 0.28626382 -0.45839977 -0.077877  ],negative,neutral
+224,2,2,Opening de Ricky Martin 🎶💥@laliespos 💞 #LaliEnMexico ,ENG,[0.22585878 0.37914366 0.3949975 ],[-0.21929513  0.2987102   0.33967444],positive,positive
+225,2,0,@user @user @user I have yet to hear of any help from Obama admin. ..please post info if you have it. Thanks! ,ENG,[0.28982598 0.2724057  0.43776825],[-0.0022322  -0.06422038  0.41017675],positive,negative
+226,2,1,I hope #TheWalkingDead writers/producers end Negan. If this is the direction of the show - I am peace out at season… ,ENG,[0.30987248 0.3084234  0.38170406],[ 0.00270665 -0.00198064  0.21119142],positive,neutral
+227,0,2,@user Yes. Thank you Wikileaks for being the honest provider of facts in the 2016 election. You saved us from the TPP and Islamization ,ENG,[0.38502708 0.29312015 0.3218528 ],[ 0.19696908 -0.07576202  0.01774968],negative,positive
+228,0,0,"""Democrats and the faux liberals are absolutely pathetic - 90% of the media is in their pocket, even the reporters… ",ENG,[0.49243855 0.2455309  0.2620306 ],[ 0.30819902 -0.38774785 -0.3227094 ],negative,negative
+229,1,1,Saakashvili passed the test for the maintenance drugs. Video - ,ENG,[0.3015495  0.3666067  0.33184388],[-0.02247325  0.17288227  0.07325724],neutral,neutral
+230,2,2,Just donated for my third time.  We just need to keep this up for one more day.  #AuditTheVote #stillwithher ,ENG,[0.32540274 0.28322485 0.39137244],[-0.03157745 -0.17040002  0.15301853],positive,positive
+231,2,0,"@user @user her attack onTRUMP for""locker room""talk yet she takes sexy pictures she's a hypocrite What… ",ENG,[0.33154693 0.3293307  0.33912233],[0.08157517 0.07486828 0.10416673],positive,negative
+232,1,1,@user You can go home now. Nothing left to tweet. ,ENG,[0.28279743 0.37652054 0.3406821 ],[-0.05035344  0.23588829  0.13586544],neutral,neutral
+233,2,2,"After Trump Win, Parallel Path Is Seen for Marine Le Pen of France’s Far Right Glorious: Wir marchieren! ",ENG,[0.29270205 0.31645155 0.3908464 ],[-0.0385871  0.039428   0.2505724],positive,positive
+234,0,0,'The only leaders of church who would support gay marriage is churches of Satan' Pmsl   #ItsSoTrue ,ENG,[0.42633507 0.2797054  0.2939595 ],[ 0.254908   -0.16658075 -0.11687564],negative,negative
+235,0,1,I am all for legalized abortion just give men the same right too. This law Sweden is considering is pretty fair. ,ENG,[0.40176234 0.27819982 0.32003784],[ 0.26196668 -0.10555436  0.03454521],negative,neutral
+236,2,2,@user 's coolness @ Barcelona fans #homophobic slurs proves that he's a legend! #Bully @user ,ENG,[0.32212797 0.3325795  0.34529254],[0.07282539 0.10475542 0.14226845],positive,positive
+237,0,0,Conservatives and liberals alike hate science. Y'all really do. Y'all believe in homeopathy and chiropractic but not in vaccines ,ENG,[0.48343897 0.22479708 0.29176393],[ 0.34473103 -0.4209959  -0.16024908],negative,negative
+238,1,1,"Obama goes to Cuba after 50+ years of embargo, LIBTARDS pat him on the back. Trump gets a congratulations from... ",ENG,[0.32196432 0.3398715  0.33816412],[0.05597497 0.11010181 0.10506552],neutral,neutral
+239,1,2,"Tyrod Taylor, Tony Romo, or Kirk Cousins would look great in a Chiefs uniform. ",ENG,[0.25436416 0.40762526 0.33801055],[-0.14541167  0.32616958  0.1388984 ],neutral,positive
+240,2,0,@user she's not half as bad as the stupid cow currently narrating the trailer for #thisisus - just hear her ridiculous take #thizizuz ,ENG,[0.3332759  0.30531746 0.3614066 ],[ 0.05536029 -0.03225835  0.13639316],positive,negative
+241,0,1,This means they believe it to be a legitimate non-violent movement based on a concern for human rights in #Palestine. #queensu #ygk ,ENG,[0.44293416 0.2759477  0.28111812],[ 0.2634926  -0.2097172  -0.19115347],negative,neutral
+242,2,2,I liked a @user video from @user Anti-Trump Protests And Riots Backfire!! Students Starting To Realize ,ENG,[0.24527606 0.3519796  0.4027443 ],[-0.15058702  0.21060188  0.34533042],positive,positive
+243,0,0,"""This machine also kills wet liberals"" guitar stickers available now super black frahdi deelz myhearts not in thisreally asyouwere ",ENG,[0.4371696  0.23165865 0.33117178],[ 0.27103198 -0.36402422 -0.00665201],negative,negative
+244,2,1,Trending: Hatchimal | Hatchimals #Hatchimals ,ENG,[0.23730884 0.37625548 0.38643566],[-0.20123363  0.2596724   0.28636938],positive,neutral
+245,1,2,George Hill returns from injury to score 22 points in the @user 108-83 blowout win over Denver.… ,ENG,[0.26479343 0.4010972  0.3341093 ],[-0.08853926  0.3267145   0.14397894],neutral,positive
+246,1,0,"@user @user Has anyone actually seen this gun used for ""pest control""? Animal cruelty?  Wait till you see this thing in action. ",ENG,[0.32819074 0.3616949  0.31011435],[ 0.02658689  0.12379298 -0.03006693],neutral,negative
+247,2,1,I'd love your thoughts on this! ,ENG,[0.3020922  0.2090996  0.48880816],[ 0.10090809 -0.2670134   0.582146  ],positive,neutral
+248,0,2,That look on Putin's face shaking Obama's hand is priceless. ,ENG,[0.42310464 0.23187871 0.34501666],[ 0.25309175 -0.3483134   0.04906492],negative,positive
+249,0,0,@user Some stuff I agree with trump on. That the TPP is awful and that lobbyists are corrupt ,ENG,[0.4218022  0.2757458  0.30245194],[ 0.24498749 -0.18006954 -0.08762655],negative,negative
+250,1,1,inch NET [russian #NO] President SAAKASHVILI @user attacked by @user LOST 2 provinces said #YES to @user i… ,ENG,[0.32602984 0.36916304 0.3048071 ],[0.13484767 0.25909713 0.06753791],neutral,neutral
+251,1,2,#Spurs #GoSpursGo 1997 Wheels Tim Duncan RC Rookie #Card Lot #TimDuncan #NBA ,ENG,[0.25461304 0.40909526 0.33629173],[-0.08496654  0.38923657  0.19326757],neutral,positive
+252,1,0,@user @user @user @user @user @user @user  That didn't take long-GOP=Special interest. ,ENG,[0.31182942 0.35130265 0.33686793],[0.02367005 0.14286187 0.10090473],neutral,negative
+253,1,1,Cosmetics makers continue shift away from animal testing：The Asahi Shimbun ,ENG,[0.26857996 0.41461816 0.3168019 ],[0.00155653 0.43576586 0.16668458],neutral,neutral
+254,2,2,@user This is great news. For a Mexican effort to build a parallel wall on their side of the border too. ,ENG,[0.32220852 0.33472747 0.34306407],[0.08638988 0.12450763 0.14910822],positive,positive
+255,0,0,"@user  White Dems will do the SAME thing again in 2020, unless we brown people explain that all-whiteness=cold water on our enthusiasm. ",ENG,[0.38484338 0.29259506 0.32256156],[ 0.16060944 -0.1134374  -0.01593299],negative,negative
+256,0,1,"Couple scorched earth w/voter obstruction, suppression & gerrymandering & you have GOP policy.  They fear THE VOTE. ",ENG,[0.40332654 0.26993904 0.32673442],[ 0.23069388 -0.1708565   0.02009504],negative,neutral
+257,2,2,Be the 1st to check out our new look at Pl give ur feedback. #Ayurveda #Homeopathy… ,ENG,[0.33535677 0.30074143 0.36390176],[ 0.0521779  -0.05676616  0.13386689],positive,positive
+258,0,0,@user @user @user @user I'm sure it's Coach K's fault 🤔 ,ENG,[0.36293855 0.32500294 0.3120585 ],[ 0.14007065  0.02967131 -0.01097219],negative,negative
+259,1,1,"In terms of (exclusive) games I'd play on it, I can mostly only think of FFXV, Persona 5 (which I could play on PS3...), and... that's it? ",ENG,[0.28343675 0.38527015 0.33129305],[-0.0741934   0.23276234  0.08182088],neutral,neutral
+260,1,2,Congratulations to the 2016 #NBAwards Winners. @user @user @user #DanielBorzutzky… ,ENG,[0.29845726 0.36691546 0.33462727],[0.06423226 0.27073693 0.17862277],neutral,positive
+261,0,0,"Blog: Obama's shameful, phony gun control rhetoric in the wake of Charleston massacre ",ENG,[0.37516707 0.3216506  0.30318233],[ 0.15661055  0.00270496 -0.05642653],negative,negative
+262,0,1,"In the media - @user ""Abortion rights ‘could be put in constitution'""https://t.co/hEXCDMcovw ",ENG,[0.44152316 0.28308085 0.27539605],[ 0.29781398 -0.14668395 -0.17420627],negative,neutral
+263,1,2,Start riding at this point in time with #Uber Don't wait for the coming day. ,ENG,[0.24985345 0.40301946 0.34712714],[-0.14577     0.3323403   0.18304653],neutral,positive
+264,0,0,@user nobody is saying to go cold turkey on fossil fuels. Just saying to expedite alternatives. Simple minded people make straw men ,ENG,[0.38941267 0.2623857  0.3482016 ],[ 0.17673945 -0.21808466  0.0648815 ],negative,negative
+265,2,1,HAHAHAHA Chanel #5 is running out of blood 😹 #ScreamQueens ,ENG,[0.31253907 0.3299641  0.35749686],[-0.02197284  0.0322816   0.11242424],positive,neutral
+266,2,2,I think I have spent quite enough on Persona 5. ,ENG,[0.30120715 0.34507304 0.35371983],[-0.02343144  0.1125265   0.13727552],positive,positive
+267,0,0,why did I choose animal testing as my speech topic I am crying looking at these images 😭 ,ENG,[0.42223522 0.26099828 0.31676653],[ 0.27951863 -0.20153014 -0.0078789 ],negative,negative
+268,0,1,Dementia and Mercury from vaccines #health #wellness #wujilife ,ENG,[0.3617195  0.32685426 0.31142616],[ 0.07364354 -0.02771108 -0.07606318],negative,neutral
+269,2,2,"@user Thanks for following us! We appreciate you being with us, and eager to share our passion for 3D printing with you ",ENG,[0.223694   0.30734718 0.46895882],[-0.13224961  0.18544933  0.60798633],positive,positive
+270,0,0,"The Cuban embargo remains for many sectors, as trade grows slowly @user reports from… ",ENG,[0.38609695 0.34603924 0.26786387],[ 0.17292042  0.06338409 -0.19268924],negative,negative
+271,0,1,@user you joke was funny I thought    .Everyone took the piss out of melania trump for copying Michelle's speech . ,ENG,[0.41090354 0.25626796 0.33282852],[ 0.22107244 -0.25106248  0.01034133],negative,neutral
+272,2,2,@user @user I was just thinking this the other day! ,ENG,[0.2556823  0.2820238  0.46229386],[-0.06860481  0.02945102  0.5236603 ],positive,positive
+273,0,0,"fossil fuels are eventually going to run out, what are we going to use when they are depleted? ",ENG,[0.44719666 0.2849984  0.267805  ],[ 0.29106838 -0.15944658 -0.221671  ],negative,negative
+274,2,1,Soooo when will it be Maduro's turn ? ,ENG,[0.32349852 0.3118211  0.36468035],[ 0.00130971 -0.03545517  0.12113637],positive,neutral
+275,2,2,"@user has been the best, I'm trying not to miss her yet. #ThankYouObama ",ENG,[0.32837287 0.3133222  0.358305  ],[ 0.04096429 -0.00595338  0.12819919],positive,positive
+276,1,0,@user @user @user @user how have the obamas been anything but gracious to trump during the transition? ,ENG,[0.33532083 0.38220173 0.28247747],[ 0.0109289   0.14178972 -0.1605601 ],neutral,negative
+277,1,1,@user divest from the Bakken Dakota Access Pipeline. #NoDAPL #IStandWithStandingRock #WaterIsLife#divestdapl ,ENG,[0.27542037 0.4010811  0.3234985 ],[-0.02192391  0.3539411   0.13897195],neutral,neutral
+278,0,2,"Hey Colts, nice backup Quarterback, bro. S/Tony Romo #jaymohrsports ",ENG,[0.3399013  0.32371938 0.3363793 ],[0.11945764 0.0706794  0.10904176],negative,positive
+279,0,0,But the AP notes 'Kim Fat Fat Fat' still works ,ENG,[0.43923756 0.2791044  0.281658  ],[ 0.27946353 -0.17399104 -0.16488324],negative,negative
+280,0,1,@user @user @user @user @user @user (My vegetarianism is hesitantly consciousness not rights-based.) ,ENG,[0.38414872 0.3049559  0.31089544],[ 0.1643523  -0.06651034 -0.04722081],negative,neutral
+281,0,2,#lmao 😂😂😂😂 #theface definitely me #mannequin #mannequinchallenge #goofy #stevebuscemi… ,ENG,[0.3722836  0.27087417 0.35684222],[ 0.1087812  -0.20922036  0.06641895],negative,positive
+282,2,0,"@user @user - she's sounding like Pelosi, cuckoo, cuckoo, cuckoo... I wonder how much she's being paid to do this for Hillary ",ENG,[0.33984536 0.29360166 0.366553  ],[ 0.09558053 -0.05068621  0.17123297],positive,negative
+283,1,1,@user unfortunately that requires a Galaxy Note 7 ,ENG,[0.28195712 0.39759478 0.32044813],[-0.04566809  0.29801026  0.08229735],neutral,neutral
+284,2,2,This is huge - #Microsoft joins the #LinuxFoundation ,ENG,[0.2948577  0.3427988  0.36234352],[-0.03131563  0.11933514  0.17478418],positive,positive
+285,2,0,Venezuela narcotics scandal heaps pressure on President Maduro.  Execute this drug scum! ,ENG,[0.3543352  0.2798709  0.36579397],[ 0.13682775 -0.09908716  0.16865467],positive,negative
+286,2,1,@user @user @user @user Yes. US citizens happily  employed for MINIMAL (not minimum) wage! I can see it now! ,ENG,[0.30708173 0.26991624 0.423002  ],[ 0.04749759 -0.08150478  0.36776054],positive,neutral
+287,0,2,"I miss Tony romo, but I love what Dak is doing ",ENG,[0.3754289  0.26332277 0.3612483 ],[ 0.10181105 -0.25287747  0.06330758],negative,positive
+288,2,0,"@user @user @user Trumped. No money for Medicare, Social Security, Public schools-only for tax cuts. Make rich richer baby! ",ENG,[0.2787145  0.28550115 0.43578428],[-0.03144531 -0.00738714  0.4155141 ],positive,negative
+289,1,1,"Anyone have a link to the Cubs movie that premiered on the 2nd? Yes, I have yet to watch. ",ENG,[0.25996107 0.37121946 0.36881945],[-0.12137593  0.23488557  0.22839938],neutral,neutral
+290,2,2,"@user Been watching good Ole movies for a couple hours. Relaxing is good. But, Michael Moore is looking like a Lego Man. Is he? ",ENG,[0.32221064 0.3148725  0.36291686],[-0.02364569 -0.04668333  0.09532259],positive,positive
+291,0,0,"@user @user the media tried their best at a Nazi tactic, repeat a lie over and over and people will believe it, J goebbles. ",ENG,[0.41647327 0.27249828 0.31102845],[ 0.24223691 -0.18195309 -0.04970098],negative,negative
+292,1,1,"Tesla Model S 85, P85 & P85+ Hire/Chauffeur/Driving experience packages #TeslaMotors #ModelS #Tesla #EV ",ENG,[0.24924047 0.40614384 0.34461567],[-0.1758222   0.31246707  0.14818946],neutral,neutral
+293,2,2,New #BeautyandtheBeast Photo Has Gaston Wooing Bellehttps://t.co/3wVBbuEXnQ ,ENG,[0.32989594 0.31467712 0.35542697],[ 0.04193687 -0.00529339  0.11647932],positive,positive
+294,0,0,"@user the alt right (i.e. what supremacists, fascists, nazis, racists, things, etc.) just make numbers up to feed the hate ",ENG,[0.42228872 0.25730333 0.32040808],[ 0.2154577  -0.27997595 -0.06063608],negative,negative
+295,1,1,5 Incidents of How Zac Efron Is Inspirational ,ENG,[0.303747   0.37474298 0.32151   ],[0.00381441 0.21385969 0.06064791],neutral,neutral
+296,2,2,I wanna live in a world where Vanessa Hudgens and Zac Efron get back together ,ENG,[0.31182444 0.26117977 0.42699575],[-0.04322867 -0.22045997  0.27110505],positive,positive
+297,0,0,@user @user chipotle also doesn't pay minimum wage. if you want to form a retarded argument based on assumptions go ahead. ,ENG,[0.42346767 0.3017945  0.27473783],[ 0.28460264 -0.05412816 -0.14805721],negative,negative
+298,1,1,A Cartoon from The New Yorker  via @user #TrumpTransitionTeam ,ENG,[0.23200293 0.44256842 0.32542875],[-0.17194436  0.47390068  0.1664491 ],neutral,neutral
+299,2,2,#onedirection #niallhoran #harrystyles #WWATour best 2 lovely dance 😊❤️ them 👍 ,ENG,[0.3519785  0.27333796 0.37468356],[ 0.1346851  -0.11817609  0.19719678],positive,positive
+300,0,0,"@user just block them... like the Fresh Prince of Bel Air sang,    🎤 'no need to argue, deplorables just don't understand.' ",ENG,[0.4366855  0.25108021 0.31223422],[ 0.2710681 -0.2823727 -0.0643916],negative,negative
+301,0,1,Coming Soon: Vengeance Against NLRB For Ruling Against Trump in Union Fighthttps://t.co/VslOvqX3IL#notemypresident #uniteblue ,ENG,[0.375628   0.29995367 0.32441834],[ 0.19834521 -0.02662601  0.05177978],negative,neutral
+302,1,2,3D printing at #BuzzConf. Got some 3D printed Squirtels for Jordan ,ENG,[0.23493151 0.41506943 0.349999  ],[-0.16839743  0.4007543   0.23023885],neutral,positive
+303,1,0,"...""radical acceptance"", a rigorous mental determination to meet head on the most powerful negatives in our lives... ",ENG,[0.32114485 0.35586792 0.32298726],[0.08898962 0.191657   0.09471025],neutral,negative
+304,0,1,"@user @user trump already broke  cuba embargo, so that part is taken care of i guess diplomacy in 140 in not good policy. ",ENG,[0.4035934  0.29718184 0.29922476],[ 0.22153944 -0.08452431 -0.07767347],negative,neutral
+305,1,2,"Lopetegui (coach Spain): ""For The Best FIFA Men’s Player 2016 award I have voted for Messi, Cristiano and Ramos"" #fcblive [cope] ",ENG,[0.33707866 0.3454632  0.31745818],[0.11216035 0.13673013 0.0521902 ],neutral,positive
+306,2,0,@user In a roomful of Adolfs be a Ruth #ruthgruber #nytimes #TrumpTransitionTeam #SundayMorning ,ENG,[0.3587673 0.273032  0.3682007],[ 0.1107299  -0.1623551   0.13668403],positive,negative
+307,1,1,The Frontiers Issue with Guest Editor President Barack Obama – President Barack Obama on How We’ll Embrace… ,ENG,[0.25453007 0.41279593 0.33267397],[-0.09742428  0.38611013  0.17031966],neutral,neutral
+308,2,2,David Blaine celebrity magic on YouTube right now I am laughing ,ENG,[0.33977604 0.2948155  0.36540845],[ 0.06028301 -0.08165395  0.13301209],positive,positive
+309,2,0,@user  Putin looked miserable for rest of the day. ,ENG,[0.31522962 0.3220585  0.36271185],[0.03290349 0.05433539 0.17321089],positive,negative
+310,0,1,@user @user @user @user @user 2 #donaldtrump #conflictofinterest #befirm ,ENG,[0.3922783  0.3109722  0.29674944],[ 0.177182   -0.05508606 -0.1019014 ],negative,neutral
+311,0,2,Black people are so dope #ThankYouObama #BET ,ENG,[0.35967898 0.28562394 0.3546971 ],[ 0.12074953 -0.10978643  0.10680182],negative,positive
+312,1,0,@user & now @user @user and others are conveniently selling out all of Europe to China by allowing them access to Ukraine. ,ENG,[0.31143054 0.3879692  0.30060017],[ 0.00875374  0.22850335 -0.02664156],neutral,negative
+313,1,1,#NowPlaying on Wicca Radio International Folly Of Fracking by Cernunnos Rising #ListenHere ,ENG,[0.29013726 0.36264092 0.34722188],[-0.07330713  0.14975184  0.10630269],neutral,neutral
+314,0,2,If @user made an appearance as Adam again I'd have to call him a God because he has so much material on #ThisIsUs  #yr #Dreams ,ENG,[0.3663712  0.2974467  0.33618206],[ 0.10317533 -0.10523662  0.01718116],negative,positive
+315,2,0,@user I need Obamacare after disability. Private insurance 7X+ higher.  Worried about buying food & emergencies. Top Ramen & dented cans. ,ENG,[0.28578952 0.33604527 0.37816525],[-0.05608922  0.10590107  0.22398643],positive,negative
+316,0,1,#cannabis The Associated PressAssistant cultivator Emily Errico examines cannabis plants grown by Vireo Health of … ,ENG,[0.36030394 0.3460133  0.29368272],[ 0.15180859  0.1113379  -0.05263932],negative,neutral
+317,2,2,@user @user @user @user  Thanks for giving & God Bless everyone! ,ENG,[0.21212009 0.28239158 0.50548834],[-0.16941665  0.11672552  0.6989558 ],positive,positive
+318,0,0,Lol @ people who think that vaccines just suddenly cause autism ,ENG,[0.40458745 0.3110989  0.28431353],[ 0.20419224 -0.05856479 -0.14859799],negative,negative
+319,0,1,Once 3D printing goes exponential the face of manufacturing will change more dramatically than most people realise. ,ENG,[0.39394212 0.2941253  0.3119326 ],[ 0.17604223 -0.11615601 -0.05737466],negative,neutral
+320,2,2,As of last night I am a proud owner of a #Niffler #FantasticBeasts 😀😀😀😀🤗🤗🤗🤗 ,ENG,[0.31538212 0.29826725 0.38635063],[ 0.02233183 -0.03346328  0.22529218],positive,positive
+321,0,0,"If Tony Romo played for a team other than Dallas, he wouldn't receive anywhere near the same kind of media slurpage ",ENG,[0.41513553 0.31866816 0.26619628],[ 0.19520864 -0.0692461  -0.24916244],negative,negative
+322,0,1,@user oh yeah your elite rotation of Verlander David price and Scherzer was supposed to lead you guys to the promise land ,ENG,[0.36832353 0.30636457 0.32531187],[ 0.17184702 -0.01233891  0.04766963],negative,neutral
+323,2,2,"The #BeautyAndTheBeast trailer is finally here! So you don't miss anything, read our in-depth analysis!https://t.co/fxmYUbv9LG ",ENG,[0.31767046 0.31666854 0.36566105],[0.06181004 0.05865099 0.20250225],positive,positive
+324,2,0,@user YOURE SO FULL OF YOURSELF! YOU KNOW U NEVER RECEIVED ANY THREATS FROM TRUMP OR HIS SUPPORTERS! MAYBE TH… ,ENG,[0.29875624 0.29620433 0.40503943],[0.06996042 0.06138197 0.37431687],positive,negative
+325,1,1,Urge @user to allow aid airdrops to #Aleppo to help save thousands from starvation: ,ENG,[0.31575462 0.36321327 0.32103214],[-0.01093815  0.12908658  0.0056376 ],neutral,neutral
+326,2,2,@user @user @user We must unite & fight to prevent changes to Medicare & Social Security. These are good programs! ,ENG,[0.2509274  0.33386055 0.415212  ],[-0.08969919  0.19586056  0.41392642],positive,positive
+327,1,0,"Flashback #ObamaShutDown: Dems reject GOP proposal, would cut 75% Obamacare subsidy for Congress  #UniteBlue #PJNet ",ENG,[0.33931914 0.3480444  0.31263652],[ 0.04482089  0.07020988 -0.03707896],neutral,negative
+328,1,1,Weird to see @user Sidney Crosby with the Cy Young bid going this year. 14 goals only 5 assists. Averaging goal a game. Yeah. #Pens #NHL ,ENG,[0.310599   0.35076323 0.33863774],[0.01104843 0.13265714 0.09747667],neutral,neutral
+329,0,2,"""Gratitude is a flower that blooms in noble souls.""POPE FRANCIS ",ENG,[0.39948654 0.31954592 0.28096753],[ 0.20585315 -0.01742589 -0.14608784],negative,positive
+330,0,0,An image of a dead animals body part is not the best #marketing approach :/ Especially with #veganism and vegetaria… ,ENG,[0.39436367 0.29673922 0.30889714],[ 0.21910885 -0.065311   -0.02515633],negative,negative
+331,1,1,@user @user found one more. ,ENG,[0.3382278  0.34132722 0.32044497],[0.11726034 0.12638232 0.06325126],neutral,neutral
+332,2,2,"Still though, Bob Dylan trumps all ",ENG,[0.369199   0.2569502  0.37385076],[ 0.09475277 -0.2677007   0.10727367],positive,positive
+333,0,0,When you make opponents publicly apologize....well #YoureAFacist #MangoMussolini #democrats #CalExit #HumanRights… ,ENG,[0.36474788 0.31423128 0.3210209 ],[ 0.13535576 -0.01372129  0.00765562],negative,negative
+334,0,1,*Excellent* >> Europe: Let's Self-destruct! #EU #jihad #hijra #isis #muslims #migrants ,ENG,[0.40384337 0.28994527 0.30621138],[ 0.27302754 -0.05830748 -0.00372396],negative,neutral
+335,1,2,@user we're thankful for Grayson Allen TBH ,ENG,[0.3124845 0.3567394 0.3307761],[0.05489103 0.18734175 0.11177787],neutral,positive
+336,0,0,Obviously the elite's and media's enemies now are:.conservatives on the right wing.pro-freedom self thinkers on t… ,ENG,[0.42464152 0.28677714 0.28858134],[ 0.26040137 -0.13213861 -0.12586695],negative,negative
+337,1,1,"@user such as telling us exactly what we have to do as my points already made with gun control, health care, business, speech, ect. ",ENG,[0.2930185  0.37665334 0.33032817],[-0.01429191  0.2367976   0.10555893],neutral,neutral
+338,1,2,"#GilmoreGirlsTop4 Luke, Lorelai, Jess, Lane ",ENG,[0.20856896 0.3992596  0.39217138],[-0.23077057  0.4185715   0.4006586 ],neutral,positive
+339,0,0,"I feel sorry for PM modi! With such supporters he doesn't need anyone else to hurt his image! Not so ""right"" righti… ",ENG,[0.4312449  0.22939646 0.3393586 ],[ 0.3071587  -0.32406572  0.0675399 ],negative,negative
+340,1,1,"Retweeted CS Monitor (@csmonitor):Bannon said the administration planned to usher in a ""new political... ",ENG,[0.2926806  0.38585073 0.32146868],[-0.06473105  0.21163756  0.02908715],neutral,neutral
+341,1,2,una de mis favoritas. #NowPlaying The (Shipped) Gold Standard de Fall Out Boy ♫ ,ENG,[0.32310545 0.3449986  0.33189592],[0.06266479 0.1282264  0.08950747],neutral,positive
+342,2,0,.@parkinsbrea @user The claim that abortion causes breast cancer is a big lie! ,ENG,[0.3495117  0.28763038 0.36285788],[ 0.14467666 -0.05018421  0.18215075],positive,negative
+343,1,1,#Spurs #GoSpursGo 1997-98 Skybox Z-Force #3 Tim Duncan Slam Cam 97-98 Spurs BGS 9.5 Gem Mint #TimDuncan #NBA ,ENG,[0.2914885  0.3759819  0.33252963],[-0.03748892  0.21705157  0.09423956],neutral,neutral
+344,2,2,BLACK FRIDAY SPECIAL!!!!!!!!!!!!!!!!!!!!!!!!Looking for a getaway with someone special for Valentines Day?... ,ENG,[0.19429015 0.3411142  0.4645957 ],[-0.2925231   0.27034158  0.5792918 ],positive,positive
+345,1,0,#Fracking Wastewater Is Ravaging North Dakota Farms #NoDAPL #DakotaAccessPipeline #INDIGENOUS ,ENG,[0.3273709  0.3611391  0.31149006],[0.13116242 0.22933175 0.08143593],neutral,negative
+346,1,1,Europe Canine Vaccines Market Report 2016 by ReportBazzar ,ENG,[0.25785804 0.43694317 0.30519888],[0.04429097 0.57168496 0.21284541],neutral,neutral
+347,2,2,Sang one my favourites last night for the Leonard Cohen Tribute. Such an amazing night to be a… ,ENG,[0.31998307 0.2500603  0.4299566 ],[ 0.08699572 -0.15957035  0.38241184],positive,positive
+348,0,0,The Big Bang blew up Ben Carson's brain ,ENG,[0.40908074 0.29844278 0.2924765 ],[ 0.19562794 -0.11970639 -0.13990028],negative,negative
+349,0,1,Just prove it all wrong next year #cy young  ,ENG,[0.40530124 0.2673744  0.32732436],[ 0.1973146  -0.21866609 -0.01636441],negative,neutral
+350,2,2,Just back from @user and the film was absolutely mind-blowing! Thank you @user for this perfect gift! ❤️ #FantasticBeasts ,ENG,[0.2648831  0.29542574 0.4396912 ],[-0.0915544   0.01757458  0.41522968],positive,positive
+351,0,0,@user Never trust Comey😡 if it wasn't for him we would have Hillary 😠 F Comey!! Get rid of him ,ENG,[0.38093957 0.2402267  0.3788337 ],[ 0.14546834 -0.3155894   0.1399249 ],negative,negative
+352,1,1,Donald Trump is hiring all Mike pence's personnel friends to his cabinet??? ,ENG,[0.26112837 0.40928924 0.32958236],[-0.1407758   0.30863416  0.09203839],neutral,neutral
+353,2,2,Bannon sure has a keen eye for talent! #TRUMP ,ENG,[0.24855019 0.31851983 0.43293002],[-0.09028606  0.15775384  0.4646452 ],positive,positive
+354,2,0,"So wait, $30 of Burger King at LAX is NOT a good idea before my 5 hour flight? WHY DIDN'T ANYONE STOP ME #NationalFastFoodDay ",ENG,[0.24650559 0.3400673  0.4134271 ],[-0.15583158  0.1659273   0.36126494],positive,negative
+355,0,1,I'll say it again. I'm willing to bet a crate of Obolon that Poroshenko will use Kuchma's 1999 strategy and win the presidential election ,ENG,[0.4604079  0.251645   0.28794715],[ 0.2759775  -0.3281161  -0.19335839],negative,neutral
+356,2,2,We just finished watching #ThankYouObama on @user I sorta feel like I was supposed to be there.... ,ENG,[0.22671108 0.3448446  0.42844427],[-0.15571786  0.26369956  0.48076636],positive,positive
+357,0,0,Noah fence but I'm sick of people telling me what I should or shouldn't be eating e.g vegetarianism ,ENG,[0.42907986 0.27675897 0.2941612 ],[ 0.22547337 -0.21302268 -0.15204184],negative,negative
+358,0,1,@user reports brush fire nearing community of Nataf in the #Jerusalem corridor. Some houses in Nataf went up in flames 4 days ago. ,ENG,[0.3669252  0.3303889  0.30268592],[ 0.12994988  0.02506227 -0.06251246],negative,neutral
+359,2,2,I love how everyone on my TL and dash agrees that they wouldn't have let Miguel wear the hat #ThisIsUs ,ENG,[0.34709692 0.27888417 0.37401885],[ 0.11001084 -0.10879657  0.18471296],positive,positive
+360,0,0,The decision to recount votes in Wisconsin is a joke. Leftists are still spotting-the-dummy of their loss. #TrumpTransition ,ENG,[0.43097633 0.2856391  0.28338453],[ 0.20081063 -0.2105134  -0.21843778],negative,negative
+361,2,1,"In memory of Fidel, a little quote from Bob Dylan:I was sleepin’ like a ratWhen I heard something jerkin’... ",ENG,[0.322426   0.33208296 0.34549102],[0.03402463 0.06353588 0.1031177 ],positive,neutral
+362,2,2,@user @user Thank - you. You as well. Hugs and kisses to Matteo and Valentino dear heart. 😘 ,ENG,[0.28762025 0.3392423  0.37313747],[-0.07209945  0.09297416  0.1882065 ],positive,positive
+363,0,0,#POTUSTrump voters are very comfortable with #TrumpTransitionTeam process because the drama reads a lot like #OldTestament:#MAGAforDummies ,ENG,[0.36662605 0.30744126 0.32593265],[ 0.10218307 -0.07387525 -0.01546855],negative,negative
+364,0,1,"God made everything in his image, it's just conservatives who try to pick and choose what's right and what's wrong ",ENG,[0.43669206 0.2246935  0.33861446],[ 0.28391853 -0.38057247  0.02955249],negative,neutral
+365,0,2,@user #Hatchimals  would melt his heart...and mine. X ,ENG,[0.36400896 0.32205155 0.31393945],[ 0.11044648 -0.01202041 -0.03753193],negative,positive
+366,0,0,@user and rightists are incapable of learning. Feeling. Or compassion. ,ENG,[0.34853527 0.34622985 0.30523485],[ 0.0580092   0.05137267 -0.07464872],negative,negative
+367,1,1,Image: Messi has been voted as the Champions League player of the week #fcblive [uefa] ,ENG,[0.31302115 0.3637132  0.32326564],[0.07704334 0.22713828 0.10924701],neutral,neutral
+368,0,2,whew god damn lea michele is so sexy #LeaMichele #ScreamQueens #Hester #Booty ,ENG,[0.36499685 0.27193415 0.363069  ],[ 0.11362176 -0.18070696  0.10832592],negative,positive
+369,0,0,Isn't it just time these fake news creators stopped feeding the deplorables' fires? #fakenews ,ENG,[0.43492103 0.27021626 0.29486272],[ 0.26705688 -0.20888494 -0.12159766],negative,negative
+370,1,1,"Cristiano Ronaldo has been accused of tax evasion, Accodring to sources in Spain.  Allegedly moving €63.5 mil. to V… ",ENG,[0.33002046 0.37939167 0.29058784],[ 0.0870292   0.22644362 -0.04021953],neutral,neutral
+371,2,2,The cast is onstage and sounding great! #BeautyandtheBeast opens next week! For tickets and more visit ,ENG,[0.18643123 0.3699769  0.44359186],[-0.31556875  0.3698094   0.5512737 ],positive,positive
+372,0,0,@user @user @user We haven't forgotten. Still litigating multiple cases while Obama admin says courts don't have jurisdiction. ,ENG,[0.363967   0.31288233 0.32315063],[ 0.11828846 -0.03294759 -0.00065618],negative,negative
+373,1,1,@user Tax. ____5%Tip. ______100%Total $_____(Slice) ,ENG,[0.33467683 0.35401496 0.31130826],[0.08201116 0.13818501 0.00962948],neutral,neutral
+374,2,2,“Real Madrid Keep Winning Because They Have the World’s Best Players” by @user ,ENG,[0.3141343  0.33558398 0.35028175],[0.06323939 0.12929098 0.17215654],positive,positive
+375,0,0,"Just in time to destroy Social Security, Medicare, Medicaid, Health Care, Education, and Freedom of the Press. ",ENG,[0.35391524 0.3001177  0.3459671 ],[ 0.10056935 -0.06431338  0.07785559],negative,negative
+376,1,1,New York Times’ Top Shareholder Is a Clinton Foundation Donor ,ENG,[0.32721522 0.38522094 0.28756392],[ 0.07125755  0.23445648 -0.05791543],neutral,neutral
+377,2,2,We used see-think-wonder to help us investigate the UNCRC. This week is the 25th anniversary of the UNCRC.… ,ENG,[0.31447142 0.3382624  0.3472662 ],[0.1123064  0.1852351  0.21150482],positive,positive
+378,0,0,Minimum wage braking at patriarchal of a piece: vXVMu ,ENG,[0.3568712  0.34669575 0.29643303],[ 0.10156154  0.07263426 -0.08399208],negative,negative
+379,1,1,@user aint in support with Israel nor Palestine! Hope this fire is settled soon & there's no more massacre in #Palestine either... ,ENG,[0.30514088 0.35072947 0.34412965],[0.05805158 0.19729316 0.17829642],neutral,neutral
+380,2,2,"#shabbatshalom #Israel #Jerusalem s=SHABBAT SHALOM TO ALL, HASHEM'S BLESSINGS!!! ",ENG,[0.26961038 0.2921556  0.43823397],[-0.04616914  0.03413951  0.43960595],positive,positive
+381,1,0,Kim fatty the third 😂😂😂 @ CSIS | Center for Strategic & International Studies ,ENG,[0.28207937 0.36341402 0.3545066 ],[-0.01885712  0.23449706  0.20968136],neutral,negative
+382,0,1,"@user and, IF we don't, it's curtains for EVERYONE.Mother Nature does not ask for anyone's voter's registration. ",ENG,[0.4059468  0.3021565  0.29189664],[ 0.21255954 -0.08271749 -0.11726274],negative,neutral
+383,2,2,@user #BlackFriday is here! All t shirts 20% OFF #StrangerThings… ,ENG,[0.30665454 0.30472276 0.3886227 ],[0.03377409 0.02745461 0.27066115],positive,positive
+384,0,0,The other day I went on a date & this guy asked me why was I wearing my Cubs jersey if that already passed... niggaaaaa are you fr rn😐🙄 ,ENG,[0.37754986 0.27593586 0.3465143 ],[ 0.14851642 -0.16501771  0.06273795],negative,negative
+385,1,1,Latest: Kate Upton clarifies her NSFW Cy Young rant #Sport ,ENG,[0.23933773 0.39235994 0.3683023 ],[-0.19304526  0.30125874  0.23798308],neutral,neutral
+386,0,2,Minimum wage is a bandaid. Minimum income is the goal. ,ENG,[0.40634638 0.29571378 0.29793987],[ 0.20392424 -0.11388966 -0.10638992],negative,positive
+387,1,0,Jew Supremacists in JewMedia @user at work with their kiddieshit fabrications ,ENG,[0.32178882 0.38667166 0.29153955],[ 0.04744281  0.23112321 -0.05127697],neutral,negative
+388,2,1,"*Jeff drops keys*""Woah how'd these get here, am I David Blaine? Is this street magic?!"" ",ENG,[0.3133979  0.31784979 0.36875233],[0.01611973 0.030225   0.17877135],positive,neutral
+389,2,2,"A hidden gem of #Jerusalem. Special prayers today for rain, our police, and firefighting heroes.… ",ENG,[0.33556733 0.27796528 0.3864674 ],[ 0.09299291 -0.0953335   0.2342178 ],positive,positive
+390,1,0,@user The protesting against Trump are as organic as the spontaneous Protest in Benghazi over a video#SorosProtestors ,ENG,[0.34877717 0.35229212 0.29893073],[ 0.11304412  0.12307164 -0.04117713],neutral,negative
+391,1,1,How did I become THAT MOM. ISO #hatchimals ,ENG,[0.34546033 0.35155585 0.30298382],[0.13947001 0.15696082 0.00827163],neutral,neutral
+392,2,2,Operated by Imura Works of Imura has been working to protect the freedom of gun rights and 3D printing workPlease support the activities!! ,ENG,[0.22440319 0.3666438  0.40895298],[-0.14482775  0.34611875  0.4553281 ],positive,positive
+393,0,0,This 19th-century wheelbarrow drunk is more kempt than Steve Bannon. ,ENG,[0.40403348 0.27910978 0.31685674],[ 0.13591915 -0.23397338 -0.10712887],negative,negative
+394,0,1,We cannot afford to ignore the conflict in #Yemen #protecthumanity #stopindifference ,ENG,[0.46036726 0.26404595 0.2755868 ],[ 0.32255512 -0.23334636 -0.19056678],negative,neutral
+395,1,2,1 of the biggest trends of this year 2016- winners have U in common- #Cubs #Trump #Bucks #Penguins ,ENG,[0.30918047 0.3602527  0.33056685],[0.00283967 0.15572028 0.06972349],neutral,positive
+396,2,0,"RT @user Remember ""Alt-Right""-a name they gave themselves,re-branding ""White Supremacists"". Bullshit can't get normalized. Let's ca… ",ENG,[0.32286963 0.30453798 0.37259242],[ 0.01931227 -0.03914056  0.16254878],positive,negative
+397,0,1,@user  doesn't she know the whole DAPL protest was just to prevent it going on sacred land?? Not to protest fossil fuels ,ENG,[0.44199532 0.2951114  0.26289332],[ 0.28561068 -0.11833569 -0.23394033],negative,neutral
+398,2,2,@user thank you for a day full of deep learning & sharing important resources with us. Looking forward to a continued partnership! ,ENG,[0.19070798 0.34027007 0.46902198],[-0.14310934  0.43588698  0.75679696],positive,positive
+399,1,0,Is she @user still an MP? Stitched up any blind people lately Sheryll ?? #BEASHAMED @user #FILIBUSTING ,ENG,[0.33058694 0.35415816 0.3152549 ],[0.11609168 0.18496567 0.06860361],neutral,negative
+400,1,1,14. Whats Your Social Security Number ? 🌚😂😭😂😭😂😭😂 ,ENG,[0.332152   0.3646288  0.30321917],[ 0.07062104  0.16390812 -0.02051589],neutral,neutral
+401,0,2,@user I hope they keep Pelosi so it's business as usual ,ENG,[0.35011235 0.3341559  0.3157318 ],[0.11458746 0.06794095 0.01122641],negative,positive
+402,2,0,@user He's not talking about killing Americans via drone strikes like your head thug obama! ,ENG,[0.3543573  0.27585864 0.3697841 ],[ 0.15430959 -0.09610753  0.19692314],positive,negative
+403,0,1,"O dear. I wonder what ""fresh"" means in this context? ""Daniel Andrews: it’s time to ‘take fresh look’ at euthanasia"" ",ENG,[0.4399132  0.25027776 0.30980903],[ 0.26050994 -0.30349618 -0.09011145],negative,neutral
+404,2,2,Watching this lit af #ThankYouObama concert special on BET & getting my entire life right now. #ISeeYouBradleyCooper. ,ENG,[0.19173089 0.3582357  0.4500335 ],[-0.25450674  0.37059173  0.5987226 ],positive,positive
+405,0,0,Drone strikes are crazily Sammy Hagar the Horrible but I repress all memory of dated Harambe jokes. ,ENG,[0.41782486 0.25062197 0.33155316],[ 0.23098372 -0.28013286 -0.00029052],negative,negative
+406,1,1,#Microsoft has become an active member of the open source community from #cloudcomputing to #networking to gaming. … ,ENG,[0.3166286  0.38022032 0.3031511 ],[ 0.03921271  0.22223413 -0.0042854 ],neutral,neutral
+407,2,2,Thank you @user for always reminding me that light is more powerful than darkness. ,ENG,[0.27303076 0.31647018 0.410499  ],[0.02011004 0.16775468 0.42789912],positive,positive
+408,1,0,So-called #FakeNews under attack by #SiliconValley leftists. via @user ,ENG,[0.3573609  0.36594296 0.27669606],[ 0.15212178  0.17585301 -0.10370484],neutral,negative
+409,0,1,Fidel Castro's Apple Victory Could Be Short-Lived #fakeheadlinebot #learntocode #makeatwitterbot #javascript ,ENG,[0.3924675  0.30347025 0.30406228],[ 0.22654118 -0.03062896 -0.02867997],negative,neutral
+410,2,2,@user wow on my daughters wish list #hatchimals #BlackFriday ,ENG,[0.34835264 0.29787275 0.35377464],[0.17532979 0.01878086 0.19077459],positive,positive
+411,0,0,White Supremacist Steve Bannon's true favorite for president was not Trump. ,ENG,[0.36039943 0.3401564  0.29944417],[ 0.13485807  0.07705061 -0.05042692],negative,negative
+412,1,1,Castro's Remains Buried in Private Ceremony in Cuba #cuba ,ENG,[0.34854504 0.36120874 0.29024622],[ 0.09432128  0.13000983 -0.08871652],neutral,neutral
+413,2,2,@user @user The team plays at a different level when you are in the game. It's great that you're back. Happy thanksgiving. ,ENG,[0.24244942 0.3169426  0.44060796],[-0.11697756  0.15095009  0.4803849 ],positive,positive
+414,1,0,@user trump cabinet is all white ,ENG,[0.28252146 0.38041192 0.3370666 ],[0.00741985 0.30492008 0.1839459 ],neutral,negative
+415,2,1,That's exactly how it is right this moment with a Trump cabinet! 🖕🏼🖕🏼🖕🏼🖕🏼🖕🏼 ,ENG,[0.32528794 0.2590002  0.4157119 ],[ 0.0559135  -0.17196845  0.3011952 ],positive,neutral
+416,0,2,Today is the feast of St Barbara! Exit #euthanasia Action suggests you make your @user barbiturates see:ch2… ,ENG,[0.40632018 0.2907569  0.3029229 ],[ 0.23477891 -0.09987499 -0.05888426],negative,positive
+417,2,0,#TrumpTransitionTeam To the #FailingNYTimes -- It took #WorstPresidentEver #Obama THREE weeks after his 2008 election to name his cabinet ! ,ENG,[0.30115607 0.27460656 0.4242374 ],[-0.00449038 -0.09677966  0.33817422],positive,negative
+418,1,1,"Author @user wins @user award for ""The Underground Railroad"" via @user #NBAwards ",ENG,[0.3013106  0.3750622  0.32362726],[0.07723451 0.29618472 0.14868529],neutral,neutral
+419,1,2,Just booked tickets to see @user v @user on the 2nd January... can't wait!!!Second visit to the @user within 12 months ,ENG,[0.22380498 0.40103453 0.37516046],[-0.20630237  0.37697014  0.31027642],neutral,positive
+420,0,0,SOMEBODY MARRIED STEVE BANNON? My estrogen just dried up. ,ENG,[0.39206198 0.27426848 0.33366954],[ 0.14653438 -0.21077804 -0.01473443],negative,negative
+421,1,1,""" #Refugees should just go home to #Syria "" they said. #Aleppo ",ENG,[0.3292134  0.35137224 0.31941432],[0.07170437 0.1368443  0.04148723],neutral,neutral
+422,0,2,Nobody could've played Muhammad Ali better than Will Smith. ,ENG,[0.39012092 0.28025287 0.32962617],[ 0.15489763 -0.17586683 -0.01359995],negative,positive
+423,1,0,Retweeted Ben Verlander (@Verly32):Are you kidding me? Most first place votes and doesn't win?... ,ENG,[0.31669414 0.34586766 0.3374382 ],[0.0138147  0.10193444 0.07726064],neutral,negative
+424,2,1,Michael Moore pans Trump Cabinet pick Betsy DeVos | #Politics ,ENG,[0.31543052 0.34068027 0.3438892 ],[0.07831676 0.15532276 0.16469786],positive,neutral
+425,0,2,"@user @user I'm sure you understand how powerful his words can be, especially with some of his supporters. ",ENG,[0.37654617 0.31520757 0.30824634],[ 0.19243343  0.0146241  -0.00770801],negative,positive
+426,0,0,@user It is racist to say voter id amounts to suppression. Minorities can get IDs just as easily as anyone else. ,ENG,[0.4389138  0.2910604  0.27002585],[ 0.2751475  -0.1356247  -0.21063787],negative,negative
+427,0,1,Another one in the Tory election locker...https://t.co/NgWSVYi9fT ,ENG,[0.43360287 0.27809724 0.2882999 ],[ 0.24849515 -0.19566312 -0.1596327 ],negative,neutral
+428,0,2,Really would be satisfied w/ a model S Tesla (black specifically) ,ENG,[0.34609592 0.33706605 0.31683803],[ 0.02912299  0.00268596 -0.05920233],negative,positive
+429,0,0,@user How stupid was that woman not to realize that Trump has always hated Obamacare and will he definitely decimate it. ,ENG,[0.4133762  0.26409736 0.32252645],[ 0.23688161 -0.21115866 -0.01129135],negative,negative
+430,0,1,"We might've 'stalled' a little, but it's here (we always knew our 'musical statues' skills would come in handy one… ",ENG,[0.42381468 0.25347373 0.32271156],[ 0.20510632 -0.3089298  -0.06743104],negative,neutral
+431,1,2,3D Printed Robots Walk Their Way to Success: ,ENG,[0.25692803 0.38828588 0.3547861 ],[-0.12899166  0.28395417  0.1937274 ],neutral,positive
+432,0,0,@user •small states given = weight•pop vote means nothing•electors can vote any way they want. Electoral college is ridiculous ,ENG,[0.42182952 0.2829994  0.29517108],[ 0.23699312 -0.16216339 -0.12005299],negative,negative
+433,0,1,"on googling, 'police samsung galaxy note 4' looks popular7,000 West Yorks5,000 Wales2,000 Lancs1,500 Cumbria1,800 Essex2,000 Kent ? ",ENG,[0.37276053 0.3110225  0.31621704],[ 0.12484509 -0.0562259  -0.03966228],negative,neutral
+434,0,2,"Zamnnn, too cute to resist. Comey sgt hayla ni. ",ENG,[0.40976986 0.2381217  0.35210845],[ 0.20739758 -0.3354162   0.05574107],negative,positive
+435,1,0,Senator calls on President Obama to reroute pipeline.  What is more important @user company profits or safe water? ,ENG,[0.32266903 0.36869088 0.30864006],[ 0.03049476  0.16382614 -0.01395667],neutral,negative
+436,2,1,Not too late to enjoy #thanksgiving! Buy your fave #sextoys @ using discount coupon codes @user ,ENG,[0.28869015 0.32765862 0.38365132],[-0.07914029  0.04747805  0.20523992],positive,neutral
+437,2,2,@user Kim Jong-un can help you. He can show you the way. ,ENG,[0.3095735  0.34414667 0.34627977],[0.00426497 0.11013731 0.11631639],positive,positive
+438,0,0,#SteveBannon is the Racist Far-Right Internet Personified — and He Ha… ,ENG,[0.3635137  0.32799277 0.3084936 ],[ 0.15965725  0.05683182 -0.00445861],negative,negative
+439,0,1,"Euthanasia for alcoholics?!  When life is devalued this is what can happen, all life is valuable @user ",ENG,[0.3698633  0.3113997  0.31873694],[ 0.16614564 -0.00591054  0.01737823],negative,neutral
+440,2,2,Chicken tenders... and frozen custard and crinkle cuts and cheese curds and 😋 @user #TenderMomentsSweepstakes… ,ENG,[0.30073214 0.34400815 0.3552597 ],[-0.06375991  0.07068549  0.1028692 ],positive,positive
+441,0,0,Why focus on #Nusra and overlook Mullahs tyrants of #Iran's terrorists from #Hezbollah #Afghanistan #Iraq who murder Syrians? #AssadMustGo ,ENG,[0.39676347 0.3012117  0.3020249 ],[ 0.16054834 -0.11497866 -0.11228248],negative,negative
+442,0,1,Trump aides mull asking Romney for APOLOGY so he can be sec. of state ,ENG,[0.37652484 0.34109756 0.28237766],[ 0.14537856  0.04656309 -0.14236015],negative,neutral
+443,1,2,LOT of 2 Allen Edmonds Grayson leather dress loafters Brown/Black career office #AllenEdmonds #Grays ,ENG,[0.2840463 0.3698141 0.3461396],[-0.01567038  0.24819288  0.18203463],neutral,positive
+444,0,0,"Disavowing neo-Nazi ""alt-right"" does nothing, Trump. Dump the neo-Nazi you plan to install in the WH (Steve Bannon). Actions not words. ",ENG,[0.41449443 0.27219886 0.31330666],[ 0.18380766 -0.23671907 -0.09606937],negative,negative
+445,1,1,NGO calls for 'safe exits' for Mosul's trapped ciivlians #ISIS ,ENG,[0.3541297  0.36043817 0.2854321 ],[ 0.13755184  0.155209   -0.07810728],neutral,neutral
+446,2,2,Here's our #BeautyAndTheBeast trailer breakdown: ,ENG,[0.21662442 0.38268137 0.40069422],[-0.17939371  0.3896439   0.4356398 ],positive,positive
+447,1,0,@user where did Floridians think the cash for Obamacare came from; Do they or rather did they have Medicare or Medicaid before the FRAUD? ,ENG,[0.33946237 0.38298467 0.27755305],[ 0.08464625  0.20527805 -0.11670488],neutral,negative
+448,0,1,If Stein was genuinely interested in ferreting voting irregularities she would pursue correcting voter registration & standardize machines ,ENG,[0.46649176 0.26768535 0.26582292],[ 0.19054519 -0.36488292 -0.3718648 ],negative,neutral
+449,2,2,"@user @user I learned Basket Weaving for my deplorables.And I love a good mani/pedi & couples massage with you, handsome 😘 ",ENG,[0.30413425 0.29118615 0.40467954],[ 0.03034991 -0.01315653  0.31597614],positive,positive
+450,0,0,@user It's called George Freaking Soros. This should be investigated in cavity search proportions. This happened after Soros meeting. ,ENG,[0.3657018  0.3228647  0.31143358],[ 0.13577367  0.01118881 -0.02485847],negative,negative
+451,0,1,"Migrants surge north, hoping to reach USA before #Trump inaugurationhttps://t.co/zlzKzuceWr #tcot #uniteblue #trumpwon #maga #Trumpwall ",ENG,[0.3679155  0.3222508  0.30983374],[ 0.13734205  0.00481887 -0.03447551],negative,neutral
+452,0,2,#Fracking can bring in more jobs ,ENG,[0.3707925  0.32418093 0.30502662],[ 0.09789567 -0.03644517 -0.09734794],negative,positive
+453,1,0,Meeker highlights US immigration hypocrisy@Anaxagoreio ,ENG,[0.2906394  0.37596017 0.3334005 ],[-0.03254193  0.224858    0.10471924],neutral,negative
+454,0,1,'Absurd & Evidence Free' (Polite way of saying Pack of Lies) - #Iran Rejects #Israel Claim of Arms for #Hezbollah on Commercial Flights ,ENG,[0.3944501  0.31925178 0.2862981 ],[ 0.13654383 -0.07496876 -0.18391517],negative,neutral
+455,2,2,@user Wow so cool! #hatchimals ,ENG,[0.27917504 0.31748456 0.40334034],[-0.06279902  0.06579112  0.3051427 ],positive,positive
+456,2,0,"@user @user @user Abortion is evil.  Deal with it, take a Midol and go to bed sugartits. ",ENG,[0.34920117 0.28914654 0.36165228],[ 0.04482399 -0.1438906   0.079859  ],positive,negative
+457,1,1,@user is this what you wanted for twitter? via @user ,ENG,[0.33233988 0.3598231  0.307837  ],[0.1383152  0.2177696  0.06172748],neutral,neutral
+458,1,2,Putin and Seagal love to double date with Dennis Rodman and Kim Jong Un. ,ENG,[0.27010518 0.39815065 0.3317442 ],[-0.10590605  0.282113    0.09964672],neutral,positive
+459,1,0,1) re-imposition of the death penalty2) lowering the minimum age of criminality to NINE YEARS OLD. MY GOD ,ENG,[0.31643528 0.36972645 0.31383827],[0.09312399 0.24876869 0.08488306],neutral,negative
+460,1,1,How appetising is a Full English Brexit? My latest 'Sideways View' for @user ,ENG,[0.2830806  0.36069557 0.35622382],[-0.05846856  0.18383408  0.171359  ],neutral,neutral
+461,2,2,The latest The Periplus Indonesia Daily! Thanks to @user #eastenders #nbawards ,ENG,[0.2942431  0.33861884 0.36713812],[-0.01232894  0.12813982  0.20900284],positive,positive
+462,2,0,#2016 is the new #1966 first #brexit then #trumpton now a crap band from #Romford have done for the Italian president #Renzi #5* #5star ,ENG,[0.3371279  0.32344127 0.3394309 ],[-0.00734996 -0.04879488 -0.00054199],positive,negative
+463,2,1,"8 essential #tech for biz: AI, VR, AR, Blockchain, IoT, Robot, Drones, 3D Printing ",ENG,[0.25591147 0.35531837 0.38877016],[-0.12785707  0.20032553  0.2902997 ],positive,neutral
+464,2,2,@user please DM us your info so we can send your your prize for participating in #NationalFastFoodDay! Thank you! ,ENG,[0.25116462 0.27805486 0.4707806 ],[-0.08509671  0.01661312  0.5431869 ],positive,positive
+465,0,0,Abysmally dumb leftists. Blind sheep aping #Hillary propaganda. Trump has no history of extremism in his entire lif… ,ENG,[0.45459566 0.24888088 0.29652348],[ 0.27014065 -0.33229333 -0.15714136],negative,negative
+466,1,1,Robots endanger up to two-thirds of emerging economy jobs: UN ,ENG,[0.36040545 0.3690877  0.27050686],[ 0.10819826  0.13200285 -0.17873394],neutral,neutral
+467,1,2,I liked a @user video Dak Prescott Responds to Tony Romo's Statement on Cowboys & QB Situation | NFL ,ENG,[0.26053336 0.38924912 0.35021752],[-0.09543762  0.30605096  0.20038584],neutral,positive
+468,0,0,"smdh this country cares more about black friday than it does about black lives. say it today, say it everyday #blacklivesmatter #blm ",ENG,[0.41527936 0.25975978 0.32496083],[ 0.2809511  -0.18824294  0.03570422],negative,negative
+469,1,1,How Medical Marijuana Could Combat the Opioid Crisis  … ,ENG,[0.30892313 0.37149176 0.31958508],[0.06051199 0.24494621 0.0944431 ],neutral,neutral
+470,2,2,"@user #FantasticBeasts' beautiful screenplay, perfect cast & performances, & awesome music makes u create an account just to say this ",ENG,[0.2871246  0.3222547  0.39062068],[-0.01206686  0.10335907  0.29575384],positive,positive
+471,0,0,@user @user @user Trump's Wall on the Mexican Border is all buy a Memory now Donald is President...Voters Remorse? ,ENG,[0.37179017 0.34199625 0.28621358],[ 0.14095078  0.05742089 -0.12064056],negative,negative
+472,0,1,Trump's excuse?  Steve Bannon ate his homework. ,ENG,[0.37223858 0.28489915 0.34286228],[ 0.0617449  -0.20565487 -0.02046122],negative,neutral
+473,2,2,Watching #thankyouobama on @user this @user 'u make me wanna' remix using that sweet sable 'old times sake' beat was 🔥🔥🔥very unexpected ,ENG,[0.33825877 0.28078905 0.3809522 ],[ 0.10589024 -0.0803173   0.22475299],positive,positive
+474,0,0,*white supremacists have ن in their bios*twitter: racists hate muslims because they're sad about how christians are treated in the ME ,ENG,[0.4822084  0.25734767 0.260444  ],[ 0.32863343 -0.299315   -0.28735512],negative,negative
+475,0,1,"Egypt's support to Haftar's army is a national priority, President al-Sisihttps://t.co/ANTKMUNiPK#Libya #News ",ENG,[0.3928086  0.3203362  0.28685516],[ 0.19749981 -0.00645155 -0.11684519],negative,neutral
+476,2,2,Thankful for all these tv shows that make me happy #supernatural #TeenWolf #AgentsofSHIELD #TheOriginals… ,ENG,[0.2785959  0.30271125 0.41869292],[-0.07348684  0.00953026  0.33388868],positive,positive
+477,0,0,Fuck my vegetarianism cause McChickens are literally crack ,ENG,[0.4445277  0.24601974 0.30945256],[ 0.24537486 -0.34622568 -0.11683262],negative,negative
+478,0,1,@user thats why I only posted 1 photo from the anti trump protest haha ,ENG,[0.37916404 0.3061141  0.31472185],[0.2352923  0.02128127 0.04901259],negative,neutral
+479,0,2,Please RETWEET as much as u can! Americans for the XII Amendment #UniteBlue #BlueUnited ,ENG,[0.37541717 0.26732853 0.35725433],[ 0.2475973  -0.09196213  0.19800736],negative,positive
+480,0,0,Omg i'm watching legally blonde too n it's about animal testing i don't fuckin want this ,ENG,[0.4228059  0.23898962 0.3382045 ],[ 0.24456722 -0.32592592  0.02130477],negative,negative
+481,1,1,@user the people of #Britain already voted #Brexit should be under way already if #UK really is a 'democracy'...... ,ENG,[0.30350545 0.36289525 0.3335993 ],[0.05197763 0.23069233 0.14651868],neutral,neutral
+482,1,2,@user @user Joker got nothing on this.  Best ship on the citadel. ,ENG,[0.32718718 0.34279367 0.33001924],[0.02266783 0.0692642  0.03128643],neutral,positive
+483,1,0,Local Native Americans protested the Dakota Access Pipeline at Panorama Bluffs on Thursday. ,ENG,[0.29460767 0.4037527  0.30163956],[0.00831246 0.32347047 0.03190068],neutral,negative
+484,1,1,@user they went down to the last play against Kansas without 2 or 3 of their starters and Grayson Allen is winning POY ,ENG,[0.3309141  0.35596618 0.31311968],[0.06110881 0.13408569 0.00583544],neutral,neutral
+485,2,2,The latest Coachella Valley 360! Thanks to @user @user @user #yemencrisis #yemen ,ENG,[0.23694074 0.349808   0.41325125],[-0.13861226  0.25096214  0.4176334 ],positive,positive
+486,0,0,@user @user Oil comps. poisoned CA's lower central valley water by fracking. Those pipes are not perfect and need repair. ,ENG,[0.39275944 0.3305327  0.2767079 ],[ 0.16238959 -0.0101021  -0.18784536],negative,negative
+487,0,1,I have four priorities. Give back to the French their sovereignty over ... #MarineLePen #quotes ,ENG,[0.36459497 0.3439153  0.2914898 ],[ 0.16680513  0.10841353 -0.05697688],negative,neutral
+488,2,2,@user @user I have a great life & I'll be fine.Many of friends dont feel that security. People like Steve Bannon don't help. ,ENG,[0.31731558 0.29849282 0.38419166],[ 0.04553191 -0.01561905  0.23677668],positive,positive
+489,0,0,"@user @user To be honest, I don't even know where you Alt-Rightists get your swagger from, you got treated like bitches. ",ENG,[0.39199805 0.27409455 0.33390734],[ 0.15863049 -0.19915329 -0.00176285],negative,negative
+490,1,1,@user what is things said at Mimms family Thanksgiving? ,ENG,[0.24864656 0.39350635 0.35784703],[-0.11891145  0.34015328  0.24516165],neutral,neutral
+491,1,2,@user only you can stop politics-as-usual. #DrainTheSwamp #MAGA ,ENG,[0.32350087 0.37476945 0.30172965],[ 0.05816282  0.20527205 -0.01150753],neutral,positive
+492,0,0,"guessing Congress, oversight committees...the ones who created scandals, peppered Obama admin with constant subpoen… ",ENG,[0.38064006 0.2809853  0.33837467],[ 0.16419604 -0.13935587  0.04649561],negative,negative
+493,0,1,"Trump Stock In Dakota Access Oil Pipeline Raises Questions via @user And he was working on Carrier, Indians were hurt ",ENG,[0.39751604 0.3177641  0.28471977],[ 0.18315892 -0.0407671  -0.15057102],negative,neutral
+494,1,2,"Bob Dylan sings his 3rd highest charting single, Lay Lady Lay live on the Rolling Thunder Tour in 1975 - ",ENG,[0.23899765 0.3872068  0.3737956 ],[-0.22563884  0.2568663   0.22161654],neutral,positive
+495,0,0,MT @user .#ThankYouObama for helping America realize what a failure your policies are. #ObamaLegacy #PJNET ,ENG,[0.35751122 0.31277892 0.3297099 ],[0.1375891  0.00391901 0.05663545],negative,negative
+496,0,1,@user @user And Melania trump wrote her own speech ,ENG,[0.3756742 0.3237706 0.3005552],[ 0.1500718   0.00138487 -0.07301907],negative,neutral
+497,1,2,Startup ebo uses GPU-accelerated deep learning to help with faster gift-giving 🎁 ,ENG,[0.27675295 0.37513694 0.34811017],[-0.08558198  0.21858399  0.14381187],neutral,positive
+498,2,0,& if thats MEAN?? lol well how MEAN r U For IGNORING lil children being KILLED & STARVING day after day in #Aleppo ?? ,ENG,[0.31342086 0.31013042 0.37644875],[0.02084549 0.01029148 0.20408055],positive,negative
+499,1,1,@user Let me Guest: Make A Movie Chris Brown Ft. Twista ,ENG,[0.22415793 0.40805033 0.36779174],[-0.2273372   0.3717025   0.26782885],neutral,neutral
+500,2,2,"Crush #fears,you can be #unstoppable! Discover the 10 #secrets#DominatingYourMind @user #DYM #NBAwards ",ENG,[0.32335716 0.31244162 0.36420125],[-0.00559274 -0.03993259  0.11335637],positive,positive
+501,2,0,Very deceptive...the grapes will give you a false sense of security - Drinking a Midas Touch @ Roxbury - #photo ,ENG,[0.34259266 0.3079912  0.3494161 ],[ 0.08848589 -0.01798506  0.10820722],positive,negative
+502,0,1,"@user @user Flowers could have hit .240/.295/.360, and they're selling still but Sale has a Cy Young award ",ENG,[0.38116133 0.30212235 0.31671628],[ 0.12461956 -0.10777111 -0.06059675],negative,neutral
+503,2,2,"Get $1,000 off a Tesla Model S or X! Use my promo code: ",ENG,[0.2586273  0.35705557 0.3843172 ],[-0.13040136  0.19210209  0.26567885],positive,positive
+504,1,0,The white supremacist using Trump? @user #NotMyPresident #Trump #Resist #MAGA @user @user #tcot #uniteblue ,ENG,[0.32316893 0.35480592 0.32202512],[0.10280843 0.19620417 0.0992628 ],neutral,negative
+505,1,1,#RetailBroadway Target of the Opera (Mike Pence) ,ENG,[0.29326594 0.38122693 0.32550713],[-0.0682266   0.19408837  0.03607798],neutral,neutral
+506,2,2,I'm fiending to satisfy my @user / potter  fix by seeing Fantastic Beasts and Where to Find Them this weekend 💯! #FantasticBeasts ,ENG,[0.22074877 0.33409894 0.44515228],[-0.20204581  0.21236618  0.49934542],positive,positive
+507,0,0,"@user Yeah, I think white supremacists are deranged, mentally ill beings who are probably sub-human. ",ENG,[0.4456292  0.27309588 0.2812749 ],[ 0.3204087  -0.1692556  -0.13974592],negative,negative
+508,0,1,"@user @user If the electoral college is really acting to the benefit of the people they will have to do that. Legally, they can. ",ENG,[0.39118925 0.30367345 0.30513734],[ 0.18026423 -0.07297434 -0.06816521],negative,neutral
+509,0,2,@user ohh yes please my faughyer would love one of these i cant get one anywhere 😔 #Win #blackfriday  #Hatchimals ,ENG,[0.37782001 0.27387062 0.34830937],[ 0.12896551 -0.1927967   0.04763865],negative,positive
+510,1,0,The Tories are hammering Britain's economy Morning Star Online THE Conservatives' long-term… ,ENG,[0.33293888 0.35173708 0.31532404],[0.06667887 0.12160389 0.01232078],neutral,negative
+511,0,1,I think this guy was a reasonable person involved in the Alt-right;  he's dropping the label since the Nazi salute… ,ENG,[0.4688953  0.24599168 0.28511307],[ 0.3738839  -0.27119783 -0.12360975],negative,neutral
+512,2,2,"@user @user  Nice, and i'm with you on that! ",ENG,[0.27987373 0.26934612 0.45078012],[-0.04142343 -0.07976484  0.4352177 ],positive,positive
+513,0,0,so wait is tpp supposed to be going through victory short walk? wtf are they doing ,ENG,[0.4222452  0.2696683  0.30808645],[ 0.24666794 -0.20172551 -0.06853778],negative,negative
+514,0,1,@user using brady as the gold standard? bills traded up and skipped over Mack. Hard not to see how big of a mistake that was. Oh well. ,ENG,[0.37085107 0.26513502 0.36401397],[ 0.16797146 -0.16758996  0.14936316],negative,neutral
+515,0,2,Good article by @user about the theoretical difficulties of deep learning. #datascience #deeplearning #AI ,ENG,[0.34050497 0.33663827 0.3228567 ],[0.09858457 0.08716382 0.04536341],negative,positive
+516,0,0,The US public essentially decided an election based on amplified lies and suppressed truths--and some people want a direct popular vote! ,ENG,[0.43358147 0.23752828 0.32889023],[ 0.2783284  -0.32346463  0.00197275],negative,negative
+517,0,1,@user Is PolitiFact a Russian or alt-right site?https://t.co/Oip8D3PpKv ,ENG,[0.36413184 0.35518044 0.28068772],[ 0.22833723  0.20344716 -0.03193606],negative,neutral
+518,1,2,Leonard Cohen albums sell fast in Montreal ,ENG,[0.28690702 0.36694035 0.3461526 ],[-0.00387985  0.24216133  0.18384182],neutral,positive
+519,1,0,Saakashvili's Appointment as Odessa Governor  Was 'Insult' to Ukrainians - Putin ,ENG,[0.34264275 0.36380833 0.2935489 ],[ 0.09500506  0.15494387 -0.05963903],neutral,negative
+520,1,1,#Tesla Motors (TSLA) Model S Price Rise While #ElonMusk Says Trump Presidency Won’t Affect Company’s Finances ,ENG,[0.29521978 0.38678128 0.317999  ],[-0.01286033  0.25727895  0.06146786],neutral,neutral
+521,0,2,"(1) In 2014, Obama declares that it's time to end the US embargo on communist Cuba and the decision is hailed as a progressive milestone ",ENG,[0.40386483 0.30095124 0.2951839 ],[ 0.15322547 -0.14090659 -0.1602562 ],negative,positive
+522,0,0,SPLC's Christian Killer gets 25 years but SPLC gets a pass ,ENG,[0.38019565 0.30801496 0.31178933],[ 0.1589714  -0.05156619 -0.03938685],negative,negative
+523,2,1,@user just as long as you're making more than minimum wage. Gotta be superior to some people. ,ENG,[0.33682567 0.2963706  0.36680368],[ 0.06291741 -0.06503741  0.14817867],positive,neutral
+524,2,2,Bankers celebrate dawn of 'Trump' era #TrumpTransitionTeam #TrumpCabinet #DrainTheSwamp ,ENG,[0.326363   0.31703728 0.35659972],[ 0.00470774 -0.02428304  0.09331142],positive,positive
+525,2,0,"SOMEONE SEND ME STATS ON ACCIDENT RATES OF SELF DRIVING CARS BC IM LOSING IT OVER HERE. SOS HELP PLEASE, ELON MUSK HAS FORSAKEN ME. ",ENG,[0.28099573 0.34114623 0.37785804],[0.01079891 0.20477061 0.30697793],positive,negative
+526,0,1,How in order to take ill an anent crinkle dash social security revive?: crIXQ ,ENG,[0.39015788 0.31285375 0.29698837],[ 0.16575797 -0.05505769 -0.10710054],negative,neutral
+527,2,2,And now it's time for #ScreamQueens😈💉🏥🔪#CrazyHester ❤️ ,ENG,[0.31479388 0.29217118 0.39303496],[-0.00725938 -0.08183773  0.21472108],positive,positive
+528,2,0,@user @user we should all refuse to let them call themselves this new cleaned up label They are NEO NAZI WHITE SUPREMACISTS . Evil ,ENG,[0.3041788  0.33292663 0.3628946 ],[0.06161512 0.1519215  0.23811182],positive,negative
+529,0,1,"only the left would bring up the ""value"" of a person in the admin. How about how much Reid,Pelosi,etc made while in… ",ENG,[0.39092627 0.3147096  0.2943641 ],[ 0.13181597 -0.08505267 -0.15188563],negative,neutral
+530,1,2,Hatchimals Free on Black Friday and Cyber Monday with a Catch #Hatchimals #BlackFriday #CyberMonday… ,ENG,[0.26207948 0.3944687  0.3434518 ],[-0.15249345  0.25639856  0.1179056 ],neutral,positive
+531,0,0,Presumably we took all that gold for saving all those 'lives'. Sounds much better than saying we mugged #Libya and… ,ENG,[0.43980932 0.24563232 0.31455833],[ 0.26785487 -0.31465057 -0.06731693],negative,negative
+532,1,1,@user @user What does he do when the Jazz lose? ,ENG,[0.33593088 0.353156   0.31091312],[ 0.04626459  0.09626905 -0.03112736],neutral,neutral
+533,1,2,School in Hogwarts probably 😇 #HARRYPOTTER #FantasticBeasts 💜 ,ENG,[0.25365883 0.3752402  0.37110096],[-0.10602374  0.2855525   0.27446032],neutral,positive
+534,0,0,I hope for the sake of all Venezuelans tonight that Maduro considers that he will have to face Him too. ,ENG,[0.36613023 0.29482475 0.33904505],[ 0.16857404 -0.04803392  0.09171792],negative,negative
+535,1,1,Steve Bannon is the chief strategist for Donald Trump's presidential staff. Read more about Bannon here: ,ENG,[0.30691943 0.37933248 0.3137481 ],[-2.2133790e-02  1.8969403e-01 -1.2868643e-04],neutral,neutral
+536,2,2,@user Just caught up on #ThisIsUs. You were outstanding 👏🏼👏🏼👏🏼👏🏼 #Heartstrings😥 ,ENG,[0.32946053 0.3099273  0.36061218],[0.10611014 0.04499142 0.1964567 ],positive,positive
+537,1,0,#Japan Issues Emergency Pamphlets to Inform Citizens to Prepare for Possible #Nuclear #War with North #Korea: ,ENG,[0.3011989  0.3978088  0.30099237],[-0.0277488   0.25045183 -0.02843473],neutral,negative
+538,1,1,@user the first step is nationwide voter ID card. Voter registration audit. ,ENG,[0.2714032  0.40328017 0.32531673],[-0.03556823  0.36045775  0.14562549],neutral,neutral
+539,1,2,"Label scan for Bob Dylan's 12th biggest hit, Subterranean Homesick Blues. ",ENG,[0.27932113 0.40191203 0.31876686],[-0.05662072  0.30725038  0.07547709],neutral,positive
+540,1,0,Israeli Navy counters increased #Hamas sea smuggling ,ENG,[0.2855331  0.4251656  0.28930134],[-0.06954332  0.32857752 -0.05643242],neutral,negative
+541,2,1,The Elephant & Fly is out! #nationalfastfoodday #ad ,ENG,[0.3013573  0.3231546  0.37548807],[-0.03480595  0.03502841  0.18512419],positive,neutral
+542,2,2,"A case for #vegetarianism. :) Happy Sunday, everyone! ",ENG,[0.25885057 0.27206632 0.469083  ],[-0.09327741 -0.04348262  0.50125134],positive,positive
+543,2,0,.@ABC Pelosi looks like she has a Shop-Vac up her a-s. ,ENG,[0.2796458  0.35779566 0.3625586 ],[-0.09952768  0.14691049  0.16013458],positive,negative
+544,1,1,@user @user @user @user 👇👍👍How Steve Bannon Sees The Entire World via @user @user ,ENG,[0.2762685  0.39140052 0.3323309 ],[-0.05333944  0.29501867  0.1314185 ],neutral,neutral
+545,2,2,So nice to be on this list among such great restaurants. Canoe is the gold standard & I had a… ,ENG,[0.33423933 0.29969105 0.36606964],[ 0.09546006 -0.01364508  0.18642639],positive,positive
+546,0,0,SMART DUDE. This man is going to have his life ruined. SPLC has power to make sure u never leave the Country fyi ,ENG,[0.42394903 0.24242322 0.33362773],[ 0.25467387 -0.3042543   0.01508639],negative,negative
+547,1,1,Randall discover some letters #ThisIsUs ,ENG,[0.28033096 0.3905487  0.32912037],[-0.05787098  0.2737108   0.10258166],neutral,neutral
+548,2,2,"The utterly brilliant @user #Bromley do the #MannequinChallenge, all for @user ",ENG,[0.31921074 0.330961   0.3498282 ],[0.00612044 0.04226954 0.09771118],positive,positive
+549,0,0,"@user So they seem to assume same posture as hardline rightists re:minorities: This bloc will never change, they're not really American ",ENG,[0.4950461  0.23916824 0.26578566],[ 0.350503   -0.3769807  -0.27145767],negative,negative
+550,2,1,"Yay, avocado smashers!!! make gun control tight tight tight!!!!! ",ENG,[0.25339705 0.28202176 0.4645812 ],[-0.09743103  0.00959561  0.5087477 ],positive,neutral
+551,2,2,@user Michael Moore for president would be a good thing.  All jokes aside. ,ENG,[0.31373385 0.3047328  0.3815333 ],[-0.00494779 -0.03405747  0.19070534],positive,positive
+552,2,0,Horrible Uber Go trips! #UBER get the things sorted plz. #UberIndia ,ENG,[0.2586574  0.36170387 0.3796388 ],[-0.11735462  0.21796684  0.26636124],positive,negative
+553,0,1,"@user @user If the #GOP dare to touch Social Security, I call for a massive class action suit. We might just sink the #GOP. ",ENG,[0.33762845 0.3359906  0.32638097],[ 0.02278833  0.01792548 -0.01109243],negative,neutral
+554,2,2,The @user were on fire tonight! It was awesome to be at the arena and watch the game! It was great to see @user back in the game ,ENG,[0.26400888 0.2910605  0.44493058],[-0.05723691  0.04031155  0.46469855],positive,positive
+555,2,0,Waiting to see a photo of Steve Bannon where he doesn't look like he has the worst hangover of his life. ,ENG,[0.29974842 0.32138306 0.37886843],[-0.05632557  0.01336464  0.1779199 ],positive,negative
+556,0,1,"@user @user How about this read, Mark:https://t.co/UxoKA4kJT1 ",ENG,[0.37250987 0.3305264  0.29696366],[ 0.22354838  0.10397139 -0.00310541],negative,neutral
+557,2,2,"Happy Thanksgiving from Turkey! (oh, the puns 😁)Deciphering cryptic wifi access at @user to… ",ENG,[0.28246796 0.3469736  0.3705584 ],[-0.10317633  0.10250729  0.16826966],positive,positive
+558,1,0,@user @user where is the FBI on this and why is trump not questioned on his participation w/ Cuba during an embargo? ,ENG,[0.3598174  0.37109184 0.2690908 ],[ 0.14929087  0.18014382 -0.141257  ],neutral,negative
+559,1,1,Donald Trump shapes his cabinet as Jill Stein presses for recounts. ,ENG,[0.32205012 0.36489776 0.3130521 ],[-0.02757062  0.09733939 -0.05590815],neutral,neutral
+560,0,2,We should support this brave people of our nation in #Syria @user @user @user ,ENG,[0.3600509  0.2950163  0.34493288],[0.24100251 0.04178768 0.198107  ],negative,positive
+561,0,0,"@user It probably is, frankly. Possible endgame is to ride the wave of disppointed leftists when it fails.  Use them to push for 1/ ",ENG,[0.4315156  0.27714083 0.29134354],[ 0.22525142 -0.21752653 -0.1675491 ],negative,negative
+562,1,1,"#NeilPrakash, #Australia's most senior #ISIS recruiter has been arrested in the Middle East, months after the... ",ENG,[0.32132623 0.3800003  0.29867354],[ 0.01538457  0.18309967 -0.05772122],neutral,neutral
+563,2,2,I managed to find Nintendo in Google Earth VR. How many nerd points do I get? #alwayssunnyingoogleearthvr ,ENG,[0.3403203  0.30847833 0.35120144],[ 0.07954071 -0.01869491  0.11101349],positive,positive
+564,1,0,@user Haha. He's not even close to Tim Duncan. Never suggested otherwise. ,ENG,[0.3215546  0.34105688 0.33738852],[0.0893798  0.14826168 0.13744754],neutral,negative
+565,2,1,Really sounds like @user doesn't want this job. Know who did? @user It's why I'm #StillwithHer ,ENG,[0.35378525 0.2821742  0.36404055],[ 0.13322079 -0.09294473  0.16179594],positive,neutral
+566,2,2,"@user I just wanna say that the rain scene in #FantasticBeasts was one of the most poetical things I've ever seen, thank you for that. ",ENG,[0.33091086 0.29287377 0.3762154 ],[ 0.07113379 -0.05097352  0.19944662],positive,positive
+567,0,0,"#SandyHookPromiseGun control will not work, I live in a place where it's harder for an illegal to get alcohol vs a gun (or several). ",ENG,[0.3850284  0.27528086 0.33969074],[ 0.10857616 -0.226949   -0.01670525],negative,negative
+568,0,1,@user #brexit the british people who supported #italy have to support G Miller.Italian referandum and Sup.Court case is same! ,ENG,[0.3512349  0.31570768 0.33305746],[ 0.1058742  -0.00076435  0.05273397],negative,neutral
+569,1,2,"#LeonardCohen a tribute, and Jennifer Warnes ",ENG,[0.28512758 0.37819946 0.3366729 ],[-0.0992782   0.18320674  0.06689687],neutral,positive
+570,0,0,@user No! It's about the shit false equivalency coverage by media and Comey. Media systematic character diso… ,ENG,[0.352766   0.32185423 0.32537973],[0.15414535 0.06243913 0.07333325],negative,negative
+571,0,1,"MRC/YouGov Poll: Most Voters Saw, Rejected News #MediaBiashttps://t.co/toE24D1NlO #msm #tcot #uniteblue #maga  #msmbias #p2 #liberalmedia ",ENG,[0.39617404 0.27888772 0.3249382 ],[ 0.22267607 -0.12836829  0.02445746],negative,neutral
+572,2,2,One of my new favorite shows is #ThisIsUs and our very own @user does awesome ep recaps!!! ,ENG,[0.2107285  0.3076759  0.48159564],[-0.20483705  0.17363927  0.6216972 ],positive,positive
+573,0,0,Clearly an attempt to scare people people into supporting more gun control ,ENG,[0.42070758 0.28003675 0.29925573],[ 0.18614312 -0.22087407 -0.15449645],negative,negative
+574,1,1,But really... can't feel like we can #DrainTheSwamp with him around.  #Cabal ,ENG,[0.30728748 0.37491012 0.3178023 ],[-0.07148308  0.12741941 -0.03783729],neutral,neutral
+575,2,2,"@user yeah good point, I forgot that veganism requires a lot of thought in that sense! I'm defo with you on vegetarianism though! ",ENG,[0.3252544  0.26365063 0.41109496],[ 0.10952163 -0.10046121  0.3437382 ],positive,positive
+576,0,0,Which altogether uncommonly wants so as to go through the candor regarding needful trafficking robots: oEJe ,ENG,[0.44824022 0.27633026 0.27542943],[ 0.28473917 -0.19899338 -0.20225868],negative,negative
+577,1,1,#TheWalkingDead 109 Blank Variant Cover  ,ENG,[0.27028388 0.39671403 0.3330021 ],[-0.08977066  0.2939722   0.11890525],neutral,neutral
+578,1,2,A.Relentless.Fucking.ExperienceThank you for the wild ride@evanrachelwood @user @user #Westworld ,ENG,[0.25772995 0.38546374 0.35680628],[-0.13510261  0.26743212  0.19017802],neutral,positive
+579,1,0,@user #Liberals #Premier #KathleenWynne helped #AG @user escape her #FailureOfDuties! via ,ENG,[0.28320965 0.370631   0.34615934],[-0.03369186  0.2353277   0.1670199 ],neutral,negative
+580,1,1,"Inside Expa Labs, #uber co-founder’s take on the #startup accelerator ",ENG,[0.30876002 0.38380444 0.30743554],[0.05157261 0.26914138 0.04727365],neutral,neutral
+581,0,2,People relate with people like them.They share ideologies and philosophies!#StillWithHer ,ENG,[0.3883336  0.24921502 0.36245137],[ 0.20265664 -0.24089205  0.13368222],negative,positive
+582,0,0,Leftists would rather start a civil war than accept a fair election result.  What a bunch of children. #AuditTheVote #StealTheVote #Recount ,ENG,[0.4606966  0.24948308 0.28982028],[ 0.28255755 -0.33079112 -0.18092106],negative,negative
+583,0,1,#is sex important in marriage free gay picture sex teen ,ENG,[0.37531182 0.30652654 0.31816164],[ 0.17571673 -0.02673616  0.01051909],negative,neutral
+584,0,2,It's so funny watching all the White Supremacists and conspiracy theory nuts attack Mitt Romney.Romney is the only GOP with a spine left. ,ENG,[0.42614543 0.25892708 0.31492755],[ 0.24046595 -0.25776833 -0.06197205],negative,positive
+585,0,0,"@user @user @user @user @user I wouldn't know about any rightists in gov, cucks yes, but no rightists ",ENG,[0.4045315  0.29598108 0.2994874 ],[ 0.22756419 -0.08486997 -0.07309307],negative,negative
+586,1,1,.@AndriyParubiy: .@poroshenko Ready To Alter Recommendation For Appointment Of CEC Members ,ENG,[0.2911156  0.39403516 0.31484917],[-0.02384527  0.2788744   0.05452802],neutral,neutral
+587,1,2,Zac Efron & Seth Rogen Flex Their Muscles In Short Shorts — 'Neighbors 2' Pic #ZacEfron #ZacEfron ,ENG,[0.2832616  0.3677199  0.34901848],[-0.05296646  0.20798424  0.15578759],neutral,positive
+588,1,0,"@user @user @user With ya on thisCountry in increasing turmoil re voter suppression, voter fraud@POTUS pls #AuditTheVote ",ENG,[0.32488587 0.35469294 0.32042116],[0.10868357 0.19646205 0.09484585],neutral,negative
+589,0,1,Vegetarianism and taboo to plastics keep Famke Janssen young - ,ENG,[0.33919942 0.3286573  0.33214325],[0.03171823 0.00014562 0.01069635],negative,neutral
+590,2,2,Finally caught up with #TheWalkingDead ,ENG,[0.2813467  0.3445904  0.37406287],[-0.10115825  0.10161056  0.18367793],positive,positive
+591,1,0,Dakota Access Pipeline Protestor Sophia Wilansky Injured By Protestors Homemade Bombshttps://t.co/3NkcojStXW via @user ,ENG,[0.35613567 0.3568114  0.28705293],[ 0.16372606  0.16562168 -0.0519191 ],neutral,negative
+592,0,1,"#Aleppo slaughter: #Russia #Assad guilty of bombing civilians, world guilty of doing nothing #UN #POTUS #EU @user ",ENG,[0.40213305 0.33108208 0.2667849 ],[ 0.29465684  0.10024017 -0.1156834 ],negative,neutral
+593,0,2,"With a gun to my head, The Stranger Song might be my favourite Leonard Cohen song... only because it's emotional trajectory is so familiar ",ENG,[0.4262245  0.22704202 0.34673345],[ 0.28142908 -0.34840202  0.07501925],negative,positive
+594,0,0,They smile at you @user for selling arms to Saudi Arabia and at you @user for defending BoomBoomB… ,ENG,[0.36429957 0.2943729  0.34132755],[ 0.14276725 -0.07036196  0.07763325],negative,negative
+595,1,1,Home Medicine for High Blood Pressure #homeopathy ,ENG,[0.28881082 0.3920533  0.31913584],[-0.04770159  0.2579244   0.05214342],neutral,neutral
+596,2,2,"A travel call on Grayson Allen. Someplace, somewhere, Tony Bennett smiles. ",ENG,[0.36450508 0.2684363  0.36705855],[ 0.10907562 -0.19685118  0.11605647],positive,positive
+597,0,0,"@user @user . Aka: Soros is paying the bills. To disrupt the Trump transition. Stein, bought & paid for by just like Bernie. ",ENG,[0.37146178 0.28849933 0.34003884],[ 0.0740757  -0.1786775  -0.01431043],negative,negative
+598,1,1,Trump has been the recipient of generous political contributions from Energy Transfer chief executive Kelcy Warren. ,ENG,[0.2642252  0.41868368 0.3170911 ],[-0.06977038  0.3905435   0.112617  ],neutral,neutral
+599,0,2,@user @user Clinton is ahead over 2 million in popular vote. ,ENG,[0.3838002  0.3049367  0.31126314],[ 0.09976099 -0.13025688 -0.10972252],negative,positive
+600,0,0,@user #hamas No way this Scottsman is a Jew for what it is worth does not matter president elect Trump repr… ,ENG,[0.39099666 0.31715596 0.29184747],[ 0.21568824  0.00638288 -0.07677949],negative,negative
+601,0,1,The UK Doctor Who Beat The British GMC By Proving That Vaccines Aren’t Necessary To Achieve Health… ,ENG,[0.37704307 0.3247468  0.2982102 ],[ 0.17149898  0.02218529 -0.0630619 ],negative,neutral
+602,2,2,It was really fantastic *-* #FantasticBeasts ,ENG,[0.3115437 0.299229  0.3892273],[ 0.01698997 -0.02334054  0.23961383],positive,positive
+603,0,0,#Angular is completely lost. They keep throwing out new versions. Versioning all over the place. They are hiding something. BAD HOMBRES ,ENG,[0.36964732 0.30788204 0.32247064],[ 0.13357843 -0.04925419 -0.00295885],negative,negative
+604,2,1,"【Popular Song】Ahh, I said I'm putting down my story in a popular song #Taylor #ArianaGrande #Justin #music ",ENG,[0.2743099  0.31252682 0.41316324],[-0.05370799  0.07672383  0.35587633],positive,neutral
+605,2,2,Micha Dorst took this beautiful picture inside his Tesla Model S! ,ENG,[0.25518912 0.31095076 0.43386015],[-0.15466031  0.04296933  0.3760571 ],positive,positive
+606,0,0,"@user QHP is not medicaid. she's not poor,lower-middle class income - pre-SS pensioner at 64(?). i hope she dies in significant pain. ",ENG,[0.37390232 0.3002614  0.3258363 ],[ 0.15351659 -0.06582457  0.01591718],negative,negative
+607,1,1,@user @user @user @user 2018 may see the MOST ACTIVE Democratic primaries with more challenges than ever before. ,ENG,[0.28377524 0.3833743  0.33285043],[-0.05097806  0.24985127  0.10853271],neutral,neutral
+608,0,2,We just tried @user #VR in our @user and loved everything about it!https://t.co/TbrBW2fwx6 ,ENG,[0.38799652 0.2687985  0.34320498],[ 0.20882158 -0.15821274  0.08615305],negative,positive
+609,0,0,"@user regarding her case being a waste to taxpayers when other murderers were not ""death penalty guarantees"" due to demographics ",ENG,[0.39683312 0.33173004 0.27143684],[ 0.18016154  0.00096714 -0.19962478],negative,negative
+610,1,1,@user @user Here's a need for voter suppression documentation. ,ENG,[0.3034476  0.38069174 0.31586066],[0.09942412 0.32620513 0.13951632],neutral,neutral
+611,2,2,@user @user I was two weeks early I traded my old note for a galaxy 7 wish I had the new vr gear. I love the first one ,ENG,[0.3407918  0.2802286  0.37897962],[ 0.0953515  -0.10031445  0.20156223],positive,positive
+612,1,0,"@user While I respect your commitment to diversified coverage, CNN's lack of reporting on the Dakota Access Pipeline is shameful. ",ENG,[0.3241576  0.3595233  0.31631917],[0.06054315 0.16409236 0.0360651 ],neutral,negative
+613,1,1,5 right-backs Barcelona could sign as Vidal's replacement #fcblive ,ENG,[0.3290822  0.36042815 0.31048962],[0.07343397 0.16441901 0.01527687],neutral,neutral
+614,0,2,I'd like to have lived in the time when bob dylan was at the top of the charts ,ENG,[0.4158467  0.2324483  0.35170496],[ 0.19737437 -0.38427448  0.02985028],negative,positive
+615,1,0,FUCK BOB DYLAN ,ENG,[0.30520627 0.36048764 0.334306  ],[0.00201537 0.16848516 0.09308422],neutral,negative
+616,0,1,Leftists see it as an impediment to revolutionary solidarity whereas liberals see it as an impediment to compromise with the opposition. ,ENG,[0.4498796  0.28663585 0.26348445],[ 0.25189182 -0.19887559 -0.28309375],negative,neutral
+617,2,2,#Westworld is the greatest work of art I've ever seen on TV. A true masterpiece. ,ENG,[0.26941243 0.33284983 0.3977377 ],[-0.05403226  0.15741585  0.33551717],positive,positive
+618,0,0,"@user Because for decades it was (and still remains) in the pockets of corporate America. Rightists internalized their shitty ""ideas"" ",ENG,[0.46354896 0.27191007 0.26454103],[ 0.31415543 -0.21928523 -0.2467602 ],negative,negative
+619,0,1,Cuban immigrants stranded for days at Reynosa-Hidalgo international bridge#Cuban #Immigration #reynosa #hidalgo… ,ENG,[0.3912554 0.3278691 0.2808756],[ 0.21065506  0.0339089  -0.12079366],negative,neutral
+620,2,2,Please go watch #FantasticBeasts in the theatres if you haven't alreadyThe movie is amazingThe visuals are splendid ,ENG,[0.36407778 0.25013423 0.385788  ],[ 0.08035692 -0.2950129   0.13827743],positive,positive
+621,0,0,The dems are bad hombres! #MAGA ,ENG,[0.37070873 0.29206586 0.3372254 ],[ 0.1571621  -0.08127524  0.06249704],negative,negative
+622,0,1,<-Chinese Wife Gets Hubby Off #tits #boob #memek #bispak  #onedirection ,ENG,[0.39168406 0.29259577 0.31572014],[ 0.15956333 -0.13210016 -0.05603599],negative,neutral
+623,2,2,Thank you!  @user @user @user ,ENG,[0.30979845 0.29124802 0.39895356],[-0.00194217 -0.06368884  0.25098097],positive,positive
+624,0,0,"#TweetMovie #ux Watch #Isis #Mosul unfold at {eastern, u.s, #attack, media, #france, prosecutor, killed, army} ",ENG,[0.39239553 0.3141049  0.29349962],[ 0.20647751 -0.0160658  -0.08391655],negative,negative
+625,1,1,Trip to Istanbul ✈️✈️✈️🏀🏀🏀#fcblive ,ENG,[0.26088324 0.40025136 0.3388654 ],[-0.12774536  0.3002745   0.1337847 ],neutral,neutral
+626,0,2,I just want the semester to be over so I can watch Westworld and Insecure without guilt ,ENG,[0.3571676  0.30295146 0.33988094],[ 0.05775231 -0.10688029  0.00814256],negative,positive
+627,0,0,This cop actually brought a P90 Shapewood too kill hosts in westworld. I'M DYING ,ENG,[0.36441377 0.2967336  0.3388527 ],[ 0.09982118 -0.105634    0.02709673],negative,negative
+628,1,1,@user homeopathy ,ENG,[0.31171307 0.3550787  0.33320823],[0.08402662 0.21428296 0.15071112],neutral,neutral
+629,1,2,WestWorld is even more meta than Community. ,ENG,[0.29435065 0.37849805 0.3271513 ],[-0.08736324  0.16407594  0.01828781],neutral,positive
+630,2,0,@user Put your life at risk for minimum wage! Once you've been injured and of no use you are abandoned or left homeless! Why not join 😂 ,ENG,[0.32521752 0.33367512 0.34110737],[0.08498033 0.11065389 0.13268338],positive,negative
+631,0,1,@user so many deplorables..need a basket the size of Russia ,ENG,[0.41351157 0.28416944 0.30231908],[ 0.25176725 -0.12334764 -0.06143523],negative,neutral
+632,2,2,Sitzprobe fun yesterday! #LiveBand We open next week! @user #Panto #BeautyAndTheBeast ,ENG,[0.2057388  0.34779698 0.4464642 ],[-0.2837875   0.24122405  0.4909644 ],positive,positive
+633,0,0,"@user @user @user You're not fooling anyone. Quit polluting the election. Besides, it might turn up a lot of dead dems ",ENG,[0.44157958 0.26671046 0.29170987],[ 0.25463092 -0.24956363 -0.15996768],negative,negative
+634,0,1,"@user ""Patriotism is the last resort to which a scoundrel clings."" - Bob Dylan ",ENG,[0.37428415 0.299212   0.3265039 ],[ 0.18177071 -0.04209216  0.04519733],negative,neutral
+635,1,2,Love and Books and Valentines ,ENG,[0.29834747 0.35152215 0.3501303 ],[-0.07701597  0.0869979   0.08303054],neutral,positive
+636,1,0,@user @user @user “Kim Fatty the Third”  will have to go on a diet. ,ENG,[0.26495898 0.37456483 0.3604762 ],[-0.12037493  0.22581491  0.18747595],neutral,negative
+637,0,1,there are many ways to not use fossil fuels & still strive in this economy but people are too money hungry so let's… ,ENG,[0.41008076 0.2504956  0.33942363],[ 0.273675   -0.21923766  0.08456988],negative,neutral
+638,0,2,"@user @user Miguel, tell me about this guy, and what he means to you as a fellow PuertoRiqueño ",ENG,[0.34910557 0.3344651  0.31642935],[0.14278832 0.09994646 0.04451392],negative,positive
+639,0,0,i don't get how we can have so many cruel forms of animal testing yet even considering doing the same to humans is regarded as unethical ,ENG,[0.5060956  0.22747906 0.26642537],[ 0.39408037 -0.405587   -0.24755095],negative,negative
+640,1,1,I have now posted an official ad on the Pasteur website: ,ENG,[0.25876516 0.39487678 0.34635806],[-0.03155426  0.3910986   0.25999796],neutral,neutral
+641,2,2,@user @user @user @user You're the one who brought up Obama. I'm going to miss him. 💙💚💛💜 #ThankYouObama ,ENG,[0.32219207 0.29139975 0.38640815],[ 0.05631134 -0.04414048  0.2380577 ],positive,positive
+642,2,0,"Good riddance to #FidelCastro, now can that SOB Nicolas Maduro be the next to go? ",ENG,[0.2958808  0.3367462  0.36737305],[-0.08258098  0.04679194  0.1338402 ],positive,negative
+643,1,1,Katie Holmes Heather Graham Phoebe Cates Gretchen Mol Alexis Dziena Jamie Lee Curtis Ashley Judd ,ENG,[0.24993768 0.44812617 0.30193615],[-0.18556082  0.39830238  0.00344316],neutral,neutral
+644,0,2,A subway wall in NYC offers some solace to those #StillWithHer. #Grieve. #Organize. #Resist.https://t.co/93kSnw0cUK ,ENG,[0.37704816 0.31798637 0.30496544],[ 0.18232755  0.01196317 -0.02984693],negative,positive
+645,2,0,"@user plan against the coming horror of climate change.  Obama just this June approved 1,500 offshore fracking wells.  They guy ",ENG,[0.3638639  0.26728263 0.36885348],[ 0.11572818 -0.19274503  0.12934777],positive,negative
+646,2,1,The latest The iNewsTV Daily! #trumptransitionteam #maga ,ENG,[0.29929477 0.33440936 0.3662958 ],[-0.04165244  0.06928446  0.16035983],positive,neutral
+647,2,2,Courtesy of @user #Gaston #BeautyAndTheBeast #BeOurGuest #Disney ,ENG,[0.29965907 0.3398565  0.36048442],[-0.05868438  0.06719362  0.12611891],positive,positive
+648,0,0,@user did you see how McDonald's has computers in areas where the minimum wage is 12$? It's bad for people. It puts them out of work ,ENG,[0.3896976  0.29486227 0.31544012],[ 0.16116324 -0.11769946 -0.05023897],negative,negative
+649,1,1,#ISIS Magazine DABIQ - ISSUE 8https://t.co/JF9wos9esV ,ENG,[0.32757908 0.35776258 0.31465828],[0.11365323 0.20179328 0.07341097],neutral,neutral
+650,0,2,"Retweeted AFV (@AFVofficial):""Um, yes, I'll take it to go."" #NationalFastFoodDay ",ENG,[0.33846378 0.33549237 0.32604387],[0.04235134 0.0335335  0.00496622],negative,positive
+651,1,0,@user @user they will pay for this on the backs of the senior citizens medicare services. Shame on them. ,ENG,[0.33403993 0.3511036  0.31485653],[0.10874636 0.15856722 0.04960295],neutral,negative
+652,0,1,"If robots and computers wind up making everything, then the thing to do is own resources. ",ENG,[0.384622   0.29167706 0.32370096],[ 0.14704375 -0.12957013 -0.02539713],negative,neutral
+653,2,2,@user I hope I white pilled you a bit enjoy Christmas in England the third world awaits the liberals hope they're as welcoming 😂 ,ENG,[0.34929448 0.24925844 0.4014471 ],[ 0.14379191 -0.19363318  0.28295228],positive,positive
+654,1,0,Aren't we supposed to phase off and divest from fossil fuels ? ,ENG,[0.34664428 0.37118256 0.28217316],[ 0.07543448  0.14382939 -0.13034372],neutral,negative
+655,0,1,@user In other words a full EIS. Which is what was required in the 1st place + what will be nearly impossible for DAPL to obtain. ,ENG,[0.36023358 0.3581836  0.28158283],[ 0.1646951   0.15898818 -0.08163083],negative,neutral
+656,2,2,30 Min into the Westworld-Finale and I’m already like Holy Shit! ,ENG,[0.20494229 0.33405244 0.46100533],[-0.26468378  0.22388583  0.54599744],positive,positive
+657,0,0,@user @user Think this means US is dropping its support for Ukraine coup?No more need for UA 'useful idiots'?Poroshenko 11% ,ENG,[0.37398115 0.34082973 0.2851891 ],[ 0.15222889  0.05940651 -0.1188241 ],negative,negative
+658,1,1,I added a video to a @user playlist 'Trump's First 100 Days': 'Fixing' ObamaCare ,ENG,[0.30638242 0.36773092 0.32588664],[-0.02543403  0.15708342  0.03628157],neutral,neutral
+659,1,2,"@user @user we have socialism here in the US with great success. Social security, Medicare, education, post office, ect... ",ENG,[0.25598207 0.39383352 0.3501845 ],[-0.09994535  0.33087546  0.21340737],neutral,positive
+660,0,0,@user @user Anyone #StillWithHer are ignorant of #PizzaGate or are pedophiles ,ENG,[0.39967045 0.30612242 0.29420707],[ 0.1743591  -0.09229615 -0.13199738],negative,negative
+661,2,1,"@user @user @user Just in case someone is wondering what to get me 4 Xmas, NOT THIS. ",ENG,[0.31206998 0.32221356 0.3657165 ],[-0.00590211  0.02608506  0.1527289 ],positive,neutral
+662,2,2,OH GOD WHAT EVEN IS EDDIE REDMAYNE? can I pack him in a suitcase? 😭😭 #fantasticbeasts ,ENG,[0.35883927 0.2752117  0.36594903],[ 0.06500559 -0.2003284   0.08462512],positive,positive
+663,0,0,"@user Homeopathy is dumb and really shouldn't be allowed anywhere, but that kind of BS seems more popular here than elsewhere. ",ENG,[0.34855416 0.31910425 0.33234155],[ 0.06105139 -0.02722443  0.01342102],negative,negative
+664,0,1,. @user recommended by Nancy Pelosi to helm Democratic Policy & Communications Committee as part of triumvirate.https://t.co/GZPb9V4pbx ,ENG,[0.3639655 0.3290953 0.3069392],[ 0.14652129  0.04580954 -0.02388811],negative,neutral
+665,1,2,Ek dink 'n #Backstage #mannequinchallenge by @user sal MAL AWESOME wees!!! 🎥💃🏼🏃🏻🚶‍♀️🙋🏻‍♂️🕴@GrootFM @user ??? ,ENG,[0.29991812 0.3570567  0.3430252 ],[0.01860593 0.19299108 0.15290043],neutral,positive
+666,0,0,From moment he was elected Far-Rightists accused Obama of Jewphobia because he didn't conform to their politics - a baseless vicious attack. ,ENG,[0.44720173 0.2812464  0.271552  ],[ 0.25736737 -0.20641132 -0.24148877],negative,negative
+667,1,1,Who does Ben Carson get his Xanax from? Asking for a friend. ,ENG,[0.2899526  0.35730338 0.352744  ],[-0.08931807  0.11954962  0.10670701],neutral,neutral
+668,2,2,Geography just got a whole lot better. ,ENG,[0.31099376 0.30453357 0.38447264],[ 0.0044376  -0.01655394  0.21653734],positive,positive
+669,0,0,"#MAGA! In North Korea you get punished for criticizing Kim Jong-un : on Reddit, you get banned for criticizing Mods ",ENG,[0.3575556  0.31466743 0.32777703],[0.17524001 0.04746543 0.08828275],negative,negative
+670,2,1,Got to show the boys in Tipp the way to the Kingdom of Kerry! ,ENG,[0.24604094 0.2668649  0.48709422],[-0.15649046 -0.07524585  0.52646923],positive,neutral
+671,2,2,Usher did a great job! #ThankYouObama ,ENG,[0.23661986 0.31476247 0.44861764],[-0.1782724   0.10709096  0.4614436 ],positive,positive
+672,0,0,@user Trump already violating people's right s for peaceful protest. Not my President. ,ENG,[0.3890685  0.2688912  0.34204036],[ 0.1688447  -0.20060399  0.04001799],negative,negative
+673,0,1,THE A WORD #apartheid #gaza #palestine #israel #BDS ,ENG,[0.3966942  0.32173195 0.2815738 ],[ 0.22486228  0.0154153  -0.11790895],negative,neutral
+674,2,2,We're back at the @user tonight for another SOLD OUT weekend of #BeautyAndTheBeast! #YQG ,ENG,[0.22075431 0.33046892 0.44877675],[-0.22341111  0.18005107  0.48606402],positive,positive
+675,0,0,"@user @user @user @user @user @user GOP, many of us remember how U screwed this country up. ",ENG,[0.37547418 0.26290858 0.36161724],[ 0.1865189  -0.16986452  0.14891544],negative,negative
+676,0,1,"There is not Communism or Marxism, but representative democracy and ... #FidelCastro #quotation ",ENG,[0.40748873 0.31690645 0.2756048 ],[ 0.23486249 -0.01654425 -0.15618281],negative,neutral
+677,1,2,I just liked “THE FREEWHEELIN' MUSIC DOCUMENTARY: D.A. PENNEBAKER ON BOB DYLAN AND DONT LOOK BACK” on #Vimeo: ,ENG,[0.3159498 0.3516124 0.3324378],[0.02753822 0.13448428 0.07840773],neutral,positive
+678,0,0,#Israel is threatened by a more capable and deadly #Hezbollah ,ENG,[0.40438116 0.31210718 0.28351164],[ 0.19389471 -0.06511655 -0.16120994],negative,negative
+679,1,1,"""Darkness is good. Dick Cheney, Darth Vader, Satan. That's power."" —chief Trump strategist Steve Bannon, in a post-election interview ",ENG,[0.34257644 0.35134324 0.30608034],[ 0.07094318  0.09621203 -0.04170399],neutral,neutral
+680,1,2,Realizing The Potential of Humanoid Robots as a Full-time Healthcare Providers #robots ,ENG,[0.24204475 0.41484118 0.3431141 ],[-0.11345427  0.42531884  0.23548618],neutral,positive
+681,2,0,#ButEvenIf #TrumpTransitionTeam #TellsLyingPress #Everything #LP #WillStillSpeculateInNegativeAboutTrump&Team #4BO&… ,ENG,[0.31079057 0.34285793 0.3463515 ],[-0.00571962  0.09247717  0.10261524],positive,negative
+682,1,1,@user  Please help Native American in Dakota Access Pipeline controversy. PLEASE. ,ENG,[0.32606003 0.36831492 0.305625  ],[0.11873875 0.24059561 0.05401612],neutral,neutral
+683,0,2,I'm honoured to be followed by both leftists & rightists. I always try to stay in the middle & take the good from both sides. ,ENG,[0.38585848 0.23226808 0.38187346],[ 0.23676975 -0.27080876  0.22638837],negative,positive
+684,2,0,@user @user France. Be very afraid of Marine Le Pen ,ENG,[0.3215342  0.31178766 0.36667818],[0.10799169 0.07721017 0.23937234],positive,negative
+685,0,1,#Kate_UptonKate Upton is not done criticizing the Cy Young voting processhttps://t.co/S1rPt4Zw8N ,ENG,[0.43798572 0.26170233 0.30031195],[ 0.23966919 -0.27530944 -0.13769536],negative,neutral
+686,2,2,"Since I wasn't here for thanksgiving, here's what I'm thankful for. I love you guys more than you'll ever know ",ENG,[0.39301077 0.20616147 0.40082783],[ 0.1945427  -0.45063472  0.21423765],positive,positive
+687,0,0,i don't think it registers with john travolta that he's pulling a fucking wire hanger out of david blaine's body ,ENG,[0.5008114  0.20512062 0.29406795],[ 0.36180454 -0.5308268  -0.17061421],negative,negative
+688,0,1,Evidence from #Texas @user shows support for #abortion grows as #abortion laws become more restrictive  ,ENG,[0.42472562 0.29233667 0.2829377 ],[ 0.22450301 -0.14903423 -0.18171367],negative,neutral
+689,2,2,"Leadership lesson from Manager, Darius's favorite team!https://t.co/4vwEuoLsBW ",ENG,[0.2777911  0.35548297 0.36672595],[-0.04405514  0.20255281  0.23369032],positive,positive
+690,0,0,This is what Oligarchy looks like. Democracy is dead and @user under Obama/Clinton(s)/Pelosi/Reid killed it. ,ENG,[0.43117526 0.2628394  0.30598533],[ 0.27019608 -0.22477533 -0.07278134],negative,negative
+691,1,1,Republic form of Govt is fairest system:Goal of #SorosRiots – Eliminate Electoral College & Constitution Part (2of2) ,ENG,[0.32350567 0.36118573 0.3153085 ],[0.08437389 0.19454953 0.05870883],neutral,neutral
+692,2,2,I discovered who David Blaine is yesterday and my life has changed forever ,ENG,[0.37705874 0.24281241 0.3801289 ],[ 0.17754947 -0.2625624   0.18565884],positive,positive
+693,0,0,"@user When euthanasia is legalised, I'm not going to commit suicide, just to spite @user *just*. No other reason. ",ENG,[0.40164313 0.29761514 0.30074176],[ 0.21845075 -0.08131201 -0.07086125],negative,negative
+694,0,1,@user @user she's buddies with Putin- she ain't messing with Trumps chances ,ENG,[0.37817082 0.3017818  0.32004735],[ 0.22305709 -0.00258471  0.05618009],negative,neutral
+695,0,2,You’re stronger than you think… #SpeakUpae #SpeakUpae #OrangeTheWorld #16Days #UnitedNations ,ENG,[0.36877632 0.29858255 0.33264112],[ 0.1441976  -0.06694631  0.04107154],negative,positive
+696,1,0,"@user trump wants a wall on Mexican border. What about the Canadian border? that would be just as silly, but why not? ",ENG,[0.34444162 0.3572039  0.29835445],[ 0.13812895  0.17451112 -0.00551344],neutral,negative
+697,1,1,Holiday gifts for all the bad hombres and nasty women in your life via @user ,ENG,[0.2798397  0.369115   0.35104528],[-0.056328    0.22056332  0.17037028],neutral,neutral
+698,0,2,"if Muhammad Ali said it ,you better believe it..You dnt become the ""Greatest"" if you dnt believe..true Legend. ",ENG,[0.3818419  0.25726068 0.36089748],[ 0.20166811 -0.19324864  0.14525536],negative,positive
+699,1,0,"@user @user @user @user I'm GOD'S Voice! God says:""EU was converted into SATANIC Unions by godless LIBERALS:Tusk ",ENG,[0.3115607  0.3682511  0.32018822],[-0.00955984  0.15761106  0.01775504],neutral,negative
+700,0,1,#PTSD sufferers can light up a blunt in #NewJersey now; Christie says it's okay ,ENG,[0.4356902  0.24392863 0.32038122],[ 0.23902538 -0.3410304  -0.06839442],negative,neutral
+701,1,2,LIVE on #Periscope: Justice for Kenneth Chamberlin Sr. #blacklivesmatter ,ENG,[0.22414781 0.41178852 0.36406368],[-0.23428178  0.37392247  0.25074136],neutral,positive
+702,2,0,@user idk. I don't think Grayson Allen is that attractive. ,ENG,[0.34699938 0.30365792 0.3493426 ],[0.16971686 0.03629568 0.17644703],positive,negative
+703,0,1,@user @user @user @user no trump is pushing to get rid of most those fools hence #draintheswamp ,ENG,[0.4215623  0.27462623 0.3038114 ],[ 0.21305542 -0.2155012  -0.11450508],negative,neutral
+704,2,2,Only our family #mannequinchallenge #thanksgiving #familygoals ,ENG,[0.3178549  0.26651025 0.4156348 ],[ 0.02252904 -0.15365332  0.29074103],positive,positive
+705,0,0,That time @user arrived in #Russia and the FSB's Olga Kostina was waiting at the airport to facilitate his defec… ,ENG,[0.3507103  0.3480187  0.30127102],[ 0.08821152  0.08050723 -0.06373877],negative,negative
+706,1,1,Centuries-Old #Shipwreck Recreated with #3DPrinting — via @user ,ENG,[0.25284046 0.41071063 0.3364489 ],[-0.0487342   0.43639606  0.23695342],neutral,neutral
+707,2,2,Yay!!! Jill Stein raises $4 million for 3-state recount effort #StillWithHer #NotMyPresident @user ,ENG,[0.30148295 0.32701808 0.37149897],[-0.00331857  0.07798339  0.20551403],positive,positive
+708,0,0,"Seems we can only count on them for tax cuts for the rich, gutting medicare, SSA, policies against women, LGBT, vot… ",ENG,[0.44806632 0.2786926  0.27324104],[ 0.279544   -0.19528796 -0.21504298],negative,negative
+709,0,1,Gen. Flynn alleged to have committed major breach of Pentagon security -  @user ,ENG,[0.35787946 0.3568441  0.2852764 ],[ 0.17746505  0.17456782 -0.04927263],negative,neutral
+710,2,2,4. Kirk 3. Mrs. Kim 2. Emily 1. Michel #GilmoreGirlsTop4 and I'll throw in Sookie for good measure too as my #5 ,ENG,[0.30366975 0.3236154  0.37271485],[-0.05070943  0.01290568  0.1541635 ],positive,positive
+711,0,0,"@user @user Single mothers, white supremacists, eh, what's the difference? Who can say. Who can say. ",ENG,[0.4387561  0.25239787 0.30884603],[ 0.3020015  -0.25093555 -0.04909937],negative,negative
+712,1,1,"♫Everybody Knows by Leonard Cohen, from #SoundHound with LiveLyrics® ",ENG,[0.2781871  0.37470156 0.34711137],[-0.05045939  0.24737659  0.17089243],neutral,neutral
+713,0,2,"I kinda like the thought of Verlander in St. Louis. Wouldn't command as much as Sale, Cy Young candidate, filthy stuff, lots of Kate Upton. ",ENG,[0.39046034 0.25304827 0.3564913 ],[ 0.17674373 -0.2570024   0.08572717],negative,positive
+714,0,0,"So it's ok when Barack Obama drone strikes and intervenes in foreign conflicts, but Trump plans to continue this an… ",ENG,[0.439511   0.25920063 0.30128834],[ 0.27745968 -0.25060067 -0.10013533],negative,negative
+715,0,1,"While @user orchestrates them, #Saakashvili says large-scale protests are a scenario that could lead to sna… ",ENG,[0.44712278 0.28215596 0.27072123],[ 0.23666853 -0.22370467 -0.26507518],negative,neutral
+716,2,2,Ashley Graham is so hot wtf ,ENG,[0.33842808 0.30298018 0.35859174],[ 0.068879   -0.04176513  0.12675194],positive,positive
+717,1,0,RT @user Trump transition statement on alt right conference where neo nazis and white nationalists were praising Trump's election ,ENG,[0.32322037 0.3822748  0.2945048 ],[0.10748619 0.27529156 0.01444704],neutral,negative
+718,2,1,I have yet to see a photo of Steve Bannon without a headset on. ,ENG,[0.3378218  0.31961668 0.34256145],[ 0.0315907  -0.02380537  0.04552324],positive,neutral
+719,2,2,"#Repost @user with repostapp・・・This is a better pic, ricky_martín! Later than his… ",ENG,[0.3397054  0.2785202  0.38177446],[ 0.03561152 -0.16297665  0.15236278],positive,positive
+720,0,0,@user does not mean that the alt-rightists and the others on the neo-fascist line are not in a worse state ,ENG,[0.41178694 0.32011163 0.26810142],[ 0.2941536   0.04231729 -0.13498701],negative,negative
+721,1,1,"@user #Venezuelan 😷President Nicolas Maduro called Cuban Raul, expresses solidarity with Cuban ppl following death of #FidelCastro. ",ENG,[0.30662155 0.38162714 0.3117513 ],[0.01496726 0.23379703 0.03155877],neutral,neutral
+722,2,2,@user God bless you thank you for fighting bigoted Orange Hitler ,ENG,[0.34541333 0.27716702 0.3774196 ],[ 0.14935058 -0.07077088  0.23796639],positive,positive
+723,0,0,McCoskrie: Euthanasia – we don’t need it ,ENG,[0.42094585 0.2961332  0.28292096],[ 0.2136081  -0.13808678 -0.18372855],negative,negative
+724,1,1,Melania Trump delivers a rare campaign speech in Pennsylvania #RealEstate ,ENG,[0.24192546 0.40352032 0.35455427],[-0.20632724  0.3052699   0.17590444],neutral,neutral
+725,0,2,@user @user sweet jesus valentines day is gonna be a too lewd for titter ,ENG,[0.3880537  0.25113702 0.3608093 ],[ 0.2323755  -0.20276959  0.15958136],negative,positive
+726,0,0,"@user funny how the #lefttards are the ones pushing the KKK narrative, oh, that's right, the Dems founded the KKK after all ",ENG,[0.43158185 0.2537257  0.31469247],[ 0.29870626 -0.23249717 -0.01715507],negative,negative
+727,0,1,@user Ryan plan would not affect people who currently have Medicare or will get it in next 10 yrs. That way he pays no political price ,ENG,[0.4036866  0.3079838  0.28832954],[ 0.18832716 -0.08226451 -0.14820763],negative,neutral
+728,1,2,"@user Tesla Network enrollee's eligible for relatively low cost insurance, since 'self-driving' cars are safer? Tesla to self-insure? ",ENG,[0.31636035 0.3794479  0.3041918 ],[ 0.03332115  0.21515654 -0.0059023 ],neutral,positive
+729,0,0,"@user @user Theyre taught liberals are non believers ; abortion is cool, being gay is a fad, non of us work, we expect gov money. ",ENG,[0.42952403 0.26493916 0.30553684],[ 0.2592693  -0.22390816 -0.08133803],negative,negative
+730,0,1,@user @user @user @user You do realize he lost the popular vote by 2 million. Most of that red is land. ,ENG,[0.425114  0.2547164 0.3201696],[ 0.28569528 -0.22651142  0.00218872],negative,neutral
+731,2,2,"@user ,,,, I hope you had a wonderful,,, turkey day!!! By the way love your book!! See you back Monday. ",ENG,[0.23333415 0.29961795 0.46704796],[-0.17501512  0.0750215   0.51894534],positive,positive
+732,0,0,"@user -- According to the Huffington Post, in regards to drone strikes, Obama really did say, ""I'm really good at killing people."" ",ENG,[0.41178694 0.2964006  0.29181248],[ 0.23082635 -0.0979678  -0.11356834],negative,negative
+733,1,1,"@user @user 😂😂😂😂😂 he needs full name, number, address, and social security ",ENG,[0.32703215 0.36595404 0.3070138 ],[ 0.04368709  0.1561364  -0.01947867],neutral,neutral
+734,0,2,Seems legit....#DrainTheSwamp #DayAfterThanksgiving ,ENG,[0.3569741 0.3106244 0.3324015],[ 0.09496605 -0.04411275  0.02364639],negative,positive
+735,0,0,"can conservatives and rightists stop calling everyone else ""liberals""you know that doesn't mean the same thing as ""leftist"" right ",ENG,[0.45330256 0.2456061  0.3010913 ],[ 0.3261953  -0.28663552 -0.08295088],negative,negative
+736,0,1,Taiwan debates gay marriagehttps://t.co/qSdKvxTV2F #Taiwan #LGBTnews ,ENG,[0.36897045 0.33596766 0.29506192],[0.22672834 0.13302672 0.00319696],negative,neutral
+737,2,2,CRAVING TACOS AND SOME ICE CREAM ! ,ENG,[0.23874582 0.34344226 0.41781193],[-0.20645677  0.15716282  0.35317516],positive,positive
+738,0,0,"Even so, the pipeline shouldn't be constructed at all. We should be moving away from fossil fuels and threats to our water supplies. ",ENG,[0.35417938 0.32781115 0.31800953],[ 0.09183235  0.01446651 -0.0158898 ],negative,negative
+739,1,1,Berry Thomas and Mathieu are the GOLD STANDARD of what an NFL safety should be in this new league ,ENG,[0.26912555 0.37521282 0.35566163],[-0.03179793  0.30051747  0.24700393],neutral,neutral
+740,2,2,Excited to be joining the great John Carr at @user tomorrow at 6:30pm to discuss #Pilgrimage. Please join us! ,ENG,[0.20625663 0.2986964  0.49504694],[-0.24945688  0.12084962  0.62607455],positive,positive
+741,0,0,"""Non-partisan"" tax-exempt anti-Clinton group paid far-right crusader Steve Bannon $99k/year salary, broke tax rules ",ENG,[0.36591005 0.35909638 0.27499357],[ 0.10774676  0.08894999 -0.17789307],negative,negative
+742,1,1,A closer look at Trump's Cabinet choices: via @user ,ENG,[0.21062794 0.43162587 0.35774624],[-0.21689247  0.5005734   0.31283814],neutral,neutral
+743,2,2,Go Marine Le Pen!👇👍 ,ENG,[0.26288062 0.33645853 0.40066084],[-0.11799709  0.12877788  0.3034182 ],positive,positive
+744,0,0,@user What the hell happened to your organization? It used to have an unequaled reputation. Sad times! Fire Dir Comey ,ENG,[0.36446032 0.27660966 0.35893002],[ 0.09669938 -0.17911096  0.08140909],negative,negative
+745,0,1,"EU’s Syria Plan B: Assad stays, and Brussels pays for it – Times #Syria #assad #Aleppo ",ENG,[0.37532318 0.31635937 0.3083175 ],[ 0.17467612  0.00376749 -0.02198122],negative,neutral
+746,1,2,"@user When will, the theme for Ryuji from Persona 5 be available in Europe? #BetterLateThanNever #P5 #Ryuji ",ENG,[0.23067886 0.3858256  0.38349557],[-0.16908853  0.3452704   0.33921298],neutral,positive
+747,0,0,Environmental racism @user It's ok to reroute w/ SOME North Dakota people but not others? You know this is wrong. ,ENG,[0.41510963 0.28651217 0.2983782 ],[ 0.2659365  -0.10482514 -0.0642444 ],negative,negative
+748,0,1,"@user yo, writing a paper on automation, can you send me stats on accidents in self driving cars thx bb ",ENG,[0.36416644 0.32245678 0.3133768 ],[0.17656961 0.05492767 0.02636494],negative,neutral
+749,2,2,My dad has been reading #TheWalkingDead nonstop for the past two days. ,ENG,[0.25422668 0.35404447 0.3917289 ],[-0.13429627  0.19689998  0.29804745],positive,positive
+750,0,0,"@user @user Not to mention he used a racial slur at a nationally televised debate. ""Bad hombres"" -Donald Trump. ",ENG,[0.35515773 0.3149689  0.32987335],[ 0.0846127  -0.03547536  0.01075953],negative,negative
+751,1,1,@user he should just have Melania go deliver Obama’s 2008 race speech. ,ENG,[0.32867974 0.3402612  0.33105904],[0.02279591 0.0574256  0.03000881],neutral,neutral
+752,2,2,@user Thankful for you and the wonderful humans in the Pantsuit Nation FB group <3 #StillWithHer ,ENG,[0.2827078  0.34679812 0.37049407],[-0.01684418  0.18748471  0.25357932],positive,positive
+753,2,0,I 'flew' around the neighborhood I grew up in on Google Earth VR and now all my childhood memories are distorted. ,ENG,[0.3093458  0.292503   0.39815116],[ 0.01177207 -0.0442128   0.264144  ],positive,negative
+754,1,1,Ashley Graham: Losing Weight Would Be Disloyal! | via @user ,ENG,[0.31198794 0.35316437 0.3348477 ],[0.02860441 0.1525735  0.09931567],neutral,neutral
+755,2,2,@user @user @user @user WE WANT @user FOR THE SOUNDTRACK ! #BeautyAndTheBeast #disney ,ENG,[0.28120944 0.33470723 0.38408333],[-0.03190809  0.14224847  0.2798518 ],positive,positive
+756,0,0,Dylann Roof competent to stand trial. Time to register all white supremacists. They will kill again. ,ENG,[0.4346057  0.2615496  0.30384472],[ 0.25332043 -0.25449476 -0.10460196],negative,negative
+757,0,1,"In China, King Jong Un is popularly referred to as ""Kim Fatty the Third"" which is probably the brightest world news you'll see in a while ",ENG,[0.42681    0.25886983 0.31432015],[ 0.18399611 -0.31601745 -0.12193076],negative,neutral
+758,2,2,"@user More terrific news out of the #TrumpTransitionTeam.  Keep up the great work, ladies & gentlemen!… ",ENG,[0.27509755 0.28406268 0.44083968],[-0.04889495 -0.0168257   0.4226606 ],positive,positive
+759,0,0,i read the first line and thought it was from melania's speech ,ENG,[0.43694562 0.27103367 0.29202077],[ 0.26244074 -0.21512496 -0.14054307],negative,negative
+760,0,1,#Brexit #UKIP - Follow the moneyhttps://t.co/wlXf4hyEki ,ENG,[0.3780215  0.29836842 0.3236101 ],[ 0.19565198 -0.04097011  0.04024026],negative,neutral
+761,2,2,We out here shopping for clothes and it feels so good to fit in smalls again 👏🏾👌🏾💪🏾 ,ENG,[0.28701356 0.27499112 0.4379953 ],[-0.03604826 -0.07883888  0.38663048],positive,positive
+762,0,0,Third and this is key here. Earning money is bad because alt-energy but OK because fossil fuels? Your entire point… ,ENG,[0.37615246 0.3014531  0.32239443],[ 0.19313268 -0.02824736  0.03891386],negative,negative
+763,2,1,You don't need that stuff u got ok lifes just live it were ok Kim Jong un take a bath look at ur boobies ,ENG,[0.3703636  0.2533432  0.37629315],[ 0.12455544 -0.25518453  0.1404388 ],positive,neutral
+764,2,2,I was excited for persona 5 3 years ago 😤😤😤😤😤😤😤 ,ENG,[0.3062162  0.31534612 0.37843767],[0.03624452 0.06562399 0.2480045 ],positive,positive
+765,0,0,"Thank u for what, for bailing out rogue banks? For negligence of his own, for racist killer cops, for war crimes, f… ",ENG,[0.4421659  0.25613418 0.3016999 ],[ 0.27732092 -0.26866278 -0.10493141],negative,negative
+766,1,1,Video: Andre Gomes vs Celtic Away. #fcblive [@Anass_Edits] ,ENG,[0.2507273  0.39842734 0.35084537],[-0.09993815  0.3632212   0.23604165],neutral,neutral
+767,1,2,"PHOTOS: From the Rio Olympics to the Cubs' win, take a look back at the big sports events of 2016. #yearinreview… ",ENG,[0.24248715 0.392214   0.3652988 ],[-0.09807537  0.38278353  0.31169164],neutral,positive
+768,0,0,Apparently those neo-Nazi’s didn’t actually MEAN all that “Sieg Trump” stuff:  they’re just playful lads who are... ,ENG,[0.39178592 0.28174162 0.32647255],[ 0.17998774 -0.14973739 -0.00238201],negative,negative
+769,1,1,Tesla's latest Easter Egg enables hypercar-like sprints #tesla ,ENG,[0.2724908 0.389733  0.3377762],[-0.11349517  0.24436185  0.10128359],neutral,neutral
+770,2,2,I SUCCESSFULLY CAPTURED THE HATCHIMAL! My journey has ended and I will go down in the history books. #hatchimals… ,ENG,[0.29247835 0.3397632  0.36775845],[-0.01211586  0.13774243  0.21691987],positive,positive
+771,2,0,"My mom used to say,""Lay down with dogs, get up with fleas.""  Just sayin' .  #TrumpTransitionTeam #DrainTheSwamp ",ENG,[0.31022865 0.32982543 0.35994595],[-0.04842252  0.01283134  0.10022172],positive,negative
+772,2,1,@user MUHAMMAD BABAR ALI Howdy I invite you to this particular porn cam free sign up Click on my profile. ,ENG,[0.2514863  0.3645818  0.38393193],[-0.05490521  0.31645712  0.3681715 ],positive,neutral
+773,1,2,#Spurs #GoSpursGo LOT OF (13) TIM DUNCAN #CardS W/ ROOKIE INSERT SPURS FUTURE HOF #TimDuncan #NBA ,ENG,[0.28086072 0.4077875  0.31135172],[-0.02382333  0.34906405  0.07924105],neutral,positive
+774,0,0,"[SocJus] Conservatives are not allowed to be gay. More doublethink, double standards... ",ENG,[0.36087617 0.32628632 0.31283754],[0.1678668  0.06710716 0.02501594],negative,negative
+775,0,1,You seem like a Grayson Allen kinda guy ,ENG,[0.35842067 0.28597823 0.35560107],[ 0.11890745 -0.10688425  0.11100963],negative,neutral
+776,0,2,Exactly what we need. Thank you president elect... @user @user @user @user ,ENG,[0.34899575 0.31236464 0.33863962],[0.12089552 0.01000701 0.09077227],negative,positive
+777,0,0,"@user Your President Elect has called for drone strikes vs. innocent women and children, why are ""Christians"" ok with that? ",ENG,[0.38363874 0.32530922 0.29105198],[ 0.15826072 -0.00666447 -0.11793871],negative,negative
+778,2,1,Mind fucked!#BreakingBad #TheWalkingDead#BB #TWD ,ENG,[0.31941634 0.28585362 0.39473   ],[ 0.00602874 -0.10498671  0.2177353 ],positive,neutral
+779,2,2,ULTIMATE No Makeup #Makeup Look for Indian Skin I @user #makeupgiveaway ,ENG,[0.28781298 0.33166146 0.38052562],[-0.0409798   0.10082407  0.2382628 ],positive,positive
+780,1,0,#sallyfields doesn't understand the electoral college.Instead of blabbing about your stupid opinions of Pres. Trump. go to Prather Univ. ,ENG,[0.31562325 0.3469508  0.33742598],[0.06801282 0.16264656 0.13480972],neutral,negative
+781,0,1,"yes, but see how Marine Le Pen made sure it was all color coded, as in, blonde? ",ENG,[0.4005113  0.27790943 0.32157925],[ 0.19729012 -0.16815653 -0.02220781],negative,neutral
+782,2,2,Mommy's here #FBNewt #FantasticBeasts ,ENG,[0.29535273 0.32203934 0.3826079 ],[-0.07325843  0.0132449   0.18558195],positive,positive
+783,0,0,"@user I'm well aware of that. If gun control happened in this story though, she'd be dead.https://t.co/4yZ2I9uv7s ",ENG,[0.4353153  0.26239473 0.3022899 ],[ 0.28916174 -0.21705881 -0.07552237],negative,negative
+784,1,1,"@user @user Apparently, euthanasia is compulsory...or something? ",ENG,[0.35640293 0.36860806 0.27498904],[ 0.12546764  0.1591396  -0.13386308],neutral,neutral
+785,2,2,Had to allow myself one bit of online shopping today since they're only making one run of these Leonard Cohen homag… ,ENG,[0.32557866 0.3074707  0.36695063],[ 0.01328484 -0.0439394   0.1329081 ],positive,positive
+786,0,0,@user @user @user @user Using those Clinton Foundation bucks while there's till money left ,ENG,[0.37009177 0.34965837 0.2802499 ],[ 0.1265218   0.06972737 -0.15154752],negative,negative
+787,0,1,"@user I bet her hall pass has Peyton Manning, Megatron & Justin Verlander on it maybe Barry Sanders. Sleeves like seems a face-slap ",ENG,[0.36551014 0.28363192 0.35085797],[ 0.10244662 -0.15117009  0.06153416],negative,neutral
+788,2,2,(Slideshow) the unintended ways #SelfDrivingCars will change our lives - $TSLA $UBER $GM $F $BMW $GOOG ,ENG,[0.32887375 0.30004266 0.37108356],[ 0.06292805 -0.02882125  0.18368134],positive,positive
+789,0,0,I miss [Spoiler]. 😭 #thewalkingdead ,ENG,[0.3811646  0.27454367 0.34429178],[ 0.11622028 -0.21190065  0.01447839],negative,negative
+790,1,1,.Some companies engaged in animal testing #CambridgeKillers  ,ENG,[0.28633428 0.4145509  0.29911488],[-0.00218132  0.36785448  0.04148643],neutral,neutral
+791,1,2,#FantasticBeasts has us thinking of #Dementors. @user explains our new theory ,ENG,[0.31840888 0.35026866 0.33132246],[0.0928195  0.1881837  0.13257538],neutral,positive
+792,0,0,space ride just are Gay  How marriage and jews fat niggas  anime that or  said  he dead fuck of the pussy ,ENG,[0.45857364 0.2251989  0.31622747],[ 0.3263245  -0.38481244 -0.04533464],negative,negative
+793,0,1,@user #p2his    alleged     electoral college victory.#AuditTheVote s#AuditThaDAMVotes ,ENG,[0.37052384 0.31797317 0.31150296],[0.19753113 0.04458033 0.02402217],negative,neutral
+794,2,2,#ThankYouObama you deserve it sir ,ENG,[0.27218622 0.3255936  0.4022202 ],[-0.05342277  0.1257407   0.33709043],positive,positive
+795,0,0,"Normal, non-violent people with immigration concerns are now far right depending on whom you're talking to ",ENG,[0.42920431 0.2876092  0.2831864 ],[ 0.18846786 -0.21186268 -0.2273598 ],negative,negative
+796,1,1,@user The followers of Kim Jong-un ,ENG,[0.29107842 0.39072692 0.31819463],[0.01656623 0.3109824  0.10563674],neutral,neutral
+797,1,2,Ludicrous road trip: Tesla Model S P90D from London to Berlin #Tesla #Models #car #Automotive #cars #Autos ,ENG,[0.23131134 0.39792597 0.37076274],[-0.19986224  0.3426392   0.27193555],neutral,positive
+798,0,0,Trump supporters always think they're so cute calling themselves deplorables. So annoying lol ,ENG,[0.44676197 0.22063543 0.33260268],[ 0.2710551  -0.43445915 -0.02402219],negative,negative
+799,2,1,Real Superstar Cristiano Ronaldo Opens Up on Exactly How He Signed for Man Utd >> ,ENG,[0.222841   0.36586604 0.41129306],[-0.16967207  0.32613677  0.44317552],positive,neutral
+800,2,2,4. Sookie3. Kirk2. Richard1. Luke#GilmoreGirlsTop4 ,ENG,[0.32072774 0.32976753 0.34950477],[-0.01101708  0.01677831  0.07490755],positive,positive
+801,0,0,@user @user can't reason with deplorables ,ENG,[0.44729915 0.3003667  0.25233418],[ 0.29715425 -0.1010693  -0.275319  ],negative,negative
+802,0,1,@user @user don't forget that minimum wage is not meant to be a living wage ,ENG,[0.4478385  0.27395803 0.2782035 ],[ 0.28827298 -0.20318481 -0.1878068 ],negative,neutral
+803,0,2,"Another good reason to control immigration.Racial segregation 'growing in UK', Dame Louise Casey warns - ",ENG,[0.3899266  0.29117042 0.31890297],[ 0.16815186 -0.12389793 -0.03291979],negative,positive
+804,2,0,"Uno menos. Now #Lat have three more left to die: Raul, Maduro and Morales. ",ENG,[0.33359128 0.330286   0.3361227 ],[0.02976788 0.01981035 0.03732764],positive,negative
+805,1,1,Al-Akhbar said #Russia and #Hezbollah will now maintain ongoing contact on operational issues in #Syria.https://t.co/VEh27IAc89 ,ENG,[0.34321    0.37081456 0.2859754 ],[ 0.13050666  0.2078662  -0.05193012],neutral,neutral
+806,1,2,Russia: Zenit stadium will be finished ‘by the end of this year’ – Putin... via @user ,ENG,[0.31212538 0.39050594 0.2973687 ],[0.05435886 0.278397   0.00592656],neutral,positive
+807,1,0,Why has the DOJ sided with Law Breakers? Oh Yeah L.Lynch is HRC's Pet.18 USC § 2101-2 BROKEN ,ENG,[0.3351244  0.3689835  0.29589212],[ 0.08835995  0.1846101  -0.03614696],neutral,negative
+808,1,1,#Hatchimals Hatching Egg #BearakeetAs low as $49.99 (Certain Areas Only)... ,ENG,[0.25958312 0.4057605  0.33465648],[-0.10916001  0.33752617  0.14486758],neutral,neutral
+809,1,2,New #GreenDay concept album: George Soros Glued a Wig on My Head and Made Love to My Face ,ENG,[0.26690912 0.3777246  0.35536635],[-0.11978298  0.22747417  0.16645801],neutral,positive
+810,0,0,"@user Megyn, Please interview Halderman from the Univ of Michigan re:discrepancy in the results in counties with e-voting machines. ",ENG,[0.35890955 0.33203244 0.30905798],[ 0.10465434  0.02681668 -0.04488717],negative,negative
+811,1,1,Miami Dolphins Fans #mannequinChallenge @user @user @user ,ENG,[0.2638606  0.39073214 0.34540728],[0.01277599 0.4053773  0.28207928],neutral,neutral
+812,0,2,"@user I'm probably the only one who listens to the podcast that cares but... Pittsburgh thanks you for Hutchison, he'll win a Cy young😂 ",ENG,[0.3742363  0.29230383 0.33345985],[ 0.12348594 -0.12360771  0.00812105],negative,positive
+813,2,0,"Yeah, and I for one am already fed up with Trump, and his cabinet! ",ENG,[0.3432472  0.23743641 0.41931635],[ 0.08758771 -0.2809633   0.2877625 ],positive,negative
+814,0,1,Why it is still important to reward staff even though the minimum wage has risen via @user ,ENG,[0.40037295 0.31171256 0.28791445],[ 0.18331455 -0.06700046 -0.14641851],negative,neutral
+815,1,2,".@UC_ArtSci Prof Chris Bachelder a #NBAwards finalist for novel dubbed ""comic masterpiece."" ",ENG,[0.3117577  0.3686781  0.31956416],[0.01438221 0.18207975 0.0391139 ],neutral,positive
+816,0,0,Tim Duncan got ejected for laughing once. Steph got ejected for throwing a mouth piece. Boogie gets ejected for breathing. None for Beal? ,ENG,[0.39880216 0.3052441  0.29595378],[ 0.11990251 -0.14745116 -0.17835969],negative,negative
+817,1,1,@user Have you a link where I may read more about this?  The social security numbers. ,ENG,[0.30430737 0.3800323  0.31566033],[0.04716908 0.26938707 0.08379756],neutral,neutral
+818,2,2,I really don't care. Final is on Tuesday and I'm watching westworld oops ,ENG,[0.2336956  0.32564965 0.4406548 ],[-0.21573995  0.11606278  0.41850254],positive,positive
+819,2,0,@user I wish Chavez didn't die young because Maduro is doing terrible. ,ENG,[0.31179386 0.33013538 0.35807076],[0.0233062  0.08046677 0.1616946 ],positive,negative
+820,1,1,One Direction Moment Perfume Ad Poster Niall Horan Harry Styles Liam Payne Louis #onedirection ,ENG,[0.25503948 0.3859039  0.3590566 ],[-0.11617231  0.29799762  0.22588933],neutral,neutral
+821,2,2,Ben Carson;One of the reasons comedians will have material for years! ,ENG,[0.27765715 0.30194908 0.42039368],[-0.06689399  0.01697724  0.34791052],positive,positive
+822,2,0,Obvious Celine Dion should be the #BeautyAndTheBeast movie sound track ..come on bitches is her song 😒 ,ENG,[0.31301108 0.3059016  0.3810873 ],[ 0.01059885 -0.01237641  0.20738867],positive,negative
+823,0,1,Jacob #Israel on how you are really not here right now. #Bibi #Yelev #Jerusalem #Blackfriday ,ENG,[0.35333547 0.30358705 0.3430775 ],[ 0.07102409 -0.08072545  0.0415626 ],negative,neutral
+824,2,2,"“I give you a very strong hug and I bless you with my whole heart, together with your parents and your loved ones.” ",ENG,[0.33697695 0.26156795 0.40145504],[ 0.16804793 -0.08527254  0.34312892],positive,positive
+825,1,0,"Cristiano Ronaldo and Jose Mourinho suspected of criminal activity (tax evasion, money laundering) -… ",ENG,[0.29298294 0.41024348 0.2967735 ],[0.01858874 0.3552252  0.0314436 ],neutral,negative
+826,1,1,Gun Control Endangers More Lives Than it Saves  via @user #2A ,ENG,[0.3240903  0.3554015  0.32050824],[0.02877848 0.12100441 0.01766434],neutral,neutral
+827,2,2,When did #Thanksgiving turn into Valentines Day? So. Many. Couples. Pictures. ,ENG,[0.2731174  0.35408813 0.3727945 ],[-0.07513203  0.18451206  0.2359936 ],positive,positive
+828,1,0,Embargo on Cuba not working. #FreeCuba. #MAGA ,ENG,[0.35448983 0.359616   0.28589416],[ 0.1045792   0.11893633 -0.11047887],neutral,negative
+829,0,1,"Next presentation is about ""sign"" #あいちゃれ ""AI can recognize sign using several modalities like human.""He is using… ",ENG,[0.41439688 0.3023646  0.28323856],[ 0.19533148 -0.11985907 -0.18520322],negative,neutral
+830,2,2,Ashley Graham's crimson Velvet gown Is the excellent holiday Outfit. #fashion #news ,ENG,[0.272761   0.32788473 0.39935425],[-0.11093956  0.07312664  0.2703134 ],positive,positive
+831,0,0,George Soros Exposed as Money Behind Anti-Trump Protests/Riots#tcot #pjnet #p2 ,ENG,[0.35957265 0.3455232  0.2949041 ],[ 0.16768202  0.12782556 -0.03058397],negative,negative
+832,0,1,@user China has setup a Ukrainian-Chinese business association. It is also known that Mr. Poroshenko has dealing w/ the Communists. ,ENG,[0.40998092 0.3123777  0.27764145],[ 0.1825892  -0.08930848 -0.20719086],negative,neutral
+833,2,2,#InStyle  Ashley Graham's Red Velvet Dress Is the Perfect Holiday Outfit ,ENG,[0.25747672 0.3530758  0.3894475 ],[-0.1468947   0.16885875  0.26690507],positive,positive
+834,0,0,Nigeria needs gun control @user Gaining approval to carry arms! @user should reconsider this..no good can come out of it ,ENG,[0.426472   0.26815206 0.305376  ],[ 0.2722808  -0.19171171 -0.0617222 ],negative,negative
+835,0,1,An end to the embargo 20 years ago may have fixed that. Sheesh. #Cuba #Fidel ,ENG,[0.415171   0.29362494 0.29120407],[ 0.22371542 -0.12267179 -0.13095078],negative,neutral
+836,2,2,I liked a @user video Nougat 7.1 for Samsung Galaxy Note 4 (SM-N910V) CM 14.1 trltevzw ,ENG,[0.258412  0.3703987 0.3711893],[-0.16349937  0.19652542  0.1986576 ],positive,positive
+837,0,0,"@user sure us liberals can be annoying, but this doesn't negate issues of inequality. He is locked onto the same pts over & over ",ENG,[0.39881942 0.27639037 0.32479024],[ 0.18615212 -0.18054235 -0.019177  ],negative,negative
+838,1,1,Karan Mahajan reading from THE ASSOCIATION OF SMALL BOMBS #MiamiBookFair2016 #NBAwards ,ENG,[0.29163894 0.37743643 0.33092457],[-0.04718903  0.21069661  0.07918491],neutral,neutral
+839,2,2,Happy #thanksgiving to @user Grateful for team's hard work and great win last night #GoJazz   #TakeNote ,ENG,[0.24224173 0.32852042 0.42923778],[-0.13368644  0.17097649  0.4383885 ],positive,positive
+840,0,0,#LOLMuslims:#Hamas leader: Trump may be a Jew | @user #Muslims #Violence #Terror #Barbarism ,ENG,[0.4157805  0.30967134 0.27454814],[ 0.2316423  -0.06300371 -0.18338853],negative,negative
+841,1,1,#Microsoft announces that it's joining the #LinuxFoundation.https://t.co/BeOxsDa9xL ,ENG,[0.3480965  0.35614297 0.2957605 ],[0.16418162 0.18703413 0.00125197],neutral,neutral
+842,2,2,Flick & Ben enjoying a trip to the countryside. I can almost hear #jerusalem playing… ,ENG,[0.34508282 0.27816045 0.37675676],[ 0.00083071 -0.2147556   0.08864609],positive,positive
+843,0,0,"@user Get rid of the Republican party, no intelligent person likes rightists. ",ENG,[0.42461857 0.28030875 0.29507267],[ 0.2845746  -0.13072497 -0.07939497],negative,negative
+844,0,1,"Those criticizing her for the ""I thought I was the only one allowed to **** Verlander"" need to find a hobby, and maybe a job. ",ENG,[0.41606995 0.29023924 0.29369077],[ 0.1248789  -0.23526898 -0.22344705],negative,neutral
+845,2,2,"look at that, one year of vegetarianism and i havent dropped deed from a lack of protein!! ",ENG,[0.36751127 0.213056   0.4194327 ],[ 0.19395013 -0.3512488   0.32609928],positive,positive
+846,0,0,"Saakashvili is pushing his own agenda here.The Ukrainian economy is growing, although corruption is still a problem… ",ENG,[0.3742149  0.32661542 0.29916975],[ 0.1574572   0.02141043 -0.06636186],negative,negative
+847,1,1,"Carol Brady, Castro & Leonard Cohen?? Coincidence.....#Trump ",ENG,[0.285928   0.38707978 0.32699224],[-0.11834322  0.18454762  0.01585322],neutral,neutral
+848,2,2,Nice! @user joins @user as Platinum member by @user in @user ,ENG,[0.2873396 0.3519303 0.3607301],[-0.06186213  0.14090626  0.16560322],positive,positive
+849,0,0,  #jocox  supporter of #hamas and #fabian and #hoax death to try and stop #brexitthe #remain cancer lost ,ENG,[0.40651584 0.2891341  0.30435008],[ 0.19308464 -0.14764774 -0.09635958],negative,negative
+850,2,1,See @user sexiest fashion looks: ,ENG,[0.26932493 0.36066458 0.37001047],[-0.04909847  0.24293132  0.26851422],positive,neutral
+851,0,2,@user @user The same McConnell who was minority leader as Obamacare was passed? Riiiight 😂 ,ENG,[0.3595167  0.33845195 0.30203128],[0.18217698 0.12179852 0.00794695],negative,positive
+852,0,0,"@user @user 😁 Maduro, Hollande, Merkel,Santos, they will fall flat on their metaphorical, if not physical faces, or both. ",ENG,[0.36011142 0.32479438 0.31509423],[ 0.09332171 -0.00989948 -0.04021999],negative,negative
+853,0,1,"Bankruptcy of wisdom promotes leftists media to ask opinion of Greece about economics,the country bailed out by Ger… ",ENG,[0.4351195  0.28508964 0.27979094],[ 0.23804148 -0.18477556 -0.20353664],negative,neutral
+854,2,2,#FantasticBeasts Loved it!My rating 8.5/10 ,ENG,[0.25385582 0.33997464 0.40616953],[-0.1310077   0.16109678  0.33899638],positive,positive
+855,2,0,"GAY marriage; MALES mentally portraying females in women bathrooms, and now liberals want INCEST MARRIAGE!… ",ENG,[0.34346253 0.25549108 0.4010464 ],[ 0.16329107 -0.13259941  0.3182902 ],positive,negative
+856,1,1,A key part of #3dprinting is the #3dprint #software used. Here we look at the key players developing #3DP software ,ENG,[0.26889408 0.39178324 0.3393227 ],[-0.02049635  0.35589486  0.21213761],neutral,neutral
+857,2,2,How the F David Blaine pull out those!!! 🙀 ,ENG,[0.2739668  0.27499267 0.45104048],[-0.08043331 -0.07669574  0.41811687],positive,positive
+858,0,0,@user @user @user Can't believe he couldn't find a Joseph Stalin shirt in San Francisco. Pelosi could probably lend him one. ,ENG,[0.4357552  0.27434978 0.2898951 ],[ 0.24779576 -0.21488099 -0.15976575],negative,negative
+859,0,1,"""If you are traveling with the samsung galaxy note 7, please leave it at the service desk and we will be happy to throw it away for you"" 😂 ",ENG,[0.39725322 0.28784427 0.3149025 ],[ 0.14558813 -0.17656612 -0.08672265],negative,neutral
+860,2,2,#GilmoreGirlsTop4 Can't be Lorelei or Rory 4)Mrs Kim 3) Miss Patty 2) Emily 1) Luke ,ENG,[0.32481837 0.31795117 0.3572304 ],[-0.03733019 -0.05869849  0.05778462],positive,positive
+861,0,0,cool tip: playing cards against humanity with conservatives isn't actually as fun ,ENG,[0.3986556  0.25565815 0.34568635],[ 0.14832431 -0.2959324   0.00575824],negative,negative
+862,2,1,Ricktatorship by TheMeeDes #art #illustration #popculture #coolpopsart #popart #thewalkingdead #rickgrimes ,ENG,[0.32754782 0.3178611  0.354591  ],[ 0.01519484 -0.01482466  0.09452583],positive,neutral
+863,2,2,Off to see Fantastic Beasts this weekend? Put some fire in your cauldron with a magical Bodega feast first!… ,ENG,[0.23317446 0.29800862 0.46881694],[-0.21113762  0.03419784  0.48728782],positive,positive
+864,0,0,"Well, @user you are right. This is no true fascist movement. We are being treated to an amateurish copy. ",ENG,[0.4426432  0.2751091  0.28224778],[ 0.36277574 -0.11282052 -0.08720298],negative,negative
+865,1,1,"""All 11 of the UK’s most senior judges will take their seats on the supreme court bench on Monday to decide... ",ENG,[0.28539833 0.3877565  0.3268451 ],[-0.0572306   0.24926111  0.07836998],neutral,neutral
+866,2,2,@user #hatchimals #BlackFriday Count me in! 🍀 ,ENG,[0.2901742  0.32056573 0.38926008],[-0.05754879  0.04205718  0.23621754],positive,positive
+867,0,0,American Radical Christianity seems to love hate-spewing Marine Le Pen 😂🙄 ,ENG,[0.4108081  0.295191   0.29400095],[ 0.19676554 -0.13373809 -0.13777758],negative,negative
+868,1,1,#ICYMI The #NBAwards winners for 2016 wereThe Underground Railroad by Colson WhiteheadStamped from the Beginning by Ibram X Kendi ,ENG,[0.25282437 0.40848154 0.33869416],[-0.09778523  0.3819664   0.1946172 ],neutral,neutral
+869,0,2,We would totally accept that challenge…if it were at all humanly possible. #ThisIsUs ,ENG,[0.48742485 0.22110634 0.29146883],[ 0.33144632 -0.45904613 -0.18275668],negative,positive
