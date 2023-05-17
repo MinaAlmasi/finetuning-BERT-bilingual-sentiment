@@ -29,6 +29,7 @@ def input_parse():
 
     # add arguments 
     parser.add_argument("-hub", "--push_to_hub", help = "Whether to push to huggingface hub or not", type = bool, default = False) #default img defined
+    parser.add_argument("-epochs", "--n_epochs", help = "number of epochs the model should run for", type = int, default = 20) #default img defined
     
     # save arguments to be parsed from the CLI
     args = parser.parse_args()
@@ -68,15 +69,14 @@ def main():
     id2label = {0: "negative", 1:"neutral", 2:"positive"}
     label2id = {"negative":0, "neutral":1, "positive":2}
 
-
     # define training arguments 
     training_args = TrainingArguments(
         output_dir = modeloutpath / "ES-ENG-mBERT-sentiment", 
         push_to_hub = args.push_to_hub,
         learning_rate=2e-5,
-        per_device_train_batch_size = 32, 
-        per_device_eval_batch_size = 32, 
-        num_train_epochs=30, 
+        per_device_train_batch_size = 16, 
+        per_device_eval_batch_size = 16, 
+        num_train_epochs=args.n_epochs, #input parse, defaults to 20
         weight_decay=0.01,
         evaluation_strategy="epoch",
         logging_strategy="epoch",
@@ -101,7 +101,7 @@ def main():
 
     # compute train and val loss, plot loss
     train_loss, val_loss = get_loss(trainer.state.log_history)
-    plot_loss(train_loss, val_loss, 2, resultspath, "loss_curve.png")
+    plot_loss(train_loss, val_loss, args.n_epochs, resultspath, "loss_curve.png")
 
     # evaluate, save summary metrics 
     metrics = get_metrics(trainer, tokenized_data["test"])
