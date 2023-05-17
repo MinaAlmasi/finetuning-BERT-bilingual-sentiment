@@ -28,7 +28,7 @@ def input_parse():
 
     # add arguments 
     parser.add_argument("-hub", "--push_to_hub", help = "Whether to push to huggingface hub or not", type = bool, default = False) 
-    parser.add_argument("-epochs", "--n_epochs", help = "number of epochs the model should run for", type = int, default = 20)
+    parser.add_argument("-epochs", "--n_epochs", help = "number of epochs the model should run for", type = int, default = 30)
     parser.add_argument("-download", "--download_mode", help = "'force_redownload' to force HF datasets to be redownloaded. None for using cached datasets.", type = str, default = None)
     parser.add_argument("-mdl", "--model", help = "Choose between 'mBERT' or 'mDistilBERT'", type = str, default = "mBERT")
 
@@ -90,8 +90,8 @@ def main():
         output_dir = modeloutpath / output_folder, 
         push_to_hub = args.push_to_hub,
         learning_rate=2e-5,
-        per_device_train_batch_size = 64, 
-        per_device_eval_batch_size = 64, 
+        per_device_train_batch_size = 32, 
+        per_device_eval_batch_size = 32, 
         num_train_epochs=args.n_epochs, 
         weight_decay=0.01,
         evaluation_strategy="epoch",
@@ -109,7 +109,7 @@ def main():
         id2label = id2label,
         label2id = label2id,
         training_args = training_args, 
-        early_stop_patience=5
+        early_stop_patience=3
         )
 
     # push model to hub
