@@ -28,6 +28,9 @@ from transformers import TrainingArguments
 from finetune_fns import finetune, get_loss, plot_loss, get_metrics, get_metrics_per_language
 from data_fns import load_datasets
 
+# save log history
+import pickle
+
 # disable msg datasets 
 import datasets 
 datasets.utils.logging.set_verbosity_error()
@@ -95,17 +98,17 @@ def main():
     label2id = {"negative":0, "neutral":1, "positive":2}
 
     # define batch_size 
-    batch_size = 64
+    batch_size = 32
 
     # define training arguments 
     training_args = TrainingArguments(
         output_dir = modeloutpath / output_folder, 
         push_to_hub = args.push_to_hub,
-        learning_rate=2e-5,
+        learning_rate=2e-6,
         per_device_train_batch_size = batch_size, 
         per_device_eval_batch_size = batch_size, 
         num_train_epochs=args.n_epochs, 
-        weight_decay=0.01,
+        weight_decay=0.1,
         evaluation_strategy="epoch",
         logging_strategy="epoch",
         save_strategy = "epoch", 
@@ -127,6 +130,9 @@ def main():
     # push model to hub
     if args.push_to_hub == True: 
         trainer.push_to_hub()
+
+    # save log history with pickle
+    trainer.state.log_history.to_pickle(resultspath / f"{args.model}_log_history.pkl")
 
     # compute train and val loss, plot loss
     train_loss, val_loss, total_epochs = get_loss(trainer.state.log_history)
