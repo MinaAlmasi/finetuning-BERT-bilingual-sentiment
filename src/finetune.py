@@ -56,6 +56,9 @@ def model_picker(chosen_model):
     if chosen_model == "mDistilBERT":
         model_dict = {"ES-ENG-mDistilBERT-sentiment": "distilbert-base-multilingual-cased"}        
 
+    if chosen_model == "mDeBERTa": 
+        model_dict = {"ES-ENG-mDeBERTa": "microsoft/mdeberta-v3-base"}
+
     return model_dict
 
 def main(): 
@@ -98,13 +101,13 @@ def main():
     label2id = {"negative":0, "neutral":1, "positive":2}
 
     # define batch_size 
-    batch_size = 32
+    batch_size = 64
 
     # define training arguments 
     training_args = TrainingArguments(
         output_dir = modeloutpath / output_folder, 
         push_to_hub = args.push_to_hub,
-        learning_rate=2e-6,
+        learning_rate=2e-7,
         per_device_train_batch_size = batch_size, 
         per_device_eval_batch_size = batch_size, 
         num_train_epochs=args.n_epochs, 
