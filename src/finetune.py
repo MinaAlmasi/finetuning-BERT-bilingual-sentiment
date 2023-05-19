@@ -107,7 +107,7 @@ def main():
     training_args = TrainingArguments(
         output_dir = modeloutpath / output_folder, 
         push_to_hub = args.push_to_hub,
-        learning_rate=2e-7,
+        learning_rate=2e-6,
         per_device_train_batch_size = batch_size, 
         per_device_eval_batch_size = batch_size, 
         num_train_epochs=args.n_epochs, 
