@@ -6,3 +6,5 @@ datasets
 evaluate
 scikit-learn
 accelerate
+seaborn
+tabulate
