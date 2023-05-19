@@ -119,7 +119,13 @@ def create_metrics_dataframes(resultspath:pathlib.Path, metrics_files_to_include
     # empty dictionary where dataframes will be saved
     metrics_dfs = {}
 
-    for file in resultspath.iterdir(): 
+    # sort path in order "_all", "_eng", "_es" if all metrics are to be saved
+    if metrics_files_to_include == "metrics":
+        sorted_resultspath = sorted(resultspath.iterdir(), key=lambda x: (1 if '_all' in x.name else 2 if '_eng' in x.name else 3 if '_es' in x.name else 4, x.name))
+    else: 
+        sorted_resultspath = sorted(resultspath.iterdir())
+
+    for file in sorted_resultspath: 
         if metrics_files_to_include in file.name: # only work on all files which have "metrics_name" in their name            # create dataframe from txt file 
             metrics_data = create_data_from_metrics_txt(resultspath/file.name)
             # define metrics name with regex (e.g., "REAL_LeNet_18e.txt" -> "REAL_LeNet")

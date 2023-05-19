@@ -8,3 +8,6 @@ scikit-learn
 accelerate
 seaborn
 tabulate
+# for deberta 
+sentencepiece
+protobuf==3.20.*

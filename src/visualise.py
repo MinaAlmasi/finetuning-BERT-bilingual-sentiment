@@ -25,7 +25,7 @@ def main():
     results_path = path.parents[1] / "results"
 
     # load predictions
-    predictions_data = pd.read_csv(results_path / "predictions" /  "mBERT_all_predictions.csv")
+    predictions_data = pd.read_csv(results_path / "predictions" /  "mDeBERTa_all_predictions.csv")
 
     # make confusion matrix with percentages, round to 2 decimals
     confusion_matrix = pd.crosstab(predictions_data["true_label"], predictions_data["prediction_label"], normalize = "index").round(2)
@@ -34,13 +34,15 @@ def main():
     labels = ["Negative", "Neutral", "Positive"]
 
     # make confusion matrix 
-    confusion_matrix = plot_confusion_matrix(predictions_data, "true_label", "prediction_label", labels, "mBERT", visualisationspath)
+    confusion_matrix = plot_confusion_matrix(predictions_data, "true_label", "prediction_label", labels, "mDeBERTa", visualisationspath)
 
     # print confusion matrix
     print(confusion_matrix)
 
     # load metrics dataframes
     metrics_dfs = create_metrics_dataframes(results_path / "metrics", "metrics")
+
+    print(metrics_dfs)
 
     # headers
     header_labels = metrics_dfs["mBERT_eng"]["class"].tolist()

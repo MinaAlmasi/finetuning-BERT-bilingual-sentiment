@@ -40,7 +40,7 @@ def input_parse():
 
     # add arguments 
     parser.add_argument("-hub", "--push_to_hub", help = "Whether to push to huggingface hub or not", type = bool, default = False) 
-    parser.add_argument("-epochs", "--n_epochs", help = "number of epochs the model should run for", type = int, default = 20)
+    parser.add_argument("-epochs", "--n_epochs", help = "number of epochs the model should run for", type = int, default = 30)
     parser.add_argument("-download", "--download_mode", help = "'force_redownload' to force HF datasets to be redownloaded. None for using cached datasets.", type = str, default = None)
     parser.add_argument("-mdl", "--model", help = "Choose between 'mBERT' or 'mDistilBERT'", type = str, default = "mBERT")
 
@@ -57,7 +57,10 @@ def model_picker(chosen_model):
         model_dict = {"ES-ENG-mDistilBERT-sentiment": "distilbert-base-multilingual-cased"}        
 
     if chosen_model == "mDeBERTa": 
-        model_dict = {"ES-ENG-mDeBERTa": "microsoft/mdeberta-v3-base"}
+        model_dict = {"ES-ENG-mDeBERTa-sentiment": "microsoft/mdeberta-v3-base"}
+
+    elif chosen_model == "xlm-roberta":
+        model_dict = {"ES-ENG-xlm-roberta-sentiment": "xlm-roberta-base"}
 
     return model_dict
 
