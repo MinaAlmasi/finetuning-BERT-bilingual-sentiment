@@ -132,7 +132,8 @@ def main():
         trainer.push_to_hub()
 
     # save log history with pickle
-    trainer.state.log_history.to_pickle(resultspath / f"{args.model}_log_history.pkl")
+    with open (resultspath / f"{args.model}_log_history.pkl", "wb") as file:
+        pickle.dump(trainer.state.log_history, file)
 
     # compute train and val loss, plot loss
     train_loss, val_loss, total_epochs = get_loss(trainer.state.log_history)
