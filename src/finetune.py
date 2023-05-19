@@ -28,7 +28,7 @@ def input_parse():
 
     # add arguments 
     parser.add_argument("-hub", "--push_to_hub", help = "Whether to push to huggingface hub or not", type = bool, default = False) 
-    parser.add_argument("-epochs", "--n_epochs", help = "number of epochs the model should run for", type = int, default = 30)
+    parser.add_argument("-epochs", "--n_epochs", help = "number of epochs the model should run for", type = int, default = 20)
     parser.add_argument("-download", "--download_mode", help = "'force_redownload' to force HF datasets to be redownloaded. None for using cached datasets.", type = str, default = None)
     parser.add_argument("-mdl", "--model", help = "Choose between 'mBERT' or 'mDistilBERT'", type = str, default = "mBERT")
 
@@ -85,13 +85,16 @@ def main():
     id2label = {0: "negative", 1:"neutral", 2:"positive"}
     label2id = {"negative":0, "neutral":1, "positive":2}
 
+    # define batch_size 
+    batch_size = 64
+
     # define training arguments 
     training_args = TrainingArguments(
         output_dir = modeloutpath / output_folder, 
         push_to_hub = args.push_to_hub,
         learning_rate=2e-5,
-        per_device_train_batch_size = 32, 
-        per_device_eval_batch_size = 32, 
+        per_device_train_batch_size = batch_size, 
+        per_device_eval_batch_size = batch_size, 
         num_train_epochs=args.n_epochs, 
         weight_decay=0.01,
         evaluation_strategy="epoch",
@@ -117,8 +120,8 @@ def main():
         trainer.push_to_hub()
 
     # compute train and val loss, plot loss
-    train_loss, val_loss = get_loss(trainer.state.log_history)
-    plot_loss(train_loss, val_loss, args.n_epochs, resultspath, f"{args.model}_loss_curve.png")
+    train_loss, val_loss, total_epochs = get_loss(trainer.state.log_history)
+    plot_loss(train_loss, val_loss, total_epochs, resultspath, f"{args.model}_loss_curve.png")
 
     # evaluate, save summary metrics 
     get_metrics(trainer,  tokenized_data["test"], ds["test"], id2label, resultspath, f"{args.model}_all")

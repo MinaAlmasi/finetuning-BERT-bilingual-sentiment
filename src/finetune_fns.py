@@ -64,8 +64,10 @@ def get_loss(trainer_history):
             train_loss[epoch] = item["loss"]
         if "eval_loss" in item:
             eval_loss[epoch] = item["eval_loss"]
-        
-    return train_loss, eval_loss
+
+    total_epochs = len(train_loss.keys())
+
+    return train_loss, eval_loss, total_epochs
 
 def plot_loss(train_loss, val_loss, epochs, savepath, filename): # adapted from class notebook
     '''
@@ -77,7 +79,7 @@ def plot_loss(train_loss, val_loss, epochs, savepath, filename): # adapted from 
     # define figure size 
     plt.figure(figsize=(8,6))
 
-    # create plot of train and validation loss, defined as two subplots on top of each other ! (but beside the accuracy plot)
+    # create plot of train and validation loss, defined as two subplots on top of each other ! 
     plt.plot(np.arange(1, epochs+1), train_loss.values(), label="Train Loss") # plot train loss 
     plt.plot(np.arange(1, epochs+1), val_loss.values(), label="Val Loss", linestyle=":") # plot val loss
     
@@ -87,8 +89,13 @@ def plot_loss(train_loss, val_loss, epochs, savepath, filename): # adapted from 
     plt.ylabel("Loss")
     plt.tight_layout()
     plt.legend()
-   
-    plt.savefig(savepath / filename, dpi=300)
+
+    # make folder in save path 
+    fullpath = savepath / "loss_curves"
+    fullpath.mkdir(parents=True, exist_ok=True)
+
+    # save fig 
+    plt.savefig(fullpath / filename, dpi=300)
 
 def finetune(dataset, model_name:str, n_labels:int, id2label:dict, label2id:dict, training_args, early_stop_patience:int=3): 
     # import tokenizer 
