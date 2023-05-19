@@ -1,3 +1,12 @@
+'''
+Script for self-assigned Assignment 5, Language Analytics, Cultural Data Science, F2023
+
+Script containing functions for loading and preprocessing data used in the finetune pipeline.
+Data is loaded either from the HuggingFace datasets library or from a local path.
+
+@MinaAlmasi
+'''
+
 # utils
 import pathlib 
 import re

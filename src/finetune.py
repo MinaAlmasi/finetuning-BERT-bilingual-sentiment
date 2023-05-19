@@ -1,11 +1,20 @@
 '''
+Script for self-assigned Assignment 5, Language Analytics, Cultural Data Science, F2023
+
 Fine-tuning BERT for bilingual sentiment classification in English and Spanish
 
 Run in terminal: 
-    python src/finetune.py -hub {PUSH_TO_HUB_BOOL}
+    python src/finetune.py -hub {PUSH_TO_HUB_BOOL} -epochs {N_EPOCHS} -download {DOWNLOAD_MODE} -mdl {MODEL}
 
-Where -hub denotes whether to push the model to the huggingface hub. 
-Note that this requires a token in a .txt file called "token.txt" in the main repo folder 
+Additonal arguments:
+    -epochs (int): number of epochs the model should run for. 
+    -download (str): 'force_redownload' to force HF datasets to be redownloaded. Defaults to 'None' for using cached datasets.
+    -mdl (str): name of model to use. Defaults to 'mBERT'. Choose between 'mBERT' or 'mDistilBERT'.
+    -hub (bool): whether to push to huggingface hub or not. Defaults to False.
+
+NB! Note that pushing to HF hub requires a token in a .txt file called "token.txt" in the main repo folder.
+
+@MinaAlmasi
 '''
 
 # utils 
