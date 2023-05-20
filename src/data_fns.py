@@ -226,17 +226,24 @@ def get_ds_overview(datadict):
     '''
     all_lengths = []
 
+    # iterate over names and datasets in datadict 
     for name, ds in datadict.items():
-        lengths = pd.DataFrame() 
-        lengths["dataset"] = [name]
+        lengths = pd.DataFrame() # create df 
+        lengths["dataset"] = [name] # add name of df as column 
 
-        for split in ["train", "validation", "test"]:
-            length = len(ds[split])
+        for split in ["train", "validation", "test"]: # iterate over splits, get length of split
+            length = len(ds[split]) 
             lengths[split] = [length]
 
         all_lengths.append(lengths)
     
+    # concatenate all dataframes to a single df
     lengths_overview = pd.concat(all_lengths, ignore_index=True)
+
+    # get total (solution inspired by https://stackoverflow.com/questions/21752399/pandas-dataframe-total-row)
+    lengths_overview.loc[:,'total'] = lengths_overview.sum(numeric_only=True, axis=1) # row total 
+    lengths_overview.loc["total"] = lengths_overview.sum(numeric_only=True, axis=0) # column total 
+    lengths_overview = lengths_overview.fillna('total') # rename column total 
 
     return lengths_overview
 
@@ -285,8 +292,10 @@ def main():
     tass_path = path.parents[1] / "data"
 
     ds, ds_overview = load_datasets(tass_path, download_mode="force_redownload")
+
+    # print ds, ds overview 
     print(ds)
-    print(ds_overview)
+    print(ds_overview.to_markdown(index=False))
 
 if __name__ == "__main__":
     main()
