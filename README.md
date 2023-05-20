@@ -1,5 +1,5 @@
 # Finetuning BERT for Bilingual Sentiment Classification in English and Spanish
-Repository link: hhttps://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment
+Repository link: https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment
 
 This repository forms the self-assigned *assignment 5* by Mina Almasi (202005465) in the subject Language Analytics, Cultural Data Science, F2023. 
 
@@ -16,7 +16,7 @@ The data comprises 3 datasets all from Twitter data in either English or Spanish
 All datasets except the ```TASS``` dataset is downloaded with Hugging Face's ```datasets``` package within the scripts. The ```TASS``` dataset can be downloaded on the link above and placed in the ```data``` folder. Note that the use of this dataset has to comply with their license ([TASS Dataset License](http://tass.sepln.org/tass_data/download.php)). For this reason, it is made possible to rerun the code without the use of the ```TASS``` data (see [Pipeline](https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment#pipeline) for instructions). 
 
 ### Combining Data
-The choice to combine datasets was made to have a greater train, test and validation set. To restrain the variability within the combined dataset, only datasets with twitter data were considered. Additionally, datasets were processed to resemble each other to the extent that was possible. For instance, the real Twitter usernames in the ```TASS``` dataset were replaced with ```@user```` to match the Cardiff dataset (and also to respect anonymity). However, this was not possible with the MTEB dataset which does not contain any user-names.
+The choice to combine datasets was made to have a greater train, test and validation set. To restrain the variability within the combined dataset, only datasets with twitter data were considered. Additionally, datasets were processed to resemble each other to the extent that was possible. For instance, the real Twitter usernames in the ```TASS``` dataset were replaced with ```@user``` to match the Cardiff dataset (and also to respect anonymity). However, this was not possible with the MTEB dataset which does not contain any user-names.
 
 The total data amounts to ```20555 tweets```:
 | dataset     |   train |   validation |   test |   total |
@@ -62,42 +62,48 @@ The repository is structured as such:
 ## Pipeline
 The pipeline has been tested on Ubuntu v22.10, Python v3.10.7 ([UCloud](https://cloud.sdu.dk/), Coder Python 1.77.3). Python's [venv](https://docs.python.org/3/library/venv.html) needs to be installed for the pipeline to work.
 
-### Setup
-Firstly, install the [TASS 2020 (Spanish)](http://tass.sepln.org/2020/?wpdmpro=task-1-train-and-dev-sets) and place it in the ```data``` folder. Ensure that the data follows the structure and naming conventions described in [data/README.md](https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment/tree/main/data).
-Create a virtual environment (```env```) and install necessary requirements by running: 
+### Installing TASS 
+If you wish to run the pipeline with all data, install the [TASS 2020 (Spanish)](http://tass.sepln.org/2020/?wpdmpro=task-1-train-and-dev-sets) and place it in the ```data``` folder. Ensure that the data follows the structure and naming conventions described in [data/README.md](https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment/tree/main/data). 
+
+### General Setup
+Secondly, create a virtual environment (```env```) and install necessary requirements by running: 
 ```
 bash setup.sh
 ```
-### Running the Experimental Pipeline 
-You can run the entire pipeline (finetuning of several models and visualisation) by typing. 
-```
-run.sh
-```
 
-### Training Models Individually: 
-Train models individually by running the ```run-X.sh``` scripts. For instance:
-```
-run-mbert.sh
-```
+### Extra Setup (Pushing to the HF Hub)
+Pushing models to the Hugging Face Hub is disabled by default in all scripts, so you can skip this setup if you are not interested in this functionality.
 
-### Training Models with Custom Arguments
-The models can be trained with custom arguments: 
-```
-python src/finetune.py 
-``` 
+If you wish to push models to the Hugging Face Hub, you need firstly save a [Hugging Face token](https://huggingface.co/docs/hub/security-tokens) in a .txt file called ```token.txt``` in the main folder. (token.txt is in ```.gitignore``` and will not be pushed!)
 
-### Pushing to the HF Hub
-The functionality to push the models to the HuggingFace Hub is disabled in the scripts that reproduce the code. 
-
-However, if you wish to push to the HF hub, git-lfs needs to be installed (```NB! WILL SUDO INSTALL TO YOUR SYSTEM```):
+Then, install git-lfs. Note that this wil ```SUDO``` install to your system, do at own risk!
 ```
 bash git-lfs-setup.sh
 ```
 
-Note that you need to state this when training the models: 
+### Running the Experimental Pipeline 
+You can run the entire pipeline on ```ALL``` the data (finetuning of several models and visualisation) by typing:
 ```
-python src/finetune.py -m 
+run.sh
 ```
+If you wish to run the pipeline without ```TASS```, type: 
+```
+bash run-noTASS.sh
+```
+
+### Training with Custom Arguments 
+Train models individually by writing in the terminal:
+```
+python src/finetune.py -mdl {MODEL} -epochs {N_EPOCHS} -hub {PUSH_TO_HUB_BOOL} -download {DOWNLOAD_MODE}
+```
+NB! Remember to activate the ```env``` first (by running ```source ./env/bin/activate```)
+
+| <div style="width:80px">Arg</div>    | Description                             | <div style="width:120px">Default</div>    |
+| :---        |:---                                                                                        |:---             |
+|```-mdl```   |  Model to be fine-tuned. Choose between 'mDeBERTa', 'mBERT' or 'xlm-roberta'               | xlm-roberta     |
+|```-hub```   | Whether to push to Hugging Face Hub. 'True' if yes, else write 'False'                     | False               |
+|```-epochs```| MAX epochs the model should train for (if not stopped after 3 epochs with no improvement)  | 30              |
+|```-download```| Write 'force_redownload' to redownload cached datasets. Useful if cache is corrupt.      | None            |
 
 ## Results 
 Insert results here! (Loss curves, evaluation)
