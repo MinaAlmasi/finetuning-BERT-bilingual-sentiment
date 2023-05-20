@@ -74,15 +74,15 @@ bash setup.sh
 ### Extra Setup (Pushing to the HF Hub)
 Pushing models to the Hugging Face Hub is disabled by default in all scripts, so you can skip this setup if you are not interested in this functionality.
 
-If you wish to push models to the Hugging Face Hub, you need firstly save a [Hugging Face token](https://huggingface.co/docs/hub/security-tokens) in a .txt file called ```token.txt``` in the main folder. (token.txt is in ```.gitignore``` and will not be pushed!)
+If you wish to push models to the Hugging Face Hub, you need to firstly save a [Hugging Face token](https://huggingface.co/docs/hub/security-tokens) in a .txt file called ```token.txt``` in the main folder. (```token.txt is in .gitignore and will not be pushed!```)
 
-Then, install git-lfs. Note that this wil ```SUDO``` install to your system, do at own risk!
+Then, install git-lfs. Note that this wil ```SUDO``` install to your system, ```do at own risk```!
 ```
 bash git-lfs-setup.sh
 ```
 
 ### Running the Experimental Pipeline 
-You can run the entire pipeline on ```ALL``` the data (finetuning of several models and visualisation) by typing:
+You can run the entire pipeline on ```ALL``` the data (fine-tuning of several models and visualisation) by typing:
 ```
 run.sh
 ```
