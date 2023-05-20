@@ -32,18 +32,18 @@ The MTEB data was subsetted to match the TASS data to ensure a balance of Spanis
 ## Experimental Pipeline and Motivation
 As the fourth most spoken language globally, the Spanish language offers the potential to gain insights into the culture and traditions of a considerable portion of the world population. Combined with the English language, the coverage is extended to an even larger segment of global society. 
 
-Therefore, the current project fine-tunes several BERT-based models on English and Spanish data simultanously. Specifically, the aim is to perform sentiment classification. The pipeline is a such: 
+With this in mind, the current project aims to perform sentiment classifcation but bilingually in Spanish and English. This is achieved by finetuning several BERT-based models on English and Spanish data simultanously using HuggingFace's Trainer from their ```transformers``` package.  The pipeline is a such: 
 
-### ```E1 FINE-TUNING```
-Fine-tune several BERT-based models on labelled Spanish & English Twitter data
+### ```(E1) FINE-TUNING```
+Fine-tune several BERT-based models on labelled Spanish & English Twitter data (3 labels: neutral, negative, positve).
 
-### ```E2 EVALUATION```
+### ```(E2) EVALUATION```
 Evaluate the models on test data, extracting overall performance as well as performance stratified by language. 
 
 By seperating the test set into the individual languages, potential disparities in performance across the two languages is explored. 
 
 ## Reproducibility 
-To reproduce the results, follow the instructions in the [Pipeline]() section.
+To reproduce the results, follow the instructions in the [Pipeline](https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment#pipeline) section.
 
 NB! Be aware that finetuning BERT-based models is a computationally heavy task. Cloud computing (e.g., [UCloud](https://cloud.sdu.dk/) with high amounts of ram (or a good GPU) is encouraged.
 
