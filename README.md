@@ -112,7 +112,7 @@ Three models have been fine-tuned based on the base version of [mBERT](https://h
 ### Loss Curves
 The loss curves for each model is displayed below. The models 
 <p align="left">
-  <img src="https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment/blob/main/visualisations/model_histories.png">
+  <img src="https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment/blob/main/visualisations/loss_curves_all_models.png">
 </p>
 
 ### Inference with the Fine-Tunes 
