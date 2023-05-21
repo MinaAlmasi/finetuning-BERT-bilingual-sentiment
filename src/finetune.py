@@ -39,10 +39,11 @@ def input_parse():
     parser = argparse.ArgumentParser()
 
     # add arguments 
-    parser.add_argument("-hub", "--push_to_hub", help = "Whether to push to huggingface hub or not", type = bool, default = False) 
+    parser.add_argument("-hub", "--push_to_hub", help = "Whether to push to Hugging Face Hub (True) or not (False)", type = bool, default = False) 
     parser.add_argument("-epochs", "--n_epochs", help = "number of epochs the model should run for", type = int, default = 30)
     parser.add_argument("-download", "--download_mode", help = "'force_redownload' to force HF datasets to be redownloaded. None for using cached datasets.", type = str, default = None)
-    parser.add_argument("-mdl", "--model", help = "Choose between 'mBERT' or 'mDistilBERT'", type = str, default = "mBERT")
+    parser.add_argument("-mdl", "--model", help = "Choose between 'mBERT' or 'mDeBERTa' or 'xlm-roberta'", type = str, default = "xlm-roberta")
+    parser.add_argument("-TASS", "--TASS_download", help = "Whether to include to TASS in the finetuning (True) or not (False)", type = bool, default = True)
 
     # save arguments to be parsed from the CLI
     args = parser.parse_args()
@@ -50,11 +51,9 @@ def input_parse():
     return args
 
 def model_picker(chosen_model): 
+    # key refers to finetune mdl name (what will be pushed to hub), val refers to name of model to be finetuned
     if chosen_model == "mBERT":
-        model_dict = {"ES-ENG-mBERT-sentiment": "bert-base-multilingual-cased"}
-
-    if chosen_model == "mDistilBERT":
-        model_dict = {"ES-ENG-mDistilBERT-sentiment": "distilbert-base-multilingual-cased"}        
+        model_dict = {"ES-ENG-mBERT-sentiment": "bert-base-multilingual-cased"} 
 
     if chosen_model == "mDeBERTa": 
         model_dict = {"ES-ENG-mDeBERTa-sentiment": "microsoft/mdeberta-v3-base"}
@@ -94,7 +93,10 @@ def main():
         login(hf_token)
 
     # load tass_path 
-    tass_path = path.parents[1] / "data"
+    if args.TASS_download == True: 
+        tass_path = path.parents[1] / "data"
+    else:
+        tass_path = None
 
     # load datasets 
     ds, ds_overview = load_datasets(tass_path, args.download_mode)
@@ -151,7 +153,6 @@ def main():
     # evaluate per language metrics subset 
     get_metrics_per_language(trainer, tokenized_data["test"], ds["test"], id2label, resultspath, f"{args.model}_es", language="ES")
     get_metrics_per_language(trainer, tokenized_data["test"], ds["test"], id2label, resultspath, f"{args.model}_eng", language="ENG")
-
 
 if __name__ == "__main__":
     main() 
