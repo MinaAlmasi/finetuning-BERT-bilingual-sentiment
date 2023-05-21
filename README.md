@@ -106,7 +106,8 @@ NB! Remember to activate the ```env``` first (by running ```source ./env/bin/act
 |```-download```| Write 'force_redownload' to redownload cached datasets. Useful if cache is corrupt.      | None            |
 
 ## Results 
-Insert results here! (Loss curves, evaluation)
+### Fine-tuned models
+Three models have been fine-tuned 
 
 ## Author 
 This repository was created by Mina Almasi:
