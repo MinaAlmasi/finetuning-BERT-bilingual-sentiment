@@ -105,6 +105,19 @@ NB! Remember to activate the ```env``` first (by running ```source ./env/bin/act
 |```-epochs```| MAX epochs the model should train for (if not stopped after 3 epochs with no improvement)  | 30              |
 |```-download```| Write 'force_redownload' to redownload cached datasets. Useful if cache is corrupt.      | None            |
 
+## Inference with the Fine-Tunes
+The three fine-tuned models are avaialble on the HuggingFace Hub:
+1. [MinaAlmasi/ES-ENG-mBERT-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-xlm-roberta-sentiment)
+2. [MinaAlmasi/ES-ENG-xlm-roberta-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-xlm-roberta-sentiment)
+3. [MinaAlmasi/ES-ENG-mDeBERTa-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-mDeBERTa-sentiment)
+
+
+If you wish to use the models for inference, click on the links to use the *Hosted inference API* by Hugging Face. If you wish to run inference locally,  the script ```inference.py``` demonstrates the use of the model ```MinaAlmasi/ES-ENG-mDeBERTa-sentiment```: 
+```
+python src/inference.py -text {TEXT}
+```
+NB! Remember to activate the ```env``` first (by running ```source ./env/bin/activate```)
+
 ## Results 
 The following presents the three models which have been fine-tuned based on the base version of [mBERT](https://huggingface.co/bert-base-multilingual-cased), [XLM-RoBERTa](https://huggingface.co/xlm-roberta-base), and  [mDeBERTa V3](https://huggingface.co/microsoft/mdeberta-v3-base). Sections describe the training hyperparameters along with the how the models fared during training and on the test set. A separate section follows the results sections which explains how to use the models for inference. 
 
@@ -158,20 +171,6 @@ The confusion matrix provides an illustated overview of the labels that the mode
 
 ### Discussion of Results
 WRITE HERE
-
-
-## Inference with the Fine-Tunes
-The three fine-tuned models are avaialble on the HuggingFace Hub:
-1. [MinaAlmasi/ES-ENG-mBERT-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-xlm-roberta-sentiment)
-2. [MinaAlmasi/ES-ENG-xlm-roberta-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-xlm-roberta-sentiment)
-3. [MinaAlmasi/ES-ENG-mDeBERTa-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-mDeBERTa-sentiment)
-
-
-If you wish to use the models for inference, click on the links to use the *Hosted inference API* by Hugging Face. If you wish to run inference locally,  the script ```inference.py``` demonstrates the use of the model ```MinaAlmasi/ES-ENG-mDeBERTa-sentiment```: 
-```
-python src/inference.py -text {TEXT}
-```
-NB! Remember to activate the ```env``` first (by running ```source ./env/bin/activate```)
 
 ## Author 
 This repository was created by Mina Almasi:
