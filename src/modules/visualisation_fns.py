@@ -234,7 +234,7 @@ def plot_model_histories(model_histories:dict, savepath:pathlib.Path):
         axes[i].axvline(x = highest_epochs[mdl_name], linestyle = "--", color = "black")
 
         # set only the legend for the highest accuracy in the individual subplots
-        axes[i].legend(loc = "upper right", labels=["_", "_", f"ACC: {highest_accuracies[mdl_name]}, EPOCH: {highest_epochs[mdl_name]}"], fontsize = 12)
+        axes[i].legend(loc = "upper right", labels=["_", "_", f"VAL ACC: {highest_accuracies[mdl_name]}, EPOCH: {highest_epochs[mdl_name]}"], fontsize = 12)
 
         # set title
         axes[i].set_title(f"{mdl_name}", fontsize = 14, fontweight = "bold")
