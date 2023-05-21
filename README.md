@@ -178,6 +178,10 @@ It is complicated to exactly identify why these performance disparities occur. F
 
 It may also be worth considering whether the Spanish dataset was more varied than the English. For instance, the ```TASS``` set consisted of tweets in several different Spanish dialects (e.g., Mexican, Peru) but were all treated as Spanish for simplicity. 
 
+For the disparities amongst ```labels```, labels ```Positive``` and ```Negative``` were near equally balanced, but there were more ```Neutral``` labels in each split (around 1000 more in train and around 250-300 in test and validation). This should have been balanced by downsampling the ```Neutral``` labels. 
+
+Finally, there may be general problems with the way the datasets were combined. The datasets may have had too great variation, despite efforts to reduce this.
+
 ## Author 
 This repository was created by Mina Almasi:
 

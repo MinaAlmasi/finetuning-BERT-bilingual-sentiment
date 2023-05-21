@@ -11,11 +11,15 @@ Data is loaded either from the HuggingFace datasets library or from a local path
 import pathlib 
 import re
 
+
 # data utils 
 import pandas as pd 
 import numpy as np
 import datasets 
 
+from collections import Counter # for counting labels
+
+# for splitting pandas df into train and test
 from sklearn.model_selection import train_test_split
 
 def combine_datasets(datasets_list):
@@ -140,11 +144,29 @@ def load_TASS(path:pathlib.Path):
 
 # utils for adding lang cols 
 def add_eng_lang_col(example): 
+    '''
+    Add a language column to a HuggingFace dataset example, denoting that the text is in English.
+    
+    Args:
+        - example: HuggingFace dataset example
+    Returns
+        - example: HuggingFace dataset example with added language column
+    '''
+
     example["lang"] = "ENG"
 
     return example
 
 def add_es_lang_col(example):
+    '''
+    Add a language column to a HuggingFace dataset example, denoting that the text is in Spanish.
+
+    Args:
+        - example: HuggingFace dataset example
+    Returns
+        - example: HuggingFace dataset example with added language column
+    '''
+    
     example["lang"] = "ES"
 
     return example
@@ -193,7 +215,7 @@ def load_mteb(download_mode): # https://huggingface.co/datasets/mteb/tweet_senti
     # subset test to match the amount of ES data in TASS 
     data["test"] = data["test"].shuffle(seed=155).select(range(2443)) 
 
-    # split test into val and test 
+    # split test into val and test (using HF's own train_test_split method rather than sklearns that was used on the pandas dataframe with TASS data)
     test_validation = data['test'].train_test_split(test_size=0.5) # solution by https://discuss.huggingface.co/t/how-to-split-main-dataset-into-train-dev-test-as-datasetdict/1090
 
     data = datasets.DatasetDict({
@@ -286,16 +308,31 @@ def load_datasets(TASS_path:pathlib.Path=None, download_mode:str=None):
 
     return combined_ds, ds_lengths 
 
-
 def main():
     path = pathlib.Path(__file__)
-    tass_path = path.parents[1] / "data"
+    tass_path = path.parents[2] / "data"
 
     ds, ds_overview = load_datasets(tass_path, download_mode="force_redownload")
 
     # print ds, ds overview 
     print(ds)
     print(ds_overview.to_markdown(index=False))
+
+    # count labels in each split 
+    train = ds["train"]["label"]
+    test = ds["test"]["label"]
+    val = ds["validation"]["label"]
+
+    counts = pd.DataFrame({
+    'split': ['train', 'test', 'val'],
+    'Negative': [train.count(0), test.count(0), val.count(0)],
+    'Neutral': [train.count(1), test.count(1), val.count(1)],
+    'Positive': [train.count(2), test.count(2), val.count(2)]
+})
+
+    # print counts
+    print(f"\n {counts.to_markdown(index=False)}")
+
 
 if __name__ == "__main__":
     main()
