@@ -15,6 +15,14 @@ python3 src/finetune.py -mdl xlm-roberta
 echo -e "[INFO:] Finetuning mDeBERTa ..." # user msg 
 python3 src/finetune.py -mdl mDeBERTa
 
+# running visualisations
+echo -e "[INFO:] Running visualisations ..." # user msg
+python3 src/visualise.py
+
+# running example inference
+echo -e "[INFO:] Running example inference ..." # user msg
+python3 src/inference.py
+
 # deactivate virtual environment
 deactivate
 
