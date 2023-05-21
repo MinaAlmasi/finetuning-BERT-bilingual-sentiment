@@ -13,7 +13,10 @@ import pathlib
 import pandas as pd
 
 # custom functions
-from visualisation_fns import plot_confusion_matrix, create_metrics_dataframes, create_table
+from modules.visualisation_fns import (create_metrics_dataframes, create_table,
+                                        load_model_histories, plot_model_histories,
+                                        plot_confusion_matrices
+                                 )
 
 def main(): 
     # define paths
@@ -22,39 +25,29 @@ def main():
     visualisationspath.mkdir(exist_ok = True, parents = True)
 
     # results path
-    results_path = path.parents[1] / "results"
+    resultspath = path.parents[1] / "results"
 
-    # load predictions
-    predictions_data = pd.read_csv(results_path / "predictions" /  "mDeBERTa_all_predictions.csv")
+    # load model histories
+    model_histories = load_model_histories(resultspath)
 
-    # make confusion matrix with percentages, round to 2 decimals
-    confusion_matrix = pd.crosstab(predictions_data["true_label"], predictions_data["prediction_label"], normalize = "index").round(2)
+    # plot model histories
+    plot_model_histories(model_histories, visualisationspath / "model_histories.png")
 
-    # define labels
-    labels = ["Negative", "Neutral", "Positive"]
+    # metrics
+    metrics_dfs = create_metrics_dataframes(resultspath / "metrics", metrics_to_include="metrics")
 
-    # make confusion matrix 
-    confusion_matrix = plot_confusion_matrix(predictions_data, "true_label", "prediction_label", labels, "mDeBERTa", visualisationspath)
-
-    # print confusion matrix
-    print(confusion_matrix)
-
-    # load metrics dataframes
-    metrics_dfs = create_metrics_dataframes(results_path / "metrics", "metrics")
-
-    print(metrics_dfs)
-
-    # headers
+    # define headers for table
     header_labels = metrics_dfs["mBERT_eng"]["class"].tolist()
-
-    print(metrics_dfs.keys())
 
     # create table
     table = create_table(metrics_dfs, header_labels, metric="f1-score")
     
-    #save table
+    # save table
     with open(visualisationspath / "all_models_metrics_table.txt", "w") as file:
         file.write(table)
+
+    # plot confusion matrices
+    matrices = plot_confusion_matrices(resultspath / "predictions", visualisationspath, preds_to_include="all_predictions")
 
 if __name__ == "__main__":
     main()

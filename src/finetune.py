@@ -4,13 +4,14 @@ Script for self-assigned Assignment 5, Language Analytics, Cultural Data Science
 Fine-tuning BERT for bilingual sentiment classification in English and Spanish
 
 Run in terminal: 
-    python src/finetune.py -hub {PUSH_TO_HUB_BOOL} -epochs {N_EPOCHS} -download {DOWNLOAD_MODE} -mdl {MODEL}
+    python src/finetune.py -hub {PUSH_TO_HUB_BOOL} -epochs {N_EPOCHS} -download {DOWNLOAD_MODE} -mdl {MODEL} -TASS {TASS_DOWNLOAD}
 
 Additonal arguments:
     -epochs (int): number of epochs the model should run for. 
     -download (str): 'force_redownload' to force HF datasets to be redownloaded. Defaults to 'None' for using cached datasets.
     -mdl (str): name of model to use. Defaults to 'mBERT'. Choose between 'mBERT' or 'mDistilBERT'.
     -hub (bool): whether to push to huggingface hub or not. Defaults to False.
+    -TASS (bool): whether to include TASS in the finetuning or not. Defaults to True.
 
 NB! Note that pushing to HF hub requires a token in a .txt file called "token.txt" in the main repo folder.
 
@@ -25,8 +26,8 @@ import argparse
 from transformers import TrainingArguments 
 
 # custom modules
-from finetune_fns import finetune, get_loss, plot_loss, get_metrics, get_metrics_per_language
-from data_fns import load_datasets
+from modules.finetune_fns import finetune, get_loss, plot_loss, get_metrics, get_metrics_per_language
+from modules.data_fns import load_datasets
 
 # save log history
 import pickle
@@ -50,8 +51,18 @@ def input_parse():
 
     return args
 
-def model_picker(chosen_model): 
-    # key refers to finetune mdl name (what will be pushed to hub), val refers to name of model to be finetuned
+def model_picker(chosen_model:str): 
+    '''
+    Function for picking model to finetune.
+
+    Args:
+        chosen_model: name of model to use. Choosen between 'mBERT' or 'mDeBERTa' or 'xlm-roberta'.capitalize()
+    
+    Returns:
+        model_dict: dictionary with name of fine-tune (key) and name of model to be fine-tuned (value).
+            - The name of the fine-tune is used in "output_dir" in TrainingArguments i.e., name that will be pushed to the hub or saved as local folder.
+    '''
+
     if chosen_model == "mBERT":
         model_dict = {"ES-ENG-mBERT-sentiment": "bert-base-multilingual-cased"} 
 
