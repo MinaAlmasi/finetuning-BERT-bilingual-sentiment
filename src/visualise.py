@@ -31,7 +31,7 @@ def main():
     model_histories = load_model_histories(resultspath)
 
     # plot model histories
-    plot_model_histories(model_histories, visualisationspath / "model_histories.png")
+    plot_model_histories(model_histories, visualisationspath / "loss_curves_all_models.png")
 
     # metrics
     metrics_dfs = create_metrics_dataframes(resultspath / "metrics", metrics_to_include="metrics")
