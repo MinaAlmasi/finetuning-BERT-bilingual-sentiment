@@ -106,8 +106,27 @@ NB! Remember to activate the ```env``` first (by running ```source ./env/bin/act
 |```-download```| Write 'force_redownload' to redownload cached datasets. Useful if cache is corrupt.      | None            |
 
 ## Results 
-### Fine-tuned models
-Three models have been fine-tuned 
+### Fine-tuned Models
+Three models have been fine-tuned based on the base version of [mBERT](https://huggingface.co/bert-base-multilingual-cased), [XLM-RoBERTa](https://huggingface.co/xlm-roberta-base), and  [mDeBERTa V3](https://huggingface.co/microsoft/mdeberta-v3-base). The following presents the train, validation and test results of these fine-tunes. The last section includes information about how to easily perform inference using these models. 
+
+### Loss Curves
+The loss curves for each model is displayed below. The models 
+<p align="left">
+  <img src="https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment/blob/main/visualisations/model_histories.png">
+</p>
+
+### Inference with the Fine-Tunes 
+The three fine-tuned models are avaialble on the HuggingFace Hub:
+1. [MinaAlmasi/ES-ENG-mBERT-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-xlm-roberta-sentiment)
+2. [MinaAlmasi/ES-ENG-xlm-roberta-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-xlm-roberta-sentiment)
+3. [MinaAlmasi/ES-ENG-mDeBERTa-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-mDeBERTa-sentiment)
+
+
+If you wish to use the models for inference, click on the links to use the *Hosted inference API* by Hugging Face. If you wish to run inference locally,  the script ```inference.py``` demonstrates the use of the model ```MinaAlmasi/ES-ENG-mDeBERTa-sentiment```: 
+```
+python src/inference.py -text {TEXT}
+```
+NB! Remember to activate the ```env``` first (by running ```source ./env/bin/activate```)
 
 ## Author 
 This repository was created by Mina Almasi:
