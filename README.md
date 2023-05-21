@@ -40,7 +40,7 @@ Fine-tune several BERT-based models on labelled Spanish & English Twitter data (
 ### ```(E2) EVALUATION```
 Evaluate the models on test data, extracting overall performance as well as performance stratified by language. 
 
-By seperating the test set into the individual languages, potential disparities in performance across the two languages is explored. 
+By seperating the test set into the individual languages and evaluating the model on only these subsets, potential disparities in performance across the two languages is explored.
 
 ## Reproducibility 
 To reproduce the results, follow the instructions in the [Pipeline](https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment#pipeline) section.
@@ -106,16 +106,57 @@ NB! Remember to activate the ```env``` first (by running ```source ./env/bin/act
 |```-download```| Write 'force_redownload' to redownload cached datasets. Useful if cache is corrupt.      | None            |
 
 ## Results 
-### Fine-tuned Models
-Three models have been fine-tuned based on the base version of [mBERT](https://huggingface.co/bert-base-multilingual-cased), [XLM-RoBERTa](https://huggingface.co/xlm-roberta-base), and  [mDeBERTa V3](https://huggingface.co/microsoft/mdeberta-v3-base). The following presents the train, validation and test results of these fine-tunes. The last section includes information about how to easily perform inference using these models. 
+The following presents the three models which have been fine-tuned based on the base version of [mBERT](https://huggingface.co/bert-base-multilingual-cased), [XLM-RoBERTa](https://huggingface.co/xlm-roberta-base), and  [mDeBERTa V3](https://huggingface.co/microsoft/mdeberta-v3-base). Sections describe the training hyperparameters along with the how the models fared during training and on the test set. Finally, a section is included on how to easily use the models for inference. 
 
-### Loss Curves
-The loss curves for each model is displayed below. The models 
+### ```(E1)``` Training Hyperparameters
+All models are trained with the parameters: 
+* Batch size: 64 
+* Max epochs: 30 
+* Early stopping patience: 3 
+* Weight decay: 0.1
+* Learning Rate: 2e-6
+
+The early stopping patience stops model training if validation accuracy does not improve for 3 epochs. It was furthermore specified that the ```BEST``` model should be loaded for inference.
+
+### ```(E1)``` Loss Curves
+The loss curves for each model is displayed below. The dashed vertical lines represent the ```BEST``` model that has been saved for inference. The validation accuracy and final epoch of the ```BEST``` model is in the legend of each plot.
+
+
 <p align="left">
   <img src="https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment/blob/main/visualisations/loss_curves_all_models.png">
 </p>
 
-### Inference with the Fine-Tunes 
+As evident from the plots above, the models are clearly ```overfitting``` as the training loss continously decreases while validation loss increases. For future projects, one should consider defining the early stopping callback based on the ```validation loss``` rather than the ```validation accuracy```. 
+
+### ```E2``` F1 scores on the Test data
+The F1 scores (and a single ```Accuracy``` score) for each model are given in the table below. Please see the individual metrics files in ```results/metrics``` for ```precision``` and ```recall``` scores.  
+
+The suffix on the table indicates whether the test set includes all examples (```all```), or if it has been stratified by language (```eng = English``` or ```es = Spanish```) . 
+|                 |   Neutral |   Negative |   Positive |   Accuracy |   Macro_Avg |   Weighted_Avg |
+|-----------------|-----------|------------|------------|------------|-------------|----------------|
+| mBERT all       |      0.54 |       0.56 |       0.73 |       0.6  |        0.61 |           0.6  |
+| mDeBERTa all    |      0.56 |       0.6  |       0.79 |       0.65 |        0.65 |           0.65 |
+| xlm-roberta all |      0.57 |       0.6  |       0.76 |       0.64 |        0.64 |           0.64 |
+| mBERT eng       |      0.71 |       0.63 |       0.74 |       0.69 |        0.69 |           0.69 |
+| mDeBERTa eng    |      0.77 |       0.65 |       0.79 |       0.73 |        0.74 |           0.73 |
+| xlm-roberta eng |      0.77 |       0.65 |       0.77 |       0.73 |        0.73 |           0.72 |
+| mBERT es        |      0.34 |       0.5  |       0.71 |       0.52 |        0.52 |           0.51 |
+| mDeBERTa es     |      0.3  |       0.56 |       0.79 |       0.57 |        0.55 |           0.55 |
+| xlm-roberta es  |      0.32 |       0.56 |       0.76 |       0.56 |        0.55 |           0.54 |
+
+Solely focusing on the overall scores, the ```mDeBERTa``` and ```xlm-roberta``` are nearly identical in performance throughout. ```mBert```is slightly worse with a ```Weighted``` F1 score of ```0.6``` versus ```mDeBERTa = 0.65``` and ```mBERT = 0.64```. 
+
+When seperating the test set into English and Spanish, there is an clear performance gap. ```mDeBERTa``` has a weighted F1 of ```0.73``` for the English test set whereas the weighted F1 is only ```0.55``` for the Spanish set. When looking at the scores per class, we note that the F1 for the neutral class in the Spanish set is at ```0.3``` which is just below the chance level ```33%```.
+
+### ```(E2)``` Confusion Matrix (mDeBERTa)
+As ```mDeBERTa``` and ```xlm-roberta``` were nearly identical in performance, only one is highlighted here. The plot below shows the confusion matrix for ```mDeBERTa``` on the entire test set: 
+<p align="left">
+  <img src="https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment/blob/main/visualisations/confusion_matrix_mDeBERTa_all.png">
+</p>
+
+The confusion matrix provides an illustated overview of the labels that the models confused by other labels. From this, it is clear that the confusion is greatly located between the ```Neutral``` and ```Negative``` labelled tweets. ```24%``` of ```Neutral``` tweets were predicted as ```Negative``` and ```40%``` of ```Negative``` tweets were predicted as ```Neutral```. Nearly none of the ```Negative``` tweets were predicted as ```Positive``` (```6%```).    
+
+### Inference with the Fine-Tunes
 The three fine-tuned models are avaialble on the HuggingFace Hub:
 1. [MinaAlmasi/ES-ENG-mBERT-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-xlm-roberta-sentiment)
 2. [MinaAlmasi/ES-ENG-xlm-roberta-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-xlm-roberta-sentiment)
@@ -127,6 +168,9 @@ If you wish to use the models for inference, click on the links to use the *Host
 python src/inference.py -text {TEXT}
 ```
 NB! Remember to activate the ```env``` first (by running ```source ./env/bin/activate```)
+
+### Discussion of Results
+WRITE HERE
 
 ## Author 
 This repository was created by Mina Almasi:
