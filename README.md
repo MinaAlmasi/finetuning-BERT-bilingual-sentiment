@@ -3,7 +3,7 @@ Repository link: https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentime
 
 This repository forms the self-assigned *assignment 5* by Mina Almasi (202005465) in the subject Language Analytics, Cultural Data Science, F2023. 
 
-The repository contains code for finetuning BERT-based models for bilingual sentiment classification in English and Spanish.
+The repository contains code for finetuning BERT-based models for bilingual sentiment classification in English and Spanish. If you wish to use the models for inference, please refer to 
 
 ## Data 
 The data comprises 3 datasets all from Twitter data in either English or Spanish: 
@@ -106,7 +106,7 @@ NB! Remember to activate the ```env``` first (by running ```source ./env/bin/act
 |```-download```| Write 'force_redownload' to redownload cached datasets. Useful if cache is corrupt.      | None            |
 
 ## Results 
-The following presents the three models which have been fine-tuned based on the base version of [mBERT](https://huggingface.co/bert-base-multilingual-cased), [XLM-RoBERTa](https://huggingface.co/xlm-roberta-base), and  [mDeBERTa V3](https://huggingface.co/microsoft/mdeberta-v3-base). Sections describe the training hyperparameters along with the how the models fared during training and on the test set. Finally, a section is included on how to easily use the models for inference. 
+The following presents the three models which have been fine-tuned based on the base version of [mBERT](https://huggingface.co/bert-base-multilingual-cased), [XLM-RoBERTa](https://huggingface.co/xlm-roberta-base), and  [mDeBERTa V3](https://huggingface.co/microsoft/mdeberta-v3-base). Sections describe the training hyperparameters along with the how the models fared during training and on the test set. A separate section follows the results sections which explains how to use the models for inference. 
 
 ### ```(E1)``` Training Hyperparameters
 All models are trained with the parameters: 
@@ -129,9 +129,9 @@ The loss curves for each model is displayed below. The dashed vertical lines rep
 As evident from the plots above, the models are clearly ```overfitting``` as the training loss continously decreases while validation loss increases. For future projects, one should consider defining the early stopping callback based on the ```validation loss``` rather than the ```validation accuracy```. 
 
 ### ```E2``` F1 scores on the Test data
-The F1 scores (and a single ```Accuracy``` score) for each model are given in the table below. Please see the individual metrics files in ```results/metrics``` for ```precision``` and ```recall``` scores.  
+The F1 scores (and a single ```Accuracy``` score) for each model are in the table below. Please see the individual metrics files in ```results/metrics``` for ```precision``` and ```recall``` scores.  
 
-The suffix on the table indicates whether the test set includes all examples (```all```), or if it has been stratified by language (```eng = English``` or ```es = Spanish```) . 
+Labels indicate whether the test set includes all examples (```all```), or if it has been stratified by language (```eng = English``` or ```es = Spanish```) . 
 |                 |   Neutral |   Negative |   Positive |   Accuracy |   Macro_Avg |   Weighted_Avg |
 |-----------------|-----------|------------|------------|------------|-------------|----------------|
 | mBERT all       |      0.54 |       0.56 |       0.73 |       0.6  |        0.61 |           0.6  |
@@ -156,7 +156,11 @@ As ```mDeBERTa``` and ```xlm-roberta``` were nearly identical in performance, on
 
 The confusion matrix provides an illustated overview of the labels that the models confused by other labels. From this, it is clear that the confusion is greatly located between the ```Neutral``` and ```Negative``` labelled tweets. ```24%``` of ```Neutral``` tweets were predicted as ```Negative``` and ```40%``` of ```Negative``` tweets were predicted as ```Neutral```. Nearly none of the ```Negative``` tweets were predicted as ```Positive``` (```6%```).    
 
-### Inference with the Fine-Tunes
+### Discussion of Results
+WRITE HERE
+
+
+## Inference with the Fine-Tunes
 The three fine-tuned models are avaialble on the HuggingFace Hub:
 1. [MinaAlmasi/ES-ENG-mBERT-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-xlm-roberta-sentiment)
 2. [MinaAlmasi/ES-ENG-xlm-roberta-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-xlm-roberta-sentiment)
@@ -168,9 +172,6 @@ If you wish to use the models for inference, click on the links to use the *Host
 python src/inference.py -text {TEXT}
 ```
 NB! Remember to activate the ```env``` first (by running ```source ./env/bin/activate```)
-
-### Discussion of Results
-WRITE HERE
 
 ## Author 
 This repository was created by Mina Almasi:
