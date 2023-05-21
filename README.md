@@ -32,12 +32,12 @@ The MTEB data was subsetted to match the TASS data to ensure a balance of Spanis
 ## Experimental Pipeline and Motivation
 As the fourth most spoken language globally, the Spanish language offers the potential to gain insights into the culture and traditions of a considerable portion of the world population. Combined with the English language, the coverage is extended to an even larger segment of global society. 
 
-With this in mind, the current project aims to perform sentiment classifcation but bilingually in Spanish and English. This is achieved by finetuning several BERT-based models on English and Spanish data simultanously using HuggingFace's Trainer from their ```transformers``` package.  The pipeline is a such: 
+With this in mind, the current project aims to perform sentiment classifcation but bilingually in Spanish and English. This is achieved by finetuning several BERT-based models on English and Spanish data simultanously using HuggingFace's Trainer from their ```transformers``` package.  The pipeline can be seperated into two parts: 
 
-### ```(E1) FINE-TUNING```
+### ```(P1) FINE-TUNING```
 Fine-tune several BERT-based models on labelled Spanish & English Twitter data (3 labels: neutral, negative, positve).
 
-### ```(E2) EVALUATION```
+### ```(P2) EVALUATION```
 Evaluate the models on test data, extracting overall performance as well as performance stratified by language. 
 
 By seperating the test set into the individual languages and evaluating the model on only these subsets, potential disparities in performance across the two languages is explored.
@@ -52,9 +52,9 @@ The repository is structured as such:
 | <div style="width:120px"></div>| Description |
 |---------|:-----------|
 | ```results``` | Results from running ```finetune.py```: loss curves, metrics (all + per language), predictions data per example in test set (all + per language). |
-| ```visualisations``` | Tables and plots from running ```visualise.py``` |
-| ```models``` | Models saved here |
-| ```src``` | Scripts to run finetuning + evaluation and to visualise results. Contains helper functions in the ```modules``` folder.|
+| ```visualisations``` | Table and confusion matrices from running ```visualise.py```. |
+| ```models``` | Models are saved here after running the fine-tune pipeline. |
+| ```src``` | Scripts to run fine-tuning + evaluation and to visualise results. Contains helper functions in the ```modules``` folder.|
 | ```requirements.txt``` | Necessary packages to be installed |
 | ```setup.sh``` |  Run to install ```requirements.txt``` within newly created ```env```. |
 | ```git-lfs-setup.sh``` |  Run to install ```gif-lfs``` necessary for pushing models to Hugging Face hub. |
@@ -66,13 +66,13 @@ The pipeline has been tested on Ubuntu v22.10, Python v3.10.7 ([UCloud](https://
 If you wish to run the pipeline with all data, install the [TASS 2020 (Spanish)](http://tass.sepln.org/2020/?wpdmpro=task-1-train-and-dev-sets) and place it in the ```data``` folder. Ensure that the data follows the structure and naming conventions described in [data/README.md](https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment/tree/main/data). 
 
 ### General Setup
-Secondly, create a virtual environment (```env```) and install necessary requirements by running: 
+To run the fine-tune pipeline, create a virtual environment (```env```) and install necessary requirements by running: 
 ```
 bash setup.sh
 ```
 
 ### Extra Setup (Pushing to the HF Hub)
-Pushing models to the Hugging Face Hub is disabled by default in all scripts, so you can skip this setup if you are not interested in this functionality.
+**NB. OPTIONAL:** Pushing models to the Hugging Face Hub is disabled by default in all scripts, so you can ```SKIP``` this setup if you are not interested in this functionality.
 
 If you wish to push models to the Hugging Face Hub, you need to firstly save a [Hugging Face token](https://huggingface.co/docs/hub/security-tokens) in a .txt file called ```token.txt``` in the main folder. (```token.txt is in .gitignore and will not be pushed!```)
 
@@ -106,22 +106,22 @@ NB! Remember to activate the ```env``` first (by running ```source ./env/bin/act
 |```-download```| Write 'force_redownload' to redownload cached datasets. Useful if cache is corrupt.      | None            |
 
 ## Inference with the Fine-Tunes
-The three fine-tuned models are avaialble on the HuggingFace Hub:
+The three fine-tuned models are available on the HuggingFace Hub:
 1. [MinaAlmasi/ES-ENG-mBERT-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-xlm-roberta-sentiment)
 2. [MinaAlmasi/ES-ENG-xlm-roberta-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-xlm-roberta-sentiment)
 3. [MinaAlmasi/ES-ENG-mDeBERTa-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-mDeBERTa-sentiment)
 
 
-If you wish to use the models for inference, click on the links to use the *Hosted inference API* by Hugging Face. If you wish to run inference locally,  the script ```inference.py``` demonstrates the use of the model ```MinaAlmasi/ES-ENG-mDeBERTa-sentiment```: 
+If you want to use the models for inference, click on the links to use the *Hosted inference API* by Hugging Face. If you wish to run inference locally,  the script ```inference.py``` demonstrates the use of the model ```MinaAlmasi/ES-ENG-mDeBERTa-sentiment```: 
 ```
 python src/inference.py -text {TEXT}
 ```
 NB! Remember to activate the ```env``` first (by running ```source ./env/bin/activate```)
 
 ## Results 
-The following presents the three models which have been fine-tuned based on the base version of [mBERT](https://huggingface.co/bert-base-multilingual-cased), [XLM-RoBERTa](https://huggingface.co/xlm-roberta-base), and  [mDeBERTa V3](https://huggingface.co/microsoft/mdeberta-v3-base). Sections describe the training hyperparameters along with the how the models fared during training and on the test set. A separate section follows the results sections which explains how to use the models for inference. 
+The following presents three models which have been fine-tuned based on the base version of [mBERT](https://huggingface.co/bert-base-multilingual-cased), [XLM-RoBERTa](https://huggingface.co/xlm-roberta-base), and  [mDeBERTa V3](https://huggingface.co/microsoft/mdeberta-v3-base). The sections include a description of the hyperparameters for the fine-tuning, results during training and an evaluation of the models on the test set. 
 
-### ```(E1)``` Training Hyperparameters
+### ```(P1)``` Training Hyperparameters
 All models are trained with the parameters: 
 * Batch size: 64 
 * Max epochs: 30 
@@ -129,9 +129,9 @@ All models are trained with the parameters:
 * Weight decay: 0.1
 * Learning Rate: 2e-6
 
-The early stopping patience stops model training if validation accuracy does not improve for 3 epochs. It was furthermore specified that the ```BEST``` model should be loaded for inference.
+The early stopping patience stopped model training if validation accuracy did not improve for 3 epochs. The model with the ```BEST``` validation accuracy was saved for inference.  
 
-### ```(E1)``` Loss Curves
+### ```(P1)``` Loss Curves
 The loss curves for each model is displayed below. The dashed vertical lines represent the ```BEST``` model that has been saved for inference. The validation accuracy and final epoch of the ```BEST``` model is in the legend of each plot.
 
 
@@ -141,7 +141,7 @@ The loss curves for each model is displayed below. The dashed vertical lines rep
 
 As evident from the plots above, the models are clearly ```overfitting``` as the training loss continously decreases while validation loss increases. For future projects, one should consider defining the early stopping callback based on the ```validation loss``` rather than the ```validation accuracy```. 
 
-### ```E2``` F1 scores on the Test data
+### ```P2``` F1 scores on the Test data
 The F1 scores (and a single ```Accuracy``` score) for each model are in the table below. Please see the individual metrics files in ```results/metrics``` for ```precision``` and ```recall``` scores.  
 
 Labels indicate whether the test set includes all examples (```all```), or if it has been stratified by language (```eng = English``` or ```es = Spanish```) . 
@@ -157,20 +157,26 @@ Labels indicate whether the test set includes all examples (```all```), or if it
 | mDeBERTa es     |      0.3  |       0.56 |       0.79 |       0.57 |        0.55 |           0.55 |
 | xlm-roberta es  |      0.32 |       0.56 |       0.76 |       0.56 |        0.55 |           0.54 |
 
-Solely focusing on the overall scores, the ```mDeBERTa``` and ```xlm-roberta``` are nearly identical in performance throughout. ```mBert```is slightly worse with a ```Weighted``` F1 score of ```0.6``` versus ```mDeBERTa = 0.65``` and ```mBERT = 0.64```. 
+Firstly, when focusing on all examples (```all```), the ```mDeBERTa``` and ```xlm-roberta``` are nearly identical in performance throughout. ```mBERT``` is slightly worse with a ```weighted F1 (Weighted_Avg)``` of ```0.6``` versus ```mDeBERTa = 0.65``` and ```xlm-roberta = 0.64```. 
 
-When seperating the test set into English and Spanish, there is an clear performance gap. ```mDeBERTa``` has a weighted F1 of ```0.73``` for the English test set whereas the weighted F1 is only ```0.55``` for the Spanish set. When looking at the scores per class, we note that the F1 for the neutral class in the Spanish set is at ```0.3``` which is just below the chance level ```33%```.
+When seperating the test set into English and Spanish, there is an clear performance gap. ```mDeBERTa``` has a ```weighted F1``` of ```0.73``` for the English test set whereas the weighted F1 is only ```0.55``` for the Spanish set. When looking at the scores per class, the F1 for the neutral class in the Spanish set is at ```0.3``` which is just below the chance level ```33%```. Nevertheless, the higher scores for the English test set suggests that the models are not entirely useless for English sentiment classification. 
 
-### ```(E2)``` Confusion Matrix (mDeBERTa)
-As ```mDeBERTa``` and ```xlm-roberta``` were nearly identical in performance, only one is highlighted here. The plot below shows the confusion matrix for ```mDeBERTa``` on the entire test set: 
+### ```(P2)``` Confusion Matrix (mDeBERTa)
+As ```mDeBERTa``` and ```xlm-roberta``` were nearly identical in performance, only one of them is highlighted. The plot below shows the confusion matrix for ```mDeBERTa``` on the entire test set: 
 <p align="left">
   <img src="https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment/blob/main/visualisations/confusion_matrix_mDeBERTa_all.png">
 </p>
 
-The confusion matrix provides an illustated overview of the labels that the models confused by other labels. From this, it is clear that the confusion is greatly located between the ```Neutral``` and ```Negative``` labelled tweets. ```24%``` of ```Neutral``` tweets were predicted as ```Negative``` and ```40%``` of ```Negative``` tweets were predicted as ```Neutral```. Nearly none of the ```Negative``` tweets were predicted as ```Positive``` (```6%```).    
+The confusion matrix provides an illustated overview of the labels that the model confused by other labels. From this, it is clear that the confusion is greatly located between the ```Neutral``` and ```Negative``` labelled tweets. ```24%``` of ```Neutral``` tweets were predicted as ```Negative``` and ```40%``` of ```Negative``` tweets were predicted as ```Neutral```. Nearly none of the ```Negative``` tweets were predicted as ```Positive``` (```6%```).     
 
-### Discussion of Results
-WRITE HERE
+For the other models, the confusion matrices on the entire test set are located in the ```visualisations``` folder. 
+
+### Discussion & Limitations
+The three fine-tuned model were close in performance with ```weighted F1``` scores ranging between ```0.60``` and ```65``` for English and Spanish sentiment classification. Importantly, these scores do not show the full picture. Upon assessing the models on the each language individually, a disparity in performance across languages is evident. Model performance is greater on English tweets (```weighted F1 = 0.69 to 0.72```) compared to Spanish (```weighted F1 = 0.51 to 0.55```). In general, this performance also differs greatly across labels with worse performance in ```Negative``` and ```Neutral``` tweets than for ```Positive``` tweets. 
+
+It is complicated to exactly identify why these performance disparities occur. Firstly, it is possible that the models are simply better at English than at Spanish, making it difficult to achieve a bilingual model that performs equally well. Nonetheless, fine-tuning Spanish monolingual models may not fix performance. In a survey of Spanish language models, Agerri and Agirre (2023) found that the multilingual models were generally better performing than Spanish monolingual models in several tasks, highlighting exactly ```mDeBERTA``` and ```xlm-roberta``` for their great performance.
+
+It may also be worth considering whether the Spanish dataset was more varied than the English. For instance, the ```TASS``` set consisted of tweets in several different Spanish dialects (e.g., Mexican, Peru) but were all treated as Spanish for simplicity. 
 
 ## Author 
 This repository was created by Mina Almasi:
@@ -180,6 +186,8 @@ This repository was created by Mina Almasi:
 * mail: mina.almasi@post.au.dk
 
 ## References
+Agerri Gascón, R., & Agirre Bengoa, E. (2023). Lessons learned from the evaluation of Spanish Language Models. Sociedad Española Para El Procesamiento Del Lenguaje Natural. https://doi.org/10.26342/2023-70-13
+
 Barbieri, F., Anke, L. E., & Camacho-Collados, J. (2022). XLM-T: Multilingual Language Models in Twitter for Sentiment Analysis and Beyond (arXiv:2104.12250). arXiv. https://doi.org/10.48550/arXiv.2104.12250
 
 Muennighoff, N., Tazi, N., Magne, L., & Reimers, N. (2023). MTEB: Massive Text Embedding Benchmark (arXiv:2210.07316). arXiv. https://doi.org/10.48550/arXiv.2210.07316
