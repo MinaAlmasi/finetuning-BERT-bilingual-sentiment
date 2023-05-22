@@ -23,6 +23,7 @@ The choice to combine datasets was made to obtain a larger train, test and valid
 To restrain the variability within the combined dataset, only datasets with Twitter data were considered. Additionally, datasets were processed to resemble each other to the extent that was possible. For instance, the real Twitter usernames in the ```TASS``` dataset were replaced with ```@user``` to match the Cardiff dataset (and also to respect anonymity). However, this was not possible with the MTEB dataset which does not contain any usernames.
 
 The total data amounts to ```20555 tweets```:
+
 | dataset     |   train |   validation |   test |   total |
 |:------------|--------:|-------------:|-------:|--------:|
 | tass_es     |    4802 |         1221 |   1222 |**7245** |
@@ -151,7 +152,8 @@ As evident from the plots above, the models are clearly ```overfitting``` as the
 ### ```P2``` F1 scores on the Test data
 The F1 scores (and a single ```Accuracy``` score) for each model are in the table below. Please see the individual metrics files in ```results/metrics``` for ```precision``` and ```recall``` scores.  
 
-Labels indicate whether the test set includes all examples (```all```), or if it has been stratified by language (```eng = English``` or ```es = Spanish```) . 
+Labels indicate whether the test set includes all examples (```all```), or if it has been stratified by language (```eng = English``` or ```es = Spanish```).
+ 
 |                 |   Negative |   Neutral |   Positive |   Accuracy |   Macro_Avg |   Weighted_Avg |
 |-----------------|------------|-----------|------------|------------|-------------|----------------|
 | mBERT all       |       0.52 |      0.55 |       0.74 |       0.6  |        0.6  |           0.6  |
