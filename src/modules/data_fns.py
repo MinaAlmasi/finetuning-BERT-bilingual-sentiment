@@ -192,7 +192,7 @@ def load_mteb(download_mode):
     data["test"] = data["test"].shuffle(seed=155).select(range(2443)) 
 
     # split test into val and test (using HF's own train_test_split method rather than sklearns that was used on the pandas dataframe with TASS data)
-    test_validation = data['test'].train_test_split(test_size=0.5) # solution by https://discuss.huggingface.co/t/how-to-split-main-dataset-into-train-dev-test-as-datasetdict/1090
+    test_validation = data['test'].train_test_split(test_size=0.5, seed=155) # solution by https://discuss.huggingface.co/t/how-to-split-main-dataset-into-train-dev-test-as-datasetdict/1090
 
     data = datasets.DatasetDict({
         "train": data["train"],
