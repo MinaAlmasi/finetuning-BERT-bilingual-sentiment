@@ -13,7 +13,6 @@ https://huggingface.co/docs/transformers/v4.17.0/en/tasks/sequence_classificatio
 import numpy as np 
 from functools import partial 
 
-
 # transformers tokenizers, models 
 from transformers import (AutoTokenizer, AutoModelForSequenceClassification, 
                         Trainer, DataCollatorWithPadding, EarlyStoppingCallback)
@@ -41,7 +40,6 @@ def tokenize(example, tokenizer, text_col:str="text"):
     Returns:
         - tokenized example
     '''
-
     return tokenizer(example[text_col], truncation=True)
     
 def tokenize_dataset(dataset, tokenizer, text_col:str="text"): 
@@ -75,8 +73,6 @@ def compute_metrics(pred):
     Returns:
         - metrics_dict: dictionary with metrics (accuracy, f1, precision, recall)
     '''
-
-
     # get labels 
     labels = pred.label_ids
 
@@ -94,7 +90,7 @@ def compute_metrics(pred):
 
 def get_loss(trainer_history):
     '''
-    Get train and eval loss from trainer history.
+    Get train and eval loss from trainer history. Useful for diagnostics in fine-tune pipeline.
 
     Args:
         - trainer_history: trainer.history (list of dicts)
@@ -103,7 +99,6 @@ def get_loss(trainer_history):
         - train_loss: dictionary with epoch (key) and train loss (value)
         - eval_loss: dictionary with epoch (key) and eval loss (value)
     '''
-
     train_loss = {}
     eval_loss = {}
 
@@ -125,7 +120,7 @@ def get_loss(trainer_history):
 
 def plot_loss(train_loss, val_loss, epochs, savepath, filename): # adapted from class notebook
     '''
-    Plot train and validation loss.
+    Plot train and validation loss for a single figure. Useful for diagnostics in fine-tune pipeline. 
 
     Args:
         - train_loss: dictionary with epoch (key) and train loss (value)
@@ -216,7 +211,7 @@ def finetune(dataset, model_name:str, n_labels:int, id2label:dict, label2id:dict
 
 def get_metrics(trainer, tokenized_ds_split, raw_ds_split, id2label:dict, path, filename):
     '''
-    Get overall metrics (accuracy, f1, precision, recall) stratified by class along with predictions/true labels per example. 
+    Get overall metrics (accuracy, f1, precision, recall) stratified by class along with predictions/true labels per example ('text' column). 
     Overall metrics are saved as .txt file. Predictions are saved as .csv file.
 
     Args:
@@ -226,6 +221,10 @@ def get_metrics(trainer, tokenized_ds_split, raw_ds_split, id2label:dict, path, 
         - id2label: dictionary with label id (key) and label (value)
         - path: directory where folder is created to save metrics
         - filename: filename of metrics
+
+    Returns: 
+        -  model_metrics: classfication report by scikit-learn with model metrics
+        -  data: dataframe with 'text' column, 'lang' column from original ds along with true labels, predicted labels, probabilities and logits. 
 
     Outputs:
         - .txt file with metrics
@@ -273,7 +272,6 @@ def get_metrics(trainer, tokenized_ds_split, raw_ds_split, id2label:dict, path, 
 
     return model_metrics, data
 
-
 def get_metrics_per_language(trainer, tokenized_ds_split, raw_ds_split, id2label, path, filename, language):
     '''
     Evaluate model on a subsetted data divided into either English or Spanish.
@@ -287,6 +285,10 @@ def get_metrics_per_language(trainer, tokenized_ds_split, raw_ds_split, id2label
         - path: directory where folder is created to save metrics
         - filename: filename of metrics
         - language: language of dataset split (e.g., "ENG", "ES")
+
+    Returns: 
+        -  model_metrics: classfication report by scikit-learn with model metrics
+        -  data: dataframe with 'text' column, 'lang' column from original ds along with true labels, predicted labels, probabilities and logits. 
     
     Outputs:
         - .txt file with metrics

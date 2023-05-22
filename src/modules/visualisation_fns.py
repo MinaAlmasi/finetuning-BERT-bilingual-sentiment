@@ -28,7 +28,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# custom func for getting loss from model history
+# custom func for getting loss from model history used in fine-tune pipeline
 from modules.finetune_fns import get_loss
 
 # table 
