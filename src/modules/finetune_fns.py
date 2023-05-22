@@ -244,7 +244,7 @@ def get_metrics(trainer, tokenized_ds_split, raw_ds_split, id2label:dict, path, 
     y_true = raw_predictions.label_ids
 
     # get summary metrics 
-    model_metrics = classification_report(y_true, y_pred, target_names=["neutral", "negative", "positive"])
+    model_metrics = classification_report(y_true, y_pred, target_names=["negative", "neutral", "positive"])
 
     # get data 
     data = pd.DataFrame({"prediction":y_pred.flatten(),
