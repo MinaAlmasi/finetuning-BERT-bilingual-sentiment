@@ -1,8 +1,11 @@
 '''
 Script for self-assigned Assignment 5, Language Analytics, Cultural Data Science, F2023
 
-Perform inference on a text using a fine-tuned model. Type: 
+Perform inference on a text using the fine-tuned model "MinaAlmasi/ES-ENG-mDeBERTa-sentiment." Type: 
     python src/inference.py -text {TEXT}
+
+E.g., 
+    python src/inference.py -text "I just love exams!"
 
 @MinaAlmasi
 '''
@@ -10,14 +13,14 @@ Perform inference on a text using a fine-tuned model. Type:
 # utils
 import argparse
 
-# load huggingface pipeline
+# load Hugging Face pipeline
 from transformers import pipeline
 
 def input_parse():
     parser = argparse.ArgumentParser()
 
     # add arguments 
-    parser.add_argument("-text", "--text_to_classify", help = "Text to perform sentiment classication on", type = str, default = "Odio el fútbol") 
+    parser.add_argument("-text", "--text_to_classify", help = "Text to perform sentiment classication on", type = str, default = "¡Me encantan los exámenes!") 
 
     # save arguments to be parsed from the CLI
     args = parser.parse_args()
@@ -39,7 +42,7 @@ def main():
     prediction = classifier(args.text_to_classify)
 
     # print text, predicted label and score
-    print(f"Text: '{args.text_to_classify}', predicted label: '{prediction[0][0]['label']}', score: '{prediction[0][0]['score']}'")
+    print(f"Text: '{args.text_to_classify}', Predicted label: '{prediction[0][0]['label']}', Score: '{round(prediction[0][0]['score'], 3)}'")
 
 
 if __name__ == "__main__":
