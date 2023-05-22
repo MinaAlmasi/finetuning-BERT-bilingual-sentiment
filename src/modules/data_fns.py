@@ -1,7 +1,7 @@
 '''
 Script for self-assigned Assignment 5, Language Analytics, Cultural Data Science, F2023
 
-Script containing functions for loading and preprocessing data used in the finetune pipeline.
+Script containing functions for loading and preprocessing data used in the fine-tune pipeline.
 Data is loaded either from the HuggingFace datasets library or from a local path.
 
 @MinaAlmasi
@@ -17,34 +17,10 @@ import pandas as pd
 import numpy as np
 import datasets 
 
-from collections import Counter # for counting labels
+from collections import Counter # for counting labels in main()
 
 # for splitting pandas df into train and test
 from sklearn.model_selection import train_test_split
-
-def combine_datasets(datasets_list):
-    '''
-    Take a list of datasets and combine them into one HuggingFace (HF) dataset. 
-
-    Args:   
-        - datasets_list: lists of HF datasets 
-
-    Return: 
-        - ds: HF dataset
-    '''
-
-    data = {}
-
-    # loop over dataset dict
-    for split in ["train", "validation", "test"]:
-        # concatenate each split with each other, append to list  
-        split_datasets = [d[split] for d in datasets_list]
-        data[split] = datasets.concatenate_datasets(split_datasets)
-
-    # make into dataset 
-    ds = datasets.DatasetDict(data)
-
-    return ds 
 
 def preprocess_TASS(path:pathlib.Path):
     '''
@@ -171,7 +147,7 @@ def add_es_lang_col(example):
 
     return example
 
-def load_cardiff(download_mode=None): # https://huggingface.co/datasets/cardiffnlp/tweet_sentiment_multilingual/viewer/arabic/train
+def load_cardiff(download_mode=None):
     '''
     Load English and Spanish twitter sentiment HF datasets by @cardiffnlp: 
     (LINK: https://huggingface.co/datasets/cardiffnlp/tweet_sentiment_multilingual)
@@ -195,7 +171,7 @@ def load_cardiff(download_mode=None): # https://huggingface.co/datasets/cardiffn
     return cardiff_eng, cardiff_es
 
 
-def load_mteb(download_mode): # https://huggingface.co/datasets/mteb/tweet_sentiment_extraction/viewer/mteb--tweet_sentiment_extraction/train?p=0 
+def load_mteb(download_mode): 
     '''
     Load a subset of English Twiter HF dataset from MTEB.
     (LINK: https://huggingface.co/datasets/mteb/tweet_sentiment_extraction)
@@ -210,7 +186,7 @@ def load_mteb(download_mode): # https://huggingface.co/datasets/mteb/tweet_senti
     data = datasets.load_dataset("mteb/tweet_sentiment_extraction", "english", download_mode=download_mode)
 
     # subset train to match the amount of ES data in TASS 
-    data["train"] = data["train"].shuffle(seed=155).select(range(4802)) # https://huggingface.co/learn/nlp-course/chapter5/3
+    data["train"] = data["train"].shuffle(seed=155).select(range(4802)) 
 
     # subset test to match the amount of ES data in TASS 
     data["test"] = data["test"].shuffle(seed=155).select(range(2443)) 
@@ -235,6 +211,30 @@ def load_mteb(download_mode): # https://huggingface.co/datasets/mteb/tweet_senti
     data = data.rename_column("label_text", "label")
 
     return data
+
+def combine_datasets(datasets_list):
+    '''
+    Take a list of datasets and combine them into one HuggingFace (HF) dataset. 
+
+    Args:   
+        - datasets_list: lists of HF datasets 
+
+    Return: 
+        - ds: HF dataset
+    '''
+
+    data = {}
+
+    # loop over dataset dict
+    for split in ["train", "validation", "test"]:
+        # concatenate each split with each other, append to list  
+        split_datasets = [d[split] for d in datasets_list]
+        data[split] = datasets.concatenate_datasets(split_datasets)
+
+    # make into dataset 
+    ds = datasets.DatasetDict(data)
+
+    return ds 
 
 def get_ds_overview(datadict):
     '''
@@ -328,7 +328,7 @@ def main():
     'Negative': [train.count(0), test.count(0), val.count(0)],
     'Neutral': [train.count(1), test.count(1), val.count(1)],
     'Positive': [train.count(2), test.count(2), val.count(2)]
-})
+    })
 
     # print counts
     print(f"\n {counts.to_markdown(index=False)}")
