@@ -147,13 +147,13 @@ The loss curves for each model is displayed below. The dashed vertical lines rep
   <img src="https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment/blob/main/visualisations/loss_curves_all_models.png">
 </p>
 
-As evident from the plots above, the models are clearly ```overfitting``` as the training loss continously decreases while validation loss increases. For future projects, one should consider defining the early stopping callback based on the ```validation loss``` rather than the ```validation accuracy```. 
+As evident from the plots above, the models are clearly ```overfitting``` as the training loss continously decreases while validation loss increases. For future projects, one should consider defining the early stopping callback based on the ```validation loss``` rather than the ```validation accuracy```. Nonetheless, from the final validation accuracy, ```mDeBERTa``` is the best performing model out of the three. 
 
 ### ```P2``` F1 scores on the Test data
 The F1 scores (and a single ```Accuracy``` score) for each model are in the table below. Please see the individual metrics files in ```results/metrics``` for ```precision``` and ```recall``` scores.  
 
 Labels indicate whether the test set includes all examples (```all```), or if it has been stratified by language (```eng = English``` or ```es = Spanish```).
- 
+
 |                 |   Negative |   Neutral |   Positive |   Accuracy |   Macro_Avg |   Weighted_Avg |
 |-----------------|------------|-----------|------------|------------|-------------|----------------|
 | mBERT all       |       0.52 |      0.55 |       0.74 |       0.6  |        0.6  |           0.6  |
