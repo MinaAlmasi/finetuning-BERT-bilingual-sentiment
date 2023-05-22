@@ -3,14 +3,14 @@ Script for self-assigned Assignment 5, Language Analytics, Cultural Data Science
 
 Contains functions for visualising results from finetuning.
 
-Concretely, it has functions to 
-    - plot confusion matrix for predictions from finetuning
-    - create a table of metrics gathering all model metrics 
+The script features functions which serve three purposes in src/visualise.py
+    1. Visualises loss curves for all models in one plot!
+    2. create a table of metrics gathering all model metrics 
+    3. plot confusion matrix for predictions from finetuning
 
 Note some functions were originally written for a previous project by the same author:  
     https://github.com/MinaAlmasi/CIFAKE-image-classifiers/blob/main/src/modules/visualisation.py
-They have been adapted (small modifications) to fit the current project. 
-The functions in question are marked with a comment.
+They have been adapted (small modifications) to fit the current project. The functions in question are marked with a comment.
 
 @MinaAlmasi
 '''
@@ -34,7 +34,121 @@ from modules.finetune_fns import get_loss
 # table 
 from tabulate import tabulate
 
-def create_data_from_metrics_txt(filepath:pathlib.Path): # function originally written for previous project by same author (see script docstring)
+def load_model_histories(resultspath:pathlib.Path): # function adapted from previous project by @MinaAlmasi (see script docstring)
+    '''
+    Loads all history objects from a given path and returns them in a dictionary.
+
+    Args:
+        - resultspath: path to directory containing history objects
+    
+    Returns: 
+        - history_objects: dictionary containing all history objects in path 
+    '''
+    # define empty dictionary where history objects will be saved 
+    history_objects = {}
+
+    for file in resultspath.iterdir():
+        if "history" in file.name: # open all files which have "history" in their name
+            with open(resultspath / file.name , 'rb') as f:
+                # load history object 
+                history = pickle.load(f)
+                # define history object name (e.g., "mBERT_log_history.pkl" -> "mBERT")
+                history_name = re.sub("_log_history.pkl", "", file.name)
+                # add to history_objects dict ! 
+                history_objects[history_name] = history
+    
+    return history_objects 
+
+def record_best_model(model_history:dict): 
+    '''
+    Record best model from model history as this is the model that is saved
+    and used for predictions as defined with early stopping and in training arguments.
+
+    Args:
+        - model_history: history object for the model
+
+    Returns:
+        - highest_accuracy: highest accuracy achieved by model
+        - highest_epoch: epoch at which highest accuracy was achieved
+    '''
+    highest_accuracy = 0
+    highest_epoch = None
+
+    # loop over model_history, extract the highest validation accuracy and the epoch it was achieved
+    for item in model_history:
+        if 'eval_accuracy' in item: 
+            accuracy = item['eval_accuracy']
+            epoch = item['epoch']
+
+            if accuracy > highest_accuracy: # check if the accuracy extracted is higher than the current 'highest_accuracy'. If yes, make it the new accuracy 
+                highest_accuracy = accuracy
+                highest_epoch = epoch
+
+    # round accuracy val
+    highest_accuracy = round(highest_accuracy, 3)
+    
+    return highest_accuracy, highest_epoch
+
+def plot_model_histories(model_histories:dict, savepath:pathlib.Path):
+    '''
+    Plot model loss curve from model histories in one plot. Also marks the epoch with highest validation accuracy as a vertical line. 
+
+    Args: 
+        - model_histories: dictionary containing model histories
+        - savepath: path to save plot to
+    '''
+    # get loss and total epochs
+    loss_dict = {}
+    eval_loss = {}
+    total_epochs = {}
+
+    for model_name, model_vals in model_histories.items():
+        loss_dict[model_name], eval_loss[model_name], total_epochs[model_name] = get_loss(model_vals)
+
+    # load highest accuracy and epoch for each model
+    highest_accuracies = {}
+    highest_epochs = {}
+
+    for model_name, model_vals in model_histories.items():
+        highest_accuracies[model_name], highest_epochs[model_name] = record_best_model(model_vals)
+
+    # define theme
+    plt.style.use("seaborn-v0_8-colorblind")
+
+    # plot loss with subplots
+    fig, axes = plt.subplots(1, 3, figsize=(15, 5), sharey=True, sharex=True)
+
+    # iterate over model names in model_histories, plot train/val loss and mark the epoch with highest validation accuracy
+    for i, model_name in enumerate(sorted(model_histories.keys())):
+        # get epochs range (from 1 to total epochs)
+        epochs_range = np.arange(1, total_epochs[model_name]+1)
+
+        # plot train loss and validation loss 
+        axes[i].plot(epochs_range, loss_dict[model_name].values())
+        axes[i].plot(epochs_range, eval_loss[model_name].values())
+
+        # add line for highest accuracy
+        axes[i].axvline(x = highest_epochs[model_name], linestyle = "--", color = "black")
+
+        # set only the legend for the highest accuracy in the individual subplots (as indicated by the "_", "_")
+        axes[i].legend(loc = "upper right", labels=["_", "_", f"VAL ACC: {highest_accuracies[model_name]}, EPOCH: {highest_epochs[model_name]}"], fontsize = 12)
+
+        # set title
+        axes[i].set_title(f"{model_name}", fontsize = 14, fontweight = "bold")
+
+    # set fig legend, here only set train and validation loss
+    fig.legend(bbox_to_anchor=(0.95, 0.5), loc="center", labels=["TRAIN", "VAL"], prop={'weight': 'bold', 'size': 14})
+
+    # pad plot
+    fig.tight_layout(pad=4)
+
+    # set fig axis x-label
+    fig.text(0.52, 0.06, 'Epochs', ha='center', va='center', fontsize = 14)
+
+    # save plot
+    plt.savefig(savepath, dpi = 300)
+
+def create_data_from_metrics_txt(filepath:pathlib.Path): # function adapted from previous project by @MinaAlmasi (see script docstring)
     '''
     Create a dataframe from a text file containing the classification report from sklearn.metrics.classification_report
 
@@ -68,7 +182,7 @@ def create_data_from_metrics_txt(filepath:pathlib.Path): # function originally w
 
     return data
 
-def create_metrics_dataframes(resultspath:pathlib.Path, metrics_to_include:str): # function originally written for previous project by same author (see script docstring)
+def create_metrics_dataframes(resultspath:pathlib.Path, metrics_to_include:str): # function adapted from previous project by @MinaAlmasi (see script docstring)
     '''
     Loads all history objects from a given path and returns them in a dictionary.
 
@@ -123,10 +237,10 @@ def create_table(data:dict, header_labels:list, metric:str="f1-score"): # functi
 
     for key, value in data.items():
         # create name 
-        mdl_name = re.sub("_", " ", key)
+        model_name = re.sub("_", " ", key)
 
         # create table row with model name and chosen metric
-        tablerow = [mdl_name] + [str(value) for value in value[metric]] 
+        tablerow = [model_name] + [str(value) for value in value[metric]] 
 
         # append tablerrow to tabledata
         tabledata.append(tablerow)
@@ -138,118 +252,6 @@ def create_table(data:dict, header_labels:list, metric:str="f1-score"): # functi
     )
 
     return table
-
-
-def load_model_histories(resultspath:pathlib.Path): # function originally written for previous project by same author (see script docstring)
-    '''
-    Loads all history objects from a given path and returns them in a dictionary.
-
-    Args:
-        - resultspath: path to directory containing history objects
-    
-    Returns: 
-        - history_objects: dictionary containing all history objects in path 
-    '''
-    # define empty dictionary where history objects will be saved 
-    history_objects = {}
-
-    for file in resultspath.iterdir():
-        if "history" in file.name: # open all files which have "history" in their name
-            with open(resultspath / file.name , 'rb') as f:
-                # load history object 
-                history = pickle.load(f)
-                # define history object name (e.g., "mBERT_log_history.pkl" -> "mBERT")
-                history_name = re.sub("_log_history.pkl", "", file.name)
-                # add to history_objects dict ! 
-                history_objects[history_name] = history
-    
-    return history_objects 
-
-def record_best_model(model_history:dict): 
-    '''
-    Record best model from model history as this is the model that is saved
-    and used for predictions as defined with early stopping and in training arguments.
-
-    Args:
-        - model_history: history object for the model
-
-    Returns:
-        - highest_accuracy: highest accuracy achieved by model
-        - highest_epoch: epoch at which highest accuracy was achieved
-    '''
-    highest_accuracy = 0
-    highest_epoch = None
-
-    # loop over model_history, extract the highest accuracy and the epoch it was achieved
-    for item in model_history:
-        if 'eval_accuracy' in item:
-            accuracy = item['eval_accuracy']
-            epoch = item['epoch']
-            if accuracy > highest_accuracy:
-                highest_accuracy = accuracy
-                highest_epoch = epoch
-
-    # round accuracy to 3 decimals
-    highest_accuracy = round(highest_accuracy, 3)
-    
-    return highest_accuracy, highest_epoch
-
-def plot_model_histories(model_histories:dict, savepath:pathlib.Path):
-    '''
-    Plot model histories in one plot
-
-    Args: 
-        - model_histories: dictionary containing model histories
-        - savepath: path to save plot to
-    '''
-    # get loss
-    loss_dict = {}
-    eval_loss = {}
-    total_epochs = {}
-
-    for mdl_name, mdl_vals in model_histories.items():
-        loss_dict[mdl_name], eval_loss[mdl_name], total_epochs[mdl_name] = get_loss(mdl_vals)
-
-    # load highest accuracy and epoch for each model
-    highest_accuracies = {}
-    highest_epochs = {}
-
-    for mdl_name, mdl_vals in model_histories.items():
-        highest_accuracies[mdl_name], highest_epochs[mdl_name] = record_best_model(mdl_vals)
-
-    # define theme
-    plt.style.use("seaborn-v0_8-colorblind")
-
-    # plot loss with subplots
-    fig, axes = plt.subplots(1, 3, figsize=(15, 5), sharey=True, sharex=True)
-
-    # iterate over model histories and plot train/loss
-    for i, (mdl_name, mdl_vals) in enumerate(model_histories.items()):
-        # get epochs range (from 1 to total epochs)
-        epochs_range = np.arange(1, total_epochs[mdl_name]+1)
-
-        axes[i].plot(epochs_range, loss_dict[mdl_name].values())
-        axes[i].plot(epochs_range, eval_loss[mdl_name].values())
-        # add line for highest accuracy
-        axes[i].axvline(x = highest_epochs[mdl_name], linestyle = "--", color = "black")
-
-        # set only the legend for the highest accuracy in the individual subplots
-        axes[i].legend(loc = "upper right", labels=["_", "_", f"VAL ACC: {highest_accuracies[mdl_name]}, EPOCH: {highest_epochs[mdl_name]}"], fontsize = 12)
-
-        # set title
-        axes[i].set_title(f"{mdl_name}", fontsize = 14, fontweight = "bold")
-
-    # set fig legend, here only set train and validation loss
-    fig.legend(bbox_to_anchor=(0.95, 0.5), loc="center", labels=["TRAIN", "VAL"], prop={'weight': 'bold', 'size': 14})
-
-    # pad plot
-    fig.tight_layout(pad=4)
-
-    # set fig axis x-label
-    fig.text(0.52, 0.06, 'Epochs', ha='center', va='center', fontsize = 14)
-
-    # save plot
-    plt.savefig(savepath, dpi = 300)
 
 def plot_confusion_matrix(pred_data, true_col:str, pred_col:str, labels:list, model_name:str, savepath:pathlib.Path):
     '''
@@ -322,12 +324,12 @@ def plot_confusion_matrices(path:pathlib.Path, savepath:pathlib.Path, preds_to_i
     # loop over files and plot confusion matrix
     for file in pred_files:
         # get model name
-        mdl_name = re.sub("_predictions.csv", "", file.name)
+        model_name = re.sub("_predictions.csv", "", file.name)
 
         # load predictions
         pred_data = pd.read_csv(file)
 
         # plot confusion matrix
-        matrices[mdl_name] = plot_confusion_matrix(pred_data, "true_label", "prediction_label", labels, mdl_name, savepath)
+        matrices[model_name] = plot_confusion_matrix(pred_data, "true_label", "prediction_label", labels, model_name, savepath)
 
     return matrices
