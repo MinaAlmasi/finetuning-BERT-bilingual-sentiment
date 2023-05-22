@@ -3,7 +3,7 @@ Repository link: https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentime
 
 This repository forms the self-assigned *assignment 5* by Mina Almasi (202005465) in the subject Language Analytics, Cultural Data Science, F2023. 
 
-The repository contains code for finetuning BERT-based models for bilingual sentiment classification in English and Spanish. If you wish to use the models for inference, please refer to the section [*Inference with the Fine-Tunes*](https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment#inference-with-the-fine-tunes). 
+The repository contains code for finetuning BERT-based models for bilingual sentiment classification in English and Spanish. If you wish to use the models for inference, please refer to the section [*Inference with the Finetunes*](https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment#inference-with-the-fine-tunes). 
 
 ## Data 
 The data comprises 3 datasets all from Twitter data in either English or Spanish: 
@@ -105,7 +105,7 @@ NB! Remember to activate the ```env``` first (by running ```source ./env/bin/act
 |```-epochs```| MAX epochs the model should train for (if not stopped after 3 epochs with no improvement)  | 30              |
 |```-download```| Write 'force_redownload' to redownload cached datasets. Useful if cache is corrupt.      | None            |
 
-## Inference with the Fine-Tunes
+## Inference with the Finetunes
 The three fine-tuned models are available on the HuggingFace Hub:
 1. [MinaAlmasi/ES-ENG-mBERT-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-xlm-roberta-sentiment)
 2. [MinaAlmasi/ES-ENG-xlm-roberta-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-xlm-roberta-sentiment)
