@@ -8,7 +8,7 @@ The script features functions which serve three purposes in src/visualise.py
     2. create a table of metrics gathering all model metrics 
     3. plot confusion matrix for predictions from finetuning
 
-Note some functions were originally written for a previous project by the same author:  
+Note some functions were originally written for a previous project by the same author for another course in cultural data science. 
     https://github.com/MinaAlmasi/CIFAKE-image-classifiers/blob/main/src/modules/visualisation.py
 They have been adapted (small modifications) to fit the current project. The functions in question are marked with a comment.
 

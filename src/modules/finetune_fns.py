@@ -3,7 +3,7 @@ Script for self-assigned Assignment 5, Language Analytics, Cultural Data Science
 
 This script comprises several functions necessary for the finetune pipeline, including tokenization, training, and evaluation.
 
-Fine-tune functions (tokenize, compute_metrics, finetune) adapted/inspired by HF tutorial ->
+Finetune functions (tokenize, compute_metrics, finetune) were adapted/inspired by HF tutorial ->
 https://huggingface.co/docs/transformers/v4.17.0/en/tasks/sequence_classification#finetune-with-trainer
 
 @MinaAlmasi

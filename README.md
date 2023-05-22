@@ -27,7 +27,7 @@ The total data amounts to ```20555 tweets```:
 | cardiff_eng |    1839 |          324 |    870 |**3033** |
 | **total**   |**13282**|     **3090** |**4183**|**20555**|
 
-The MTEB data was subsetted to match the TASS data to ensure a balance of Spanish and English tweets. The splits in the original datasets were respected, resulting in approx. 35 % of the dataset being used for validation (approx. 15%) and test (approx. 20%). 
+The MTEB data was subsetted to match the TASS data to ensure a balance of Spanish and English tweets. The splits in the original datasets were respected, resulting in approx. 35 % of the dataset being used for validation (approx. 15%) and test (approx. 20%). A seed was set for all custom splits to ensure reproducibility.
 
 ## Experimental Pipeline and Motivation
 As the fourth most spoken language globally, the Spanish language offers the potential to gain insights into the culture and traditions of a considerable portion of the world population. Combined with the English language, the coverage is extended to an even larger segment of global society. 
@@ -35,7 +35,7 @@ As the fourth most spoken language globally, the Spanish language offers the pot
 With this in mind, the current project aims to perform sentiment classifcation but bilingually in Spanish and English. This is achieved by finetuning several BERT-based models on English and Spanish data simultanously using HuggingFace's Trainer from their ```transformers``` package.  The pipeline can be seperated into two parts: 
 
 ### ```(P1) FINE-TUNING```
-Fine-tune several BERT-based models on labelled Spanish & English Twitter data (3 labels: neutral, negative, positve).
+Fine-tune several BERT-based models on labelled Spanish & English Twitter data (3 labels: negative, neutral, and positve).
 
 ### ```(P2) EVALUATION```
 Evaluate the models on test data, extracting overall performance as well as performance stratified by language. 
