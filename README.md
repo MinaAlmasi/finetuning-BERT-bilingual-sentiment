@@ -106,7 +106,7 @@ NB! Remember to activate the ```env``` first (by running ```source ./env/bin/act
 |```-download```| Write 'force_redownload' to redownload cached datasets. Useful if cache is corrupt.      | None            |
 
 ## Inference with the Finetunes
-The three fine-tuned models are available on the HuggingFace Hub:
+The three finetuned models are available on the HuggingFace Hub:
 1. [MinaAlmasi/ES-ENG-mBERT-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-xlm-roberta-sentiment)
 2. [MinaAlmasi/ES-ENG-xlm-roberta-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-xlm-roberta-sentiment)
 3. [MinaAlmasi/ES-ENG-mDeBERTa-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-mDeBERTa-sentiment)
@@ -119,7 +119,7 @@ python src/inference.py -text {TEXT}
 NB! Remember to activate the ```env``` first (by running ```source ./env/bin/activate```)
 
 ## Results 
-The following presents three models which have been fine-tuned based on the base version of [mBERT](https://huggingface.co/bert-base-multilingual-cased), [XLM-RoBERTa](https://huggingface.co/xlm-roberta-base), and  [mDeBERTa V3](https://huggingface.co/microsoft/mdeberta-v3-base). The sections include a description of the hyperparameters for the fine-tuning, results during training and an evaluation of the models on the test set. 
+The following presents three models which have been finetuned based on the base versions of [mBERT](https://huggingface.co/bert-base-multilingual-cased), [XLM-RoBERTa](https://huggingface.co/xlm-roberta-base), and  [mDeBERTa V3](https://huggingface.co/microsoft/mdeberta-v3-base). The sections include a description of the hyperparameters for the finetuning, results during training and an evaluation of the models on the test set. 
 
 ### ```(P1)``` Training Hyperparameters
 All models are trained with the parameters: 
@@ -172,13 +172,13 @@ The confusion matrix provides an illustated overview of the labels that the mode
 For the other models, the confusion matrices on the entire test set are located in the ```visualisations``` folder. 
 
 ### Discussion & Limitations
-The three fine-tuned model were close in performance with ```weighted F1``` scores ranging between ```0.60``` and ```65``` for English and Spanish sentiment classification. Importantly, these scores do not show the full picture. Upon assessing the models on the each language individually, a disparity in performance across languages is evident. Model performance is greater on English tweets (```weighted F1 = 0.69 to 0.72```) compared to Spanish (```weighted F1 = 0.51 to 0.55```). In general, this performance also differs greatly across labels with worse performance in ```Negative``` and ```Neutral``` tweets than for ```Positive``` tweets. 
+The three finetuned model were close in performance with ```weighted F1``` scores ranging between ```0.60``` and ```65``` for English and Spanish sentiment classification. Importantly, these scores do not show the full picture. Upon assessing the models on the each language individually, a disparity in performance across languages is evident. Model performance is greater on English tweets (```weighted F1 = 0.69 to 0.72```) compared to Spanish (```weighted F1 = 0.51 to 0.55```). In general, this performance also differs greatly across labels with worse performance in ```Negative``` and ```Neutral``` tweets than for ```Positive``` tweets. 
 
-It is complicated to exactly identify why these performance disparities occur. Firstly, it is possible that the models are simply better at English than at Spanish, making it difficult to achieve a bilingual model that performs equally well. Nonetheless, fine-tuning Spanish monolingual models may not fix performance. In a survey of Spanish language models, Agerri and Agirre (2023) found that the multilingual models were generally better performing than Spanish monolingual models in several tasks, highlighting exactly ```mDeBERTA``` and ```xlm-roberta``` for their great performance.
+It is complicated to exactly identify why these performance disparities occur. Firstly, it is possible that the models are simply better at English than at Spanish, making it difficult to achieve a bilingual model that performs equally well. Nonetheless, finetuning Spanish monolingual models may not fix performance. In a survey of Spanish language models, Agerri and Agirre (2023) found that the multilingual models were generally better performing than Spanish monolingual models in several tasks, highlighting exactly ```mDeBERTA``` and ```xlm-roberta``` for their great performance.
 
 It may also be worth considering whether the Spanish dataset was more varied than the English. For instance, the ```TASS``` set consisted of tweets in several different Spanish dialects (e.g., Mexican, Peru) but were all treated as Spanish for simplicity. 
 
-For the disparities amongst ```labels```, labels ```Positive``` and ```Negative``` were near equally balanced, but there were more ```Neutral``` labels in each split (around 1000 more in train and around 250-300 in test and validation). This should have been balanced by downsampling the ```Neutral``` labels. 
+For the disparities amongst ```labels```, labels ```Positive``` and ```Negative``` were near equally balanced, but there were more ```Neutral``` labels in each split (around 1000 more in train and around 200-250 in both test and validation). This could be balanced in future testing. 
 
 Finally, there may be general problems with the way the datasets were combined. The datasets may have had too great variation, despite efforts to reduce this.
 
