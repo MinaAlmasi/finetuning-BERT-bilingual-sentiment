@@ -166,9 +166,9 @@ Labels indicate whether the test set includes all examples (```all```), or if it
 | mDeBERTa es     |       0.34 |      0.55 |       0.78 |       0.56 |        0.55 |           0.55 |
 | xlm-roberta es  |       0.34 |      0.56 |       0.76 |       0.57 |        0.56 |           0.55 |
 
-Firstly, when focusing on all examples (```all```), the ```mDeBERTa``` and ```xlm-roberta``` are nearly identical in performance throughout. ```mBERT``` is slightly worse with a ```weighted F1 (Weighted_Avg)``` of ```0.6``` versus ```mDeBERTa = 0.65``` and ```xlm-roberta = 0.64```. 
+The table shows that the the three finetuned model are close in performance with ```weighted F1``` scores ranging between ```0.60``` and ```0.65``` for English and Spanish sentiment classification. However, these scores do not show the full picture. Upon assessing the models on the each language individually, a disparity in performance across languages is evident. Model performance is greater on English tweets (```weighted F1 = 0.68 to 0.74```) compared to Spanish (```weighted F1 = 0.51 to 0.55```). In general, this performance also differs greatly across labels with worse performance in ```Negative``` and ```Neutral``` tweets than for ```Positive``` tweets. ```Negative``` labels were especially impacted with scores around chance level (```33%```).
 
-When seperating the test set into English and Spanish, there is an clear performance gap. ```mDeBERTa``` has a ```weighted F1``` of ```0.74``` for the English test set whereas the weighted F1 is only ```0.55``` for the Spanish set. When looking at the scores per class, the F1 for the negative class in the Spanish set is at ```0.3``` which is just below the chance level ```33%```. Nevertheless, the higher scores for the English test set suggests that the models are not entirely useless for English sentiment classification. 
+Overall, models ```mDeBERTa``` and ```xlm-roberta``` performed better than ```mBERT````. 
 
 ### ```(P2)``` Confusion Matrix (mDeBERTa)
 As ```mDeBERTa``` and ```xlm-roberta``` were nearly identical in performance, only one of them is highlighted. The plot below shows the confusion matrix for ```mDeBERTa``` on the entire test set: 
@@ -181,15 +181,11 @@ The confusion matrix provides an illustated overview of the labels that the mode
 For the other models, the confusion matrices on the entire test set are located in the ```visualisations``` folder. 
 
 ### Discussion & Limitations
-The three finetuned model were close in performance with ```weighted F1``` scores ranging between ```0.60``` and ```0.65``` for English and Spanish sentiment classification. Importantly, these scores do not show the full picture. Upon assessing the models on the each language individually, a disparity in performance across languages is evident. Model performance is greater on English tweets (```weighted F1 = 0.68 to 0.74```) compared to Spanish (```weighted F1 = 0.51 to 0.55```). In general, this performance also differs greatly across labels with worse performance in ```Negative``` and ```Neutral``` tweets than for ```Positive``` tweets. 
+Results showed low weighted F1-scores for bilingual sentiment classification, but also revealed a performance gap between English and Spanish with all models doing better in English. Also, performance differed across labels with ```Negative``` labels being close to chance level. 
 
-It is complicated to exactly identify why these performance disparities occur. Firstly, it is possible that the models are simply better at English than at Spanish, making it difficult to achieve a bilingual model that performs equally well. Nonetheless, finetuning Spanish monolingual models may not fix performance. In a survey of Spanish language models, Agerri and Agirre (2023) found that the multilingual models were generally better performing than Spanish monolingual models in several tasks, highlighting exactly ```mDeBERTA``` and ```xlm-roberta``` for their great performance.
+It is complicated to exactly identify why these performance disparities occur. Firstly, it is possible that the models are simply better at English than at Spanish, making it difficult to achieve a bilingual model that performs equally well. Nonetheless, finetuning the currently available Spanish monolingual models may not fix performance. In a survey of Spanish language models, Agerri and Agirre (2023) found that the multilingual models generally surpassed Spanish monolingual models, highlighting exactly ```mDeBERTA``` and ```xlm-roberta``` for their great performance.
 
-It may also be worth considering whether the Spanish dataset was more varied than the English. For instance, the ```TASS``` set consisted of tweets in several different Spanish dialects (e.g., Mexican, Peru) but were all treated as Spanish for simplicity. 
-
-For the disparities amongst ```labels```, labels ```Positive``` and ```Negative``` were near equally balanced, but there were more ```Neutral``` labels in each split (around 1000 more in train and around 200-250 in both test and validation). This could be balanced in future testing. 
-
-Finally, there may be general problems with the way the datasets were combined. The datasets may have had too great variation, despite efforts to reduce this.
+It may also be worth considering whether the Spanish dataset was more varied than the English. For instance, the ```TASS``` set consisted of tweets in several different Spanish dialects (e.g., Mexican, Peru) but were all treated as Spanish for simplicity. Moreover, for the disparities amongst ```labels```, labels ```Positive``` and ```Negative``` were near equally balanced, but there were more ```Neutral``` labels in each split (around 1000 more in train and around 200-250 in both test and validation). This could be balanced in future testing. Finally, there may be general problems with the way the datasets were combined. The datasets may have had too great variation, despite efforts to reduce this.
 
 ## Author 
 This repository was created by Mina Almasi:
