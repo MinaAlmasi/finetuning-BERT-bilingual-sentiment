@@ -1,4 +1,4 @@
-# Finetuning BERT for Bilingual Sentiment Classification in English and Spanish
+# Finetuning BERT-models for Bilingual Sentiment Classification in English and Spanish
 Repository link: https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment
 
 This repository forms the self-assigned *assignment 5* by Mina Almasi (202005465) in the subject Language Analytics, Cultural Data Science, F2023. 
