@@ -4,16 +4,21 @@ Script for self-assigned Assignment 5, Language Analytics, Cultural Data Science
 Fine-tuning BERT for bilingual sentiment classification in English and Spanish
 
 Run in terminal: 
-    python src/finetune.py -hub {PUSH_TO_HUB_BOOL} -epochs {N_EPOCHS} -download {DOWNLOAD_MODE} -mdl {MODEL} -TASS {TASS_DOWNLOAD}
+    python src/finetune.py -epochs {N_EPOCHS} -download {DOWNLOAD_MODE} -mdl {MODEL} -TASS -hub 
 
 Additonal arguments:
-    -epochs (int): number of epochs the model should run for. 
+    -epochs (int): number of epochs the model should run for. Defaults to 30. 
     -download (str): 'force_redownload' to force HF datasets to be redownloaded. Defaults to 'None' for using cached datasets.
     -mdl (str): name of model to use. Defaults to 'mBERT'. Choose between 'mBERT' or 'mDistilBERT'.
-    -hub (bool): whether to push to huggingface hub or not. Defaults to False.
-    -TASS (bool): whether to include TASS in the finetuning or not. Defaults to True.
 
-NB! Note that pushing to HF hub requires a token in a .txt file called "token.txt" in the main repo folder.
+Note the boolean arguments do not rely on any arguments following their flags. Simply specifying the flags will set them to True. 
+    -hub (bool): whether to push to Huggingface Hub or not. If not specified, no login will occur. This furthermore includes a token in a .txt file called "token.txt" located in the main repo folder. 
+    -TASS (bool): whether to include TASS in the finetuning or not. If not specified, TASS will not be included. 
+
+E.g., writing: 
+     python src/finetune.py -TASS -hub 
+
+Entails that the fine-tuning will include the TASS data and the model will be pushed to the Hugging Face Hub. 
 
 @MinaAlmasi
 '''
@@ -40,11 +45,11 @@ def input_parse():
     parser = argparse.ArgumentParser()
 
     # add arguments 
-    parser.add_argument("-hub", "--push_to_hub", help = "Whether to push to Hugging Face Hub (True) or not (False)", type = bool, default = False) 
+    parser.add_argument("-hub", "--push_to_hub", help = "Whether to push to Hugging Face Hub, if arg is specified, it will push to hub", action="store_true") 
     parser.add_argument("-epochs", "--n_epochs", help = "number of epochs the model should run for", type = int, default = 30)
     parser.add_argument("-download", "--download_mode", help = "'force_redownload' to force HF datasets to be redownloaded. None for using cached datasets.", type = str, default = None)
     parser.add_argument("-mdl", "--model", help = "Choose between 'mBERT' or 'mDeBERTa' or 'xlm-roberta'", type = str, default = "xlm-roberta")
-    parser.add_argument("-TASS", "--TASS_download", help = "Whether to include to TASS in the finetuning (True) or not (False)", type = bool, default = True)
+    parser.add_argument("-TASS", "--TASS_download", help = "Whether to include to TASS in the finetuning. If arg is specified, TASS will be used.",  action="store_true")
 
     # save arguments to be parsed from the CLI
     args = parser.parse_args()
@@ -93,8 +98,8 @@ def main():
     output_folder = list(model_dict.keys())[0]
     model_name = list(model_dict.values())[0]
 
-    # push to hub ! 
-    if args.push_to_hub == True: 
+    # push to hub ! But only if "-hub" flag is specified
+    if args.push_to_hub: 
         from huggingface_hub import login
 
         # get token from txt
@@ -103,14 +108,16 @@ def main():
 
         login(hf_token)
 
-    # load tass_path 
-    if args.TASS_download == True: 
+    # define path for TASS data. If '-TASS' flag is specified, load data with TASS
+    if args.TASS_download: 
         tass_path = path.parents[1] / "data"
     else:
         tass_path = None
 
-    # load datasets 
     ds, ds_overview = load_datasets(tass_path, args.download_mode)
+
+    # user-msg
+    print(f"[INFO]: Fine-Tuning on Data: \n {ds_overview}")
 
     # map labels to ids
     id2label = {0: "negative", 1:"neutral", 2:"positive"}
@@ -135,7 +142,7 @@ def main():
         metric_for_best_model = "accuracy",
     )
 
-    # fine tune 
+    # fine-tune 
     trainer, tokenized_data = finetune(
         dataset = ds, 
         model_name = model_name,
@@ -146,8 +153,8 @@ def main():
         early_stop_patience=3
         )
 
-    # push model to hub
-    if args.push_to_hub == True: 
+    # push model to hub (only if "-hub" flag is specified)
+    if args.push_to_hub: 
         trainer.push_to_hub()
 
     # save log history with pickle
@@ -161,7 +168,7 @@ def main():
     # evaluate, save summary metrics 
     get_metrics(trainer,  tokenized_data["test"], ds["test"], id2label, resultspath, f"{args.model}_all")
 
-    # evaluate per language metrics subset 
+    # evaluate again on a subset, filtered by language 
     get_metrics_per_language(trainer, tokenized_data["test"], ds["test"], id2label, resultspath, f"{args.model}_es", language="ES")
     get_metrics_per_language(trainer, tokenized_data["test"], ds["test"], id2label, resultspath, f"{args.model}_eng", language="ENG")
 

@@ -1,19 +1,21 @@
 #!/bin/bash
 
+# Running Fine-tuning WITH TASS data 
+
 # activate virtual environment (works only if setup.sh has been run only !)
 source ./env/bin/activate
 
 # finetune mBERT 
 echo -e "[INFO:] Finetuning mBERT ..." # user msg 
-python3 src/finetune.py -mdl mBERT
+python3 src/finetune.py -mdl mBERT -TASS
 
 # run xlm roberta
 echo -e "[INFO:] Finetuning xlm-roberta ..." # user msg 
-python3 src/finetune.py -mdl xlm-roberta
+python3 src/finetune.py -mdl xlm-roberta -TASS
 
 # finetune mDeBERTa
 echo -e "[INFO:] Finetuning mDeBERTa ..." # user msg 
-python3 src/finetune.py -mdl mDeBERTa
+python3 src/finetune.py -mdl mDeBERTa -TASS
 
 # running visualisations
 echo -e "[INFO:] Running visualisations ..." # user msg
