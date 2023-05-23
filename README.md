@@ -112,7 +112,7 @@ NB! Remember to activate the ```env``` first (by running ```source ./env/bin/act
 
 ## Inference with the Finetunes
 The three finetuned models are available on the Hugging Face Hub:
-1. [MinaAlmasi/ES-ENG-mBERT-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-xlm-roberta-sentiment)
+1. [MinaAlmasi/ES-ENG-mBERT-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-mBERT-sentiment)
 2. [MinaAlmasi/ES-ENG-xlm-roberta-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-xlm-roberta-sentiment)
 3. [MinaAlmasi/ES-ENG-mDeBERTa-sentiment](https://huggingface.co/MinaAlmasi/ES-ENG-mDeBERTa-sentiment)
 
@@ -130,7 +130,8 @@ The following presents the results from the three models that were finetuned on 
 
 ### ```(P1)``` Training Hyperparameters
 All models are trained with the parameters: 
-* Batch size: 64, Max epochs: 30 
+* Batch size: 64
+* Max epochs: 30 
 * Early stopping patience: 3 (stops if validation acc. does not improve for 3 epochs)
 * Weight decay: 0.1
 * Learning Rate: 2e-6
