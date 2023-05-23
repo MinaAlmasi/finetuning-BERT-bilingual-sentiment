@@ -56,7 +56,7 @@ The repository is structured as such:
 | <div style="width:120px"></div>| Description |
 |---------|:-----------|
 | ```results``` | Results from running ```finetune.py```: loss curves, metrics (all + per language), predictions data per example in test set (all + per language). |
-| ```visualisations``` | Table and confusion matrices from running ```visualise.py```. |
+| ```visualisations``` | Table, loss curves overview and confusion matrices from running ```visualise.py```. |
 | ```models``` | Models are saved here after finetuning.|
 | ```src``` | Scripts to run finetuning + evaluation and to visualise results. Contains helper functions in the ```modules``` folder.|
 | ```requirements.txt``` | Necessary packages to be installed |
