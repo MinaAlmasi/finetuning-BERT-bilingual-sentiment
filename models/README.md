@@ -1,1 +1,1 @@
-Model saved locally here! 
+Model are saved locally in this folder but not pushed to git due to their large size! 
