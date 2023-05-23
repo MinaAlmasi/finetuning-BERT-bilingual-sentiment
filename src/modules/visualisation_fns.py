@@ -8,9 +8,9 @@ The script features functions which serve three purposes in src/visualise.py
     2. create a table of metrics gathering all model metrics 
     3. plot confusion matrix for predictions from finetuning
 
-Note some functions were originally written for a previous project by the same author for another course in cultural data science. 
-    https://github.com/MinaAlmasi/CIFAKE-image-classifiers/blob/main/src/modules/visualisation.py
-They have been adapted (small modifications) to fit the current project. The functions in question are marked with a comment.
+Note some functions were originally written for a previous project by the same author for another course in cultural data science: https://github.com/MinaAlmasi/CIFAKE-image-classifiers/blob/main/src/modules/visualisation.py
+- These functions are: load_model_histories, create_data_from_metrics_txt, create_metrics_dataframes and create_table
+- The functions have been adapted (small modifications) to fit the current project.
 
 @MinaAlmasi
 '''
@@ -28,13 +28,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# custom func for getting loss from model history used in fine-tune pipeline
+# custom func for getting loss from model history used in finetune pipeline
 from modules.finetune_fns import get_loss
 
 # table 
 from tabulate import tabulate
 
-def load_model_histories(resultspath:pathlib.Path): # function adapted from previous project by @MinaAlmasi (see script docstring)
+def load_model_histories(resultspath:pathlib.Path): 
     '''
     Loads all history objects from a given path and returns them in a dictionary.
 
@@ -148,7 +148,7 @@ def plot_model_histories(model_histories:dict, savepath:pathlib.Path):
     # save plot
     plt.savefig(savepath, dpi = 300)
 
-def create_data_from_metrics_txt(filepath:pathlib.Path): # function adapted from previous project by @MinaAlmasi (see script docstring)
+def create_data_from_metrics_txt(filepath:pathlib.Path): 
     '''
     Create a dataframe from a text file containing the classification report from sklearn.metrics.classification_report
 
@@ -182,7 +182,7 @@ def create_data_from_metrics_txt(filepath:pathlib.Path): # function adapted from
 
     return data
 
-def create_metrics_dataframes(resultspath:pathlib.Path, metrics_to_include:str): # function adapted from previous project by @MinaAlmasi (see script docstring)
+def create_metrics_dataframes(resultspath:pathlib.Path, metrics_to_include:str): 
     '''
     Loads all history objects from a given path and returns them in a dictionary.
 
@@ -216,7 +216,7 @@ def create_metrics_dataframes(resultspath:pathlib.Path, metrics_to_include:str):
 
     return metrics_dfs
 
-def create_table(data:dict, header_labels:list, metric:str="f1-score"): # function originally written for previous project by same author (see script docstring)
+def create_table(data:dict, header_labels:list, metric:str="f1-score"): 
     '''
     Create table from dictionary with dataframes created from create_metrics_dataframes.
 
