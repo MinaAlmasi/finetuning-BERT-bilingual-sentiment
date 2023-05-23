@@ -4,21 +4,19 @@ Script for self-assigned Assignment 5, Language Analytics, Cultural Data Science
 Fine-tuning BERT for bilingual sentiment classification in English and Spanish
 
 Run in terminal: 
-    python src/finetune.py -epochs {N_EPOCHS} -download {DOWNLOAD_MODE} -mdl {MODEL} -TASS -hub 
+    python src/finetune.py -mdl {MODEL} -epochs {N_EPOCHS} -download {DOWNLOAD_MODE} -TASS -hub
 
 Additonal arguments:
+    -mdl (str): name of model to use. Choose between 'mBERT', 'mDeBERTa' or 'xlm-roberta'. Defaults to 'xlm-roberta'. 
     -epochs (int): number of epochs the model should run for. Defaults to 30. 
     -download (str): 'force_redownload' to force HF datasets to be redownloaded. Defaults to 'None' for using cached datasets.
-    -mdl (str): name of model to use. Defaults to 'mBERT'. Choose between 'mBERT' or 'mDistilBERT'.
 
 Note the boolean arguments do not rely on any arguments following their flags. Simply specifying the flags will set them to True. 
     -hub (bool): whether to push to Huggingface Hub or not. If not specified, no login will occur. This furthermore includes a token in a .txt file called "token.txt" located in the main repo folder. 
     -TASS (bool): whether to include TASS in the finetuning or not. If not specified, TASS will not be included. 
 
-E.g., writing: 
+E.g., to include the TASS data and to push the model to the Hub, type:
      python src/finetune.py -TASS -hub 
-
-Entails that the fine-tuning will include the TASS data and the model will be pushed to the Hugging Face Hub. 
 
 @MinaAlmasi
 '''
