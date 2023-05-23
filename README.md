@@ -171,7 +171,7 @@ Overall, models ```mDeBERTa``` and ```xlm-roberta``` performed better than ```mB
 ### ```(P2)``` Confusion Matrix (mDeBERTa)
 As ```mDeBERTa``` and ```xlm-roberta``` were nearly identical in performance, only one of them is highlighted. The plot below shows the confusion matrix for ```mDeBERTa``` on the entire test set: 
 <p align="left">
-  <img width=70% height=70% src="https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment/blob/main/visualisations/confusion_matrix_mDeBERTa_all.png">
+  <img width=85% height=85% src="https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment/blob/main/visualisations/confusion_matrix_mDeBERTa_all.png">
 </p>
 
 The confusion matrix provides an illustated overview of the labels that the model confused by other labels. From this, it is clear that the confusion is greatly located between the ```Neutral``` and ```Negative``` labelled tweets. ```27%``` of ```Neutral``` tweets were predicted as ```Negative``` and ```37%``` of ```Negative``` tweets were predicted as ```Neutral```. Nearly none of the ```Negative``` tweets were predicted as ```Positive``` (```7%```).     
