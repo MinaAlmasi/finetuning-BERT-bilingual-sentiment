@@ -128,15 +128,15 @@ NB! Remember to activate the ```env``` first (by running ```source ./env/bin/act
 ## Results 
 The following presents the results from the three models that were finetuned on the base versions of of [mBERT](https://huggingface.co/bert-base-multilingual-cased), [XLM-RoBERTa](https://huggingface.co/xlm-roberta-base), and  [mDeBERTa V3](https://huggingface.co/microsoft/mdeberta-v3-base). 
 
-### ```(P1)``` Training Hyperparameters
+### ```(P1)``` Finetuning Hyperparameters
 All models are trained with the parameters: 
 * Batch size: 64
 * Max epochs: 30 
-* Early stopping patience: 3 (stops if validation acc. does not improve for 3 epochs)
+* Early stopping patience: 3 (stops training if validation acc. does not improve for 3 epochs)
 * Weight decay: 0.1
 * Learning Rate: 2e-6
 
-With the early stopping callback, the model with the ```BEST``` validation accuracy was saved for inference. 
+With the early stopping defined, the model with the ```BEST``` validation accuracy was saved for inference. 
 
 ### ```(P1)``` Loss Curves
 The loss curves for each model is displayed below. The dashed vertical lines represent the ```BEST model``` with its validation accuracy and final epoch described in the corresponding legend. 
