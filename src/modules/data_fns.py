@@ -1,7 +1,7 @@
 '''
 Script for self-assigned Assignment 5, Language Analytics, Cultural Data Science, F2023
 
-Script containing functions for loading and preprocessing data used in the fine-tune pipeline.
+Script containing functions for loading and preprocessing data used in the finetune pipeline.
 Data is loaded either from the HuggingFace datasets library or from a local path.
 
 @MinaAlmasi
@@ -10,7 +10,6 @@ Data is loaded either from the HuggingFace datasets library or from a local path
 # utils
 import pathlib 
 import re
-
 
 # data utils 
 import pandas as pd 
@@ -77,8 +76,8 @@ def convert_TASS(dfs):
     Returns: 
         - ds: HF dataset dictionary containing splits "train", "validation" and "test". 
     '''
-    # split dev into val and test, stratify by language, so that we do not get an overrepresentation of e.g., "Mexican" (MX) Spanish. 
-    dfs["validation"], dfs["test"] = train_test_split(dfs["dev"], test_size=0.50, stratify=dfs["dev"]["lang"], random_state=155)
+    # split dev into val and test, stratify by language, so that we do not get an overrepresentation of e.g., "Mexican" (MX) Spanish. # scikit-learns train_test_split is used instead of the HF method before turning it into a HF dataset. 
+    dfs["validation"], dfs["test"] = train_test_split(dfs["dev"], test_size=0.50, stratify=dfs["dev"]["lang"], random_state=155)      # this choice is made as the scikit-learn function can stratify by other columns than the column coded as "class label" in HF datasets.
     
     # rm dev
     del dfs["dev"]

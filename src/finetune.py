@@ -1,7 +1,7 @@
 '''
 Script for self-assigned Assignment 5, Language Analytics, Cultural Data Science, F2023
 
-Fine-tuning BERT for bilingual sentiment classification in English and Spanish
+Finetuning BERT-based models for bilingual sentiment classification in English and Spanish.
 
 Run in terminal: 
     python src/finetune.py -mdl {MODEL} -epochs {N_EPOCHS} -download {DOWNLOAD_MODE} -TASS -hub
@@ -59,11 +59,11 @@ def model_picker(chosen_model:str):
     Function for picking model to finetune.
 
     Args:
-        chosen_model: name of model to use. Choosen between 'mBERT' or 'mDeBERTa' or 'xlm-roberta'.capitalize()
+        chosen_model: name of model to use. Choose between 'mBERT' or 'mDeBERTa' or 'xlm-roberta'.
     
     Returns:
-        model_dict: dictionary with name of fine-tune (key) and name of model to be fine-tuned (value).
-            - The name of the fine-tune is used in "output_dir" in TrainingArguments i.e., name that will be pushed to the hub or saved as local folder.
+        model_dict: dictionary with the name of finetune (key) and name of model to be finetuned (value).
+            - The name of the finetune is used in "output_dir" in TrainingArguments i.e., name that will be pushed to the hub or saved as local folder.
     '''
 
     if chosen_model == "mBERT":
@@ -92,11 +92,11 @@ def main():
     # pick model
     model_dict = model_picker(args.model)
 
-    # get outputfolder, modelname
+    # get output dir folder, model name
     output_folder = list(model_dict.keys())[0]
     model_name = list(model_dict.values())[0]
 
-    # push to hub ! But only if "-hub" flag is specified
+    # login for push to hub functionality! But only if "-hub" flag is specified
     if args.push_to_hub: 
         from huggingface_hub import login
 
