@@ -45,8 +45,7 @@ Finetuning several BERT-based models on labelled Spanish & English Twitter data 
 ### ```(P2) EVALUATION```
 Evaluating the models on test data. 
 
-Overall performance is extracted, but the models are also evaluated on subsets of the test data, seperated into English and Spanish. Asssesing models per language is done to uncover potential disparities in performance across the two languages. 
-
+Overall performance is extracted, but the models are also evaluated on subsets of the test data, seperated into English and Spanish, to uncover potential disparities across languages.
 ## Reproducibility 
 To reproduce the results, follow the instructions in the [Pipeline](https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment#pipeline) section.
 
@@ -58,16 +57,16 @@ The repository is structured as such:
 |---------|:-----------|
 | ```results``` | Results from running ```finetune.py```: loss curves, metrics (all + per language), predictions data per example in test set (all + per language). |
 | ```visualisations``` | Table and confusion matrices from running ```visualise.py```. |
-| ```models``` | Models are saved here after running the finetune pipeline. |
+| ```models``` | Models are saved here after finetuning.|
 | ```src``` | Scripts to run finetuning + evaluation and to visualise results. Contains helper functions in the ```modules``` folder.|
 | ```requirements.txt``` | Necessary packages to be installed |
 | ```setup.sh``` |  Run to install ```requirements.txt``` within newly created ```env```. |
-| ```git-lfs-setup.sh``` |  Run to install ```gif-lfs``` necessary for pushing models to Hugging Face hub. |
+| ```git-lfs-setup.sh``` |  Run to install ```gif-lfs```. Optional setup needed for pushing models to Hugging Face Hub. |
 
 ## Pipeline
 The pipeline has been tested on Ubuntu v22.10, Python v3.10.7 ([UCloud](https://cloud.sdu.dk/), Coder Python 1.77.3). Python's [venv](https://docs.python.org/3/library/venv.html) needs to be installed for the pipeline to work.
 
-### Installing TASS 
+### Installing TASS Data
 If you wish to run the pipeline with all data, install the [TASS 2020 (Spanish)](http://tass.sepln.org/2020/?wpdmpro=task-1-train-and-dev-sets) files and place them in the ```data``` folder. Ensure that the data follows the structure and naming conventions described in [data/README.md](https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment/tree/main/data). 
 
 ### General Setup
@@ -108,8 +107,8 @@ NB! Remember to activate the ```env``` first (by running ```source ./env/bin/act
 |```-mdl```   |  Model to be finetuned. Choose between 'mDeBERTa', 'mBERT' or 'xlm-roberta'               | xlm-roberta     |
 |```-epochs```| MAX epochs the model should train for (if not stopped after 3 epochs with no improvement)  | 30              |
 |```-download```| Write 'force_redownload' to redownload cached datasets. Useful if cache is corrupt.      | None            |
-|```-hub```   | Write the flag ```-hub``` if you wish to Hugging Face Hub. Leave it out if not.                      |       False         |
-|```-TASS```   | Write the flag ```-TASS``` if you wish to use the TASS dataset. Leave it out if not.                          | False               |
+|```-hub```   | Write the flag ```-hub``` if you wish to Hugging Face Hub. Leave it out if not.                      |                |
+|```-TASS```   | Write the flag ```-TASS``` if you wish to use the TASS dataset. Leave it out if not.                          |                |
 
 ## Inference with the Finetunes
 The three finetuned models are available on the Hugging Face Hub:
@@ -131,16 +130,15 @@ The following presents the results from the three models that were finetuned on 
 
 ### ```(P1)``` Training Hyperparameters
 All models are trained with the parameters: 
-* Batch size: 64 
-* Max epochs: 30 
-* Early stopping patience: 3 
+* Batch size: 64, Max epochs: 30 
+* Early stopping patience: 3 (stops if validation acc. does not improve for 3 epochs)
 * Weight decay: 0.1
 * Learning Rate: 2e-6
 
-The early stopping patience stopped model training if validation accuracy did not improve for 3 epochs. The model with the ```BEST``` validation accuracy was saved for inference.  
+With the early stopping callback, the model with the ```BEST``` validation accuracy was saved for inference. 
 
 ### ```(P1)``` Loss Curves
-The loss curves for each model is displayed below. The dashed vertical lines represent the ```BEST``` model that has been saved for inference. The validation accuracy and final epoch of the ```BEST``` model is in the legend of each plot.
+The loss curves for each model is displayed below. The dashed vertical lines represent the ```BEST model``` with its validation accuracy and final epoch described in the corresponding legend. 
 
 
 <p align="left">
@@ -166,14 +164,14 @@ Labels indicate whether the test set includes all examples (```all```), or if it
 | mDeBERTa es     |       0.34 |      0.55 |       0.78 |       0.56 |        0.55 |           0.55 |
 | xlm-roberta es  |       0.34 |      0.56 |       0.76 |       0.57 |        0.56 |           0.55 |
 
-The table shows that the the three finetuned model are close in performance with ```weighted F1``` scores ranging between ```0.60``` and ```0.65``` for English and Spanish sentiment classification. However, these scores do not show the full picture. Upon assessing the models on the each language individually, a disparity in performance across languages is evident. Model performance is greater on English tweets (```weighted F1 = 0.68 to 0.74```) compared to Spanish (```weighted F1 = 0.51 to 0.55```). In general, this performance also differs greatly across labels with worse performance in ```Negative``` and ```Neutral``` tweets than for ```Positive``` tweets. On the Spanish data, ```Negative``` labels are especially impacted with scores around chance level (```33%```).
+The table shows that the the three finetuned model are close in performance with ```weighted F1 (Macro_Avg)``` scores ranging between ```0.60``` and ```0.65``` for English and Spanish sentiment classification. However, these scores do not show the full picture. Upon assessing the models on the each language individually, a disparity in performance across languages is evident. Model performance is greater on English tweets (```weighted F1 = 0.68 to 0.74```) compared to Spanish (```weighted F1 = 0.51 to 0.55```). In general, this performance also differs greatly across labels with worse performance in ```Negative``` and ```Neutral``` tweets than for ```Positive``` tweets. On the Spanish data, ```Negative``` labels are especially impacted with scores around chance level (```33%```).
 
 Overall, models ```mDeBERTa``` and ```xlm-roberta``` performed better than ```mBERT```. 
 
 ### ```(P2)``` Confusion Matrix (mDeBERTa)
 As ```mDeBERTa``` and ```xlm-roberta``` were nearly identical in performance, only one of them is highlighted. The plot below shows the confusion matrix for ```mDeBERTa``` on the entire test set: 
 <p align="left">
-  <img src="https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment/blob/main/visualisations/confusion_matrix_mDeBERTa_all.png">
+  <img width=70% height=70% src="https://github.com/MinaAlmasi/finetuning-BERT-bilingual-sentiment/blob/main/visualisations/confusion_matrix_mDeBERTa_all.png">
 </p>
 
 The confusion matrix provides an illustated overview of the labels that the model confused by other labels. From this, it is clear that the confusion is greatly located between the ```Neutral``` and ```Negative``` labelled tweets. ```27%``` of ```Neutral``` tweets were predicted as ```Negative``` and ```37%``` of ```Negative``` tweets were predicted as ```Neutral```. Nearly none of the ```Negative``` tweets were predicted as ```Positive``` (```7%```).     
